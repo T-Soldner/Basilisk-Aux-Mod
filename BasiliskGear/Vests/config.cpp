@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class Basilisk_Vests
+	class BasiliskGear
 	{
 		author = "Soldner";
 		units[] = {};

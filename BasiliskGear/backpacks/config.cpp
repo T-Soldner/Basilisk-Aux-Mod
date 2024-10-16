@@ -1,3 +1,14 @@
+class CfgPatches
+{
+	class BasiliskGear
+	{
+		author = "Soldner";
+		units[] = {};
+		weapons[] = {};
+		requiredVersion = 0.1;
+		requiredAddons[] = { "A3_Characters_F","OPTRE_Core" };
+	};
+};
 class XtdGearModels
 {
 	class CfgVehicles
@@ -62,6 +73,22 @@ class XtdGearModels
 				};
 			};
 		};
+		class Basilisk_Custom_Backpacks
+		{
+			label = "Basilisk Custom Packs";
+			author = "Basilisk Mod Team";
+			options[] = { "role" };
+			class role
+			{
+				alwaysSelectable = 1;
+				label = "Owner";
+				values[] = { "Holland" };
+				class Holland
+				{
+					label = "Holland";
+				};
+			};
+		};
 	};
 };
 
@@ -118,9 +145,8 @@ class XtdGearInfos
 			squad = "unsc";
 		};
 		class Basilisk_ANPRC_521_Holland {
-			model = "Basilisk_Backpacks";
-			role = "PRC521";
-			squad = "custom";
+			model = "Basilisk_Custom_Backpacks";
+			role = "Holland";
 		};
 	};
 };

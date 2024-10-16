@@ -1,3 +1,14 @@
+class CfgPatches
+{
+	class BasiliskGear
+	{
+		author = "Soldner";
+		units[] = {};
+		weapons[] = {};
+		requiredVersion = 0.1;
+		requiredAddons[] = { "A3_Characters_F","OPTRE_Core" };
+	};
+};
 class XtdGearModels
 {
 	class CamoBase;

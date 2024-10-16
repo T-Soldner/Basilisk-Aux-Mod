@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class Basilisk_Uniforms
+	class BasiliskGear
 	{
 		author = "Soldner";
 		units[] = {};
@@ -12,6 +12,7 @@ class CfgPatches
 class CfgWeapons
 {
 	class ItemInfo;
+	class UniformItem;
 
 	//M56
 	class MA_M56S_BDU;
@@ -20,13 +21,18 @@ class CfgWeapons
 		scope = 2;
 		scopeCurator = 2;
 		scopeArsenal = 2;
+		author = "Soldner";
 		displayName = "[Basilisk] M56 BDU";
 		CBRN_protectionLevel = "4 + 8";
 		ACE_GForceCoef = 0.9;
-		class ItemInfo : ItemInfo
+		class ItemInfo : UniformItem
 		{
-			uniformClass = "Basilisk_M56S_BDU";
+			uniformModel = "-";
+			uniformClass = "Basilisk_M56_BDU_Base";
+			containerClass = "Supply150";
+			mass = 10;
 			uniformType = "Neopren";
+			modelSides[] = { 6 };
 		};
 	};
 
@@ -46,11 +52,14 @@ class CfgWeapons
 };
 class CfgVehicles
 {
+	//Base setup
 	class SoldierWB;
-	class B_Pilot_F;
 	class Basilisk_Soldier_Base : SoldierWB
 	{
 		class HitPoints;
+		scope = 1;
+		scopeCurator = 1;
+		scopeArsenal = 1;
 	};
 	class Basilisk_Soldier_WDL : Basilisk_Soldier_Base
 	{
@@ -290,14 +299,14 @@ class CfgVehicles
 		editorSubcategory = "Basilisk_EdSubCat_ODSTs";
 	};
 
-
 	//M56 BDU
-	//class MA_M56S_BDU;
-	class Basilisk_M56_BDU : Basilisk_Base_Uniform
+	class Basilisk_M56_BDU_Base : Basilisk_Base_Uniform
 	{
+		scope = 1;		
 		dlc = "Basilisk Aux Mod";
 		UniformClass = "Basilisk_M56_BDU";
 		model = "MA_Armor\data\Uniforms\H3_ODST\H3_ODST_Uniform.p3d";
+		picture = "\MA_Armor\data\Icons\H3_ODST_Uniform.paa";
 		hiddenSelections[] = { "camo" };
 		hiddenSelectionsTextures[] = { "MA_Armor\data\Uniforms\H3_ODST\H3_Undersuit_co.paa" };
 	};

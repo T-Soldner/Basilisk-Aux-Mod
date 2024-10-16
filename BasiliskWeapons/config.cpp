@@ -53,7 +53,7 @@ class XtdGearModels
 				};
 			};
 		};
-		class Basilisk_personal_weapons
+		class Basilisk_personal_primary_weapons
 		{
 			label = "Basilisk Personal Weapons";
 			options[] = {"type"};
@@ -65,6 +65,21 @@ class XtdGearModels
 				class HollandAK120
 				{
 					label = "Holland";
+				};
+			};
+		};
+		class Basilisk_personal_secondary_weapons
+		{
+			label = "Basilisk Personal Weapons";
+			options[] = { "type" };
+			class type
+			{
+				alwaysSelectable = 1;
+				label = "Owner";
+				values[] = { "SoldnerPistol" };
+				class SoldnerPistol
+				{
+					label = "Soldner";
 				};
 			};
 		};
@@ -92,10 +107,14 @@ class XtdGearInfos
 			type = "TemplarMA5";
 			GL = "GL";
 		};
-		class Basilisk_Holland_AK120
-		{
-			model = "Basilisk_personal_weapons";
+		class Basilisk_Holland_AK120 {
+			model = "Basilisk_personal_primary_weapons";
 			type = "HollandAK120";
+		};
+		class Basilisk_Soldner_Pistol {
+			model = "Basilisk_personal_secondary_weapons";
+			type = "HollandAK120";
+
 		};
 	};
 };
@@ -278,35 +297,9 @@ class CfgWeapons
 	};
 };
 
-class CfgMagazineWells
-{
-	class 19_UNSC_SRS99_Magwell{
-		UNSC_145x114_4rnd[] = {
-			"Basilisk_4Rnd_145x114_srs99",
-			"Basilisk_6Rnd_145x114_srs99_apfsds",
-			"Basilisk_6Rnd_145x114_srs99_hvap"
-		};
-	};
-};
 
 class CfgMagazines
 {
-	//OPTRE sniper ammo
-	class OPTRE_4Rnd_145x114_APFSDS_Mag;
-	class OPTRE_4Rnd_145x114_HVAP_Mag;
-	
-	class Basilisk_4Rnd_145x114_HVAP_Mag : OPTRE_4Rnd_145x114_APFSDS_Mag {
-		displayname="4Rnd 14.5x114mm HVAP Magazine (C/No Tracers)";
-		tracersEvery=0;
-		lastRoundsTracer=0;
-	};
-	
-	class Basilisk_4Rnd_145x114_APFSDS_Mag : OPTRE_4Rnd_145x114_APFSDS_Mag {
-		displayname="4Rnd 14.5x114mm APFSDS Magazine (C/No Tracers)";
-		tracersEvery=0;
-		lastRoundsTracer=0;
-	};
-
 	//Railgun Ammo
 	class OPTRE_FC_Railgun_Slug;
 	class Basilisk_Railgun_Slug : OPTRE_FC_Railgun_Slug

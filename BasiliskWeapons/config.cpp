@@ -24,31 +24,28 @@ class XtdGearModels
 		{
 			label = "Basilisk Squad Weapons";
 			options[] = {"type","GL"};
-			class type
-			{
+			class type {
 				alwaysSelectable = 1;
 				label = "Type";
-				values[] = {"VulcanM7","TemplarMA5"};
-				class VulcanM7
-				{
+				values[] = {"VulcanM7","TemplarMA5","OlympusM7"};
+				class VulcanM7 {
 					label = "Vulcan M7";
 				};
-				class TemplarMA5
-				{
+				class TemplarMA5 {
 					label = "Templar";
 				};
+				class OlympusM7 {
+					label = "Olympus M7";
+				};
 			};
-			class GL
-			{
+			class GL {
 				alwaysSelectable = 1;
 				label = "GL";
 				values[] = {"NoGL","GL"};
-				class NoGL
-				{
+				class NoGL {
 					label = "No GL";
 				};
-				class GL
-				{
+				class GL {
 					label = "GL";
 				};
 			};
@@ -57,29 +54,12 @@ class XtdGearModels
 		{
 			label = "Basilisk Personal Weapons";
 			options[] = {"type"};
-			class type
-			{
+			class type {
 				alwaysSelectable = 1;
 				label = "Owner";
 				values[] = {"HollandAK120"};
-				class HollandAK120
-				{
+				class HollandAK120 {
 					label = "Holland";
-				};
-			};
-		};
-		class Basilisk_personal_secondary_weapons
-		{
-			label = "Basilisk Personal Weapons";
-			options[] = { "type" };
-			class type
-			{
-				alwaysSelectable = 1;
-				label = "Owner";
-				values[] = { "SoldnerPistol" };
-				class SoldnerPistol
-				{
-					label = "Soldner";
 				};
 			};
 		};
@@ -89,20 +69,22 @@ class XtdGearInfos
 {
 	class CfgWeapons
 	{
-		class Basilisk_Vulcan_M7
-		{
+		class Basilisk_Olympus_M7 {
+			model = "Basilisk_squad_weapons";
+			type = "OlympusM7";
+			GL = "NoGL";
+		};
+		class Basilisk_Vulcan_M7 {
 			model = "Basilisk_squad_weapons";
 			type = "VulcanM7";
 			GL = "NoGL";
 		};
-		class Basilisk_Templar_MA5B
-		{
+		class Basilisk_Templar_MA5B {
 			model = "Basilisk_squad_weapons";
 			type = "TemplarMA5";
 			GL = "NoGL";
 		};
-		class Basilisk_Templar_MA5BGL
-		{
+		class Basilisk_Templar_MA5BGL {
 			model = "Basilisk_squad_weapons";
 			type = "TemplarMA5";
 			GL = "GL";
@@ -110,11 +92,6 @@ class XtdGearInfos
 		class Basilisk_Holland_AK120 {
 			model = "Basilisk_personal_primary_weapons";
 			type = "HollandAK120";
-		};
-		class Basilisk_Soldner_Pistol {
-			model = "Basilisk_personal_secondary_weapons";
-			type = "HollandAK120";
-
 		};
 	};
 };
@@ -258,25 +235,34 @@ class CfgWeapons
 		};
 	};
 
-	//Soldners Handgun
-	class hgun_Pistol_heavy_01_F;
-	class Basilisk_Soldner_Pistol : hgun_Pistol_heavy_01_F
+	//Olympus M7
+	class Basilisk_Olympus_M7 : OPTRE_M7
 	{
 		dlc = "Basilisk AUX Mod";
 		author = "Soldner";
-		baseWeapon = "Basilisk_Soldner_Pistol";
+		baseWeapon = "Basilisk_Olympus_M7";
 		scope = 2;
 		scopearsenal = 2;
-		magazines[] = { "Basilisk_20Rnd_45ACP_Mag" };
-		magazineWell[] = {};
-		displayname = "[Basilisk] Soldner's Pistol";
-		hiddenSelections[] = { "camo" };
-		hiddenSelectionsTextures[] = { "BasiliskWeapons\data\Soldner_Pistol.paa" };
-		inertia = 0.3;
-		aimTransitionSpeed = 1.5;
-		dexterity = 1.7;
-		initSpeed = 700;
-		maxZeroing = 100;
+		displayName = "[Basilisk] Olympus M7X Caseless SMG";
+		canShootInWater = 1;
+		hiddenSelections[] = { "camo","camo1" };
+		hiddenSelectionsTextures[] = { "BasiliskWeapons\data\Olympus_m7_co.paa","OPTRE_Weapons\smg\data\m7_magazine_co.paa" };
+		class WeaponSlotsInfo : WeaponSlotsInfo
+		{
+			mass = 30;
+			class MuzzleSlot : MuzzleSlot
+			{
+				compatibleitems[] = { "optre_m7_silencer" };
+			};
+			class CowsSlot : CowsSlot
+			{
+				compatibleitems[] = { "MEU_REC_HOLO_DMR","optic_hamr","OPTRE_M7_Sight" };
+			};
+			class PointerSlot : PointerSlot
+			{
+				compatibleitems[] = { "OPTRE_M7_Flashlight","OPTRE_M7_Laser","MEU_M7_Vis_Laser" };
+			};
+		};
 	};
 
 	//Basilisk Railgun

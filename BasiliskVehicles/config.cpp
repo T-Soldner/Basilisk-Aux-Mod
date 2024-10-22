@@ -970,8 +970,6 @@ class CfgVehicles
 		fuelConsumptionRate = 0.01;
 		editorCategory = "Basilisk_AUX_EdCat";
 		editorSubcategory = "Basilisk_EdSubCat_Drones";
-		altFullForce = 2500;
-		altNoForce = 5000;
 		maxHeight = 2500;
 		avgHeight = 1250;
 		radarTargetSize = 0.01;
@@ -1021,8 +1019,8 @@ class CfgVehicles
 		{
 			class MainTurret : MainTurret
 			{
-				weapons[] = { "Basilisk_missiles_SCALPEL","Laserdesignator_mounted" };
-				magazines[] = { "Laserbatteries","Basilisk_Aurora_Drone_Archer","8Rnd_LG_scalpel" };
+				weapons[] = { "missiles_SCALPEL","Laserdesignator_mounted" };
+				magazines[] = { "Laserbatteries","8Rnd_LG_scalpel" };
 			};
 		};
 	};
@@ -1031,12 +1029,6 @@ class CfgWeapons
 {
 	//inherted stuff
 	class ITC_Land_UAV_Packed_base;
-	class OPTRE_M41_LAAG;
-	class MGun;
-	class missiles_SCALPEL;
-	class Basilisk_missiles_SCALPEL : missiles_SCALPEL {
-		magazines[] = { "8Rnd_LG_scalpel" };
-	};
 
 	class Basilisk_Searcher_Drone_Item : ITC_Land_UAV_Packed_base
 	{

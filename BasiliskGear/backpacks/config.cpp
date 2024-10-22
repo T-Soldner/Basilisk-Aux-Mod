@@ -82,10 +82,14 @@ class XtdGearModels
 			{
 				alwaysSelectable = 1;
 				label = "Owner";
-				values[] = { "Holland" };
+				values[] = { "Holland","Soldner"};
 				class Holland
 				{
 					label = "Holland";
+				};
+				class Soldner
+				{
+					label = "Soldner";
 				};
 			};
 		};
@@ -147,6 +151,10 @@ class XtdGearInfos
 		class Basilisk_ANPRC_521_Holland {
 			model = "Basilisk_Custom_Backpacks";
 			role = "Holland";
+		};
+		class Basilisk_Soldner_Rucksack_Gunbag {
+			model = "Basilisk_Custom_Backpacks";
+			role = "Soldner";
 		};
 	};
 };
@@ -286,6 +294,13 @@ class CfgVehicles
 		displayName = "[Basilisk] M56 ILCS Gunbag";
 		maximumLoad = 250;
 		ace_gunbag = 1;
+	};
+	class Basilisk_Soldner_Rucksack_Gunbag : Basilisk_M56_ILCS_Gunbag
+	{
+		_generalMacro = "ace_gunbag_Tan";
+		displayName = "[Basilisk] M56 ILCS Gunbag (Soldner)";
+		hiddenSelections[] = { "camo1","camo2","Radio" };
+		hiddenSelectionsTextures[] = { "BasiliskGear\data\packs\Soldner_ODST_Ruck_co.paa" };
 	};
 
 

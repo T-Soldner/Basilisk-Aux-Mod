@@ -22,7 +22,7 @@ class XtdGearModels
 			{
 				alwaysSelectable = 1;
 				label = "Role";
-				values[] = {"Standard","Soldner","Buckley","Wolf","Payne","Blackburn","Burtovski","Holland","Chop","Sabbath","Kaker"};
+				values[] = {"Standard","Soldner","Buckley","Wolf","Payne","Blackburn","Burtovski","Holland","Chop","Sabbath","Kaker","Tepfer" };
 				class Standard {
 					label = "Standard";
 				};
@@ -55,6 +55,12 @@ class XtdGearModels
 				};
 				class Kaker {
 					label = "Kaker";
+				};
+				class Kaker {
+					label = "Kaker";
+				};
+				class Tepfer {
+					label = "Tepfer";
 				};
 			};
 		};
@@ -132,6 +138,10 @@ class XtdGearInfos
 			role	= "Kaker";
 			model	= "Basilisk_Custom_helmets";
 		};
+		class Basilisk_Tepfer_M56SH_Helmet {
+			role	= "Tepfer";
+			model	= "Basilisk_Custom_helmets";
+		};
 
 
 
@@ -156,6 +166,7 @@ class CfgWeapons
 	class Basilisk_Base_Recon_Helmet;
 	class Basilisk_M56E_Helmet_Base;
 	class Basilisk_M56SR_Helmet_Base;
+	class Basilisk_M56SH_Helmet_Base;
 	class Basilisk_Base_CQB_Helmet;
 
 	class Basilisk_Standard_M56SR_Helmet : Basilisk_M56SR_Helmet_Base
@@ -321,6 +332,19 @@ class CfgWeapons
 			hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Kaker_HR_ODST_Helmet_CO.paa","BasiliskGear\data\helmets\kaker_HR_ODST_Visor_Red_co.paa" };
 		};
 	};
+	class Basilisk_Tepfer_M56SH_Helmet : Basilisk_M56SH_Helmet_Base
+	{
+		scope = 2;
+		scopeArsenal = 2;
+		author = "Soldner";
+		displayName = "[Basilisk] M56SH (Tepfer)";
+		hiddenSelections[] = { "camo1","camo2" };
+		hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Tepfer_H3_Helmet_co.paa","BasiliskGear\data\helmets\Tepfer_H3_Visor_co.paa" };
+		class ItemInfo : ItemInfo {
+			hiddenSelections[] = { "camo1","camo2" };
+			hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Tepfer_H3_Helmet_co.paa","BasiliskGear\data\helmets\Tepfer_H3_Visor_co.paa" };
+		};
+	};
 
 
 	class Basilisk_Base_Beret;
@@ -347,4 +371,5 @@ class CfgWeapons
 		displayName = "Basilisk Boonie";
 		hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\headgear_Basiliskboonie_co.paa" };
 	};
+
 };

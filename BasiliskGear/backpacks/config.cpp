@@ -277,14 +277,8 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		scopeArsenal = 2;
-		maximumLoad = 300;
+		maximumLoad = 400;
 		mass = 50;
-		tf_encryptionCode = "tf_west_radio_code";
-		tf_dialog = "anarc210_radio_dialog";
-		tf_subtype = "digital_lr";
-		tf_range = 25000;
-		tf_dialogUpdate = "[""%1""] call TFAR_fnc_updateLRDialogToChannel;";
-		tf_hasLRradio = 1;
 		hiddenSelections[] = {"camo1","camo2"};
 		hiddenSelectionsTextures[] = {"MA_Armor\data\Backpacks\ODST_Rucksack\ODST_Ruck_co.paa","MA_Armor\data\Backpacks\ODST_Rucksack\Attachments\Backpack_Radio_ODST_co.paa"};
 	};

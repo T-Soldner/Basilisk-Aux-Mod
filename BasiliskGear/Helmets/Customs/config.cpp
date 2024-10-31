@@ -22,7 +22,7 @@ class XtdGearModels
 			{
 				alwaysSelectable = 1;
 				label = "Role";
-				values[] = {"Standard","Soldner","Buckley","Wolf","Payne","Blackburn","Burtovski","Holland","Chop","Sabbath","Kaker","Tepfer" };
+				values[] = {"Standard","Soldner","Buckley","Wolf","Payne","Blackburn","Burtovski","Holland","Chop","Sabbath","Kaker","Tepfer","Lane" };
 				class Standard {
 					label = "Standard";
 				};
@@ -56,11 +56,11 @@ class XtdGearModels
 				class Kaker {
 					label = "Kaker";
 				};
-				class Kaker {
-					label = "Kaker";
-				};
 				class Tepfer {
 					label = "Tepfer";
+				};
+				class Lane {
+					label = "Lane";
 				};
 			};
 		};
@@ -134,12 +134,16 @@ class XtdGearInfos
 			role	= "Sabbath";
 			model	= "Basilisk_Custom_helmets";
 		};
-		class Basilisk_Kaker_M56SR_Helmet {
+		class Basilisk_Kaker_Fishbowl_Helmet {
 			role	= "Kaker";
 			model	= "Basilisk_Custom_helmets";
 		};
 		class Basilisk_Tepfer_M56SH_Helmet {
 			role	= "Tepfer";
+			model	= "Basilisk_Custom_helmets";
+		};
+		class Basilisk_Lane_M56SR_Helmet {
+			role	= "Lane";
 			model	= "Basilisk_Custom_helmets";
 		};
 
@@ -168,6 +172,7 @@ class CfgWeapons
 	class Basilisk_M56SR_Helmet_Base;
 	class Basilisk_M56SH_Helmet_Base;
 	class Basilisk_Base_CQB_Helmet;
+	class Basilisk_Fishbowl_Helmet;
 
 	class Basilisk_Standard_M56SR_Helmet : Basilisk_M56SR_Helmet_Base
 	{
@@ -318,20 +323,6 @@ class CfgWeapons
 			hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Sabbath_HR_ODST_Helmet_CO.paa","BasiliskGear\data\helmets\Sabbath_HR_ODST_Visor_co.paa" };
 		};
 	};
-	class Basilisk_Kaker_M56SR_Helmet : Basilisk_M56SR_Helmet_Base
-	{
-		scope = 2;
-		scopeArsenal = 2;
-		author = "Jimbo";
-		displayName = "[Basilisk] M56S-R Helmet (Kaker)";
-		hiddenSelections[] = { "camo1","camo2" };
-		hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\kaker_HR_ODST_Helmet_CO.paa","BasiliskGear\data\helmets\kaker_HR_ODST_Visor_Red_co.paa" };
-		class ItemInfo : ItemInfo
-		{
-			hiddenSelections[] = { "camo1","camo2" };
-			hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Kaker_HR_ODST_Helmet_CO.paa","BasiliskGear\data\helmets\kaker_HR_ODST_Visor_Red_co.paa" };
-		};
-	};
 	class Basilisk_Tepfer_M56SH_Helmet : Basilisk_M56SH_Helmet_Base
 	{
 		scope = 2;
@@ -343,6 +334,34 @@ class CfgWeapons
 		class ItemInfo : ItemInfo {
 			hiddenSelections[] = { "camo1","camo2" };
 			hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Tepfer_H3_Helmet_co.paa","BasiliskGear\data\helmets\Tepfer_H3_Visor_co.paa" };
+		};
+	};
+	class Basilisk_Lane_M56SR_Helmet : Basilisk_M56SR_Helmet_Base
+	{
+		scope = 2;
+		scopeArsenal = 2;
+		author = "Lane";
+		displayName = "[Basilisk] M56S-R Helmet (Lane)";
+		hiddenSelections[] = { "camo1","camo2" };
+		hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Lane_HR_ODST_Helmet_CO.paa","BasiliskGear\data\helmets\Lane_HR_ODST_Visor_co.paa" };
+		class ItemInfo : ItemInfo
+		{
+			hiddenSelections[] = { "camo1","camo2" };
+			hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Lane_HR_ODST_Helmet_CO.paa","BasiliskGear\data\helmets\Lane_HR_ODST_Visor_co.paa" };
+		};
+	};
+	class Basilisk_Kaker_Fishbowl_Helmet : Basilisk_Fishbowl_Helmet
+	{
+		scope = 2;
+		scopeArsenal = 2;
+		author = "Kaker";
+		displayName = "[Basilisk] Hellbringer Helmet (Kaker)";
+		hiddenSelections[] = { "camo1","camo2" };
+		hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Kaker_Pilot_Helmet_CO.paa","BasiliskGear\data\helmets\Kaker_Pilot_Visor_co.paa" };
+		class ItemInfo : ItemInfo
+		{
+			hiddenSelections[] = { "camo1","camo2" };
+			hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Kaker_Pilot_Helmet_CO.paa","BasiliskGear\data\helmets\Kaker_Pilot_Visor_co.paa" };
 		};
 	};
 

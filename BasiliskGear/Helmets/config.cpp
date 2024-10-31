@@ -451,6 +451,45 @@ class CfgWeapons
 		};
 	};
 
+	//Pilot Helmet
+	class Basilisk_Fishbowl_Helmet : MA_Helmet_Base_one
+	{
+		dlc = "Basilisk Aux Mod";
+		scope = 1;
+		scopeCurator = 1;
+		scopeArsenal = 1;
+		displayName = "[Basilisk] Hellbringer Helmet";
+		model = "MA_Armor\data\Helmets\Pilot\Pilot_Helm.p3d";
+		hiddenSelections[] = { "camo1","camo2" };
+		hiddenSelectionsTextures[] = { "MA_Armor\data\Helmets\Pilot\Helmets\Olive_Pilot_Helmet_CO.paa","MA_Armor\data\Helmets\Pilot\Visors\Base_Pilot_Visor_CO.paa" };
+		class ItemInfo : ItemInfo
+		{
+			uniformModel = "MA_Armor\data\Helmets\Pilot\Pilot_Helm.p3d";
+			hiddenSelectionsTextures[] = { "MA_Armor\data\Helmets\Pilot\Helmets\Olive_Pilot_Helmet_CO.paa","MA_Armor\data\Helmets\Pilot\Visors\Base_Pilot_Visor_CO.paa" };
+			class HitpointsProtectionInfo
+			{
+				class Face
+				{
+					armor = 35;
+					hitpointName = "HitFace";
+					passThrough = 0.1;
+				};
+				class Head
+				{
+					armor = 35;
+					hitPointName = "HitHead";
+					passThrough = 0.1;
+				};
+				class Neck
+				{
+					armor = 35;
+					hitpointName = "HitNeck";
+					passThrough = 0.1;
+				};
+			};
+		};
+	};
+
 	//Covers
 	class H_MilCap_Blue;
 	class Basilisk_Base_Beret : H_HelmetB

@@ -289,12 +289,20 @@ class CfgVehicles
 		maximumLoad = 250;
 		ace_gunbag = 1;
 	};
-	class Basilisk_Soldner_Rucksack_Gunbag : Basilisk_M56_ILCS_Gunbag
+	class Basilisk_Soldner_Rucksack_Gunbag : Basilisk_ANPRC_515
 	{
 		_generalMacro = "ace_gunbag_Tan";
 		displayName = "[Basilisk] M56 ILCS Gunbag (Soldner)";
-		hiddenSelections[] = { "camo1","camo2","Radio" };
-		hiddenSelectionsTextures[] = { "BasiliskGear\data\packs\Soldner_ODST_Ruck_co.paa" };
+		hiddenSelectionsTextures[] = { "BasiliskGear\data\packs\Soldner_prc515_co.paa" };
+		tf_isolatedAmount = 0.65;
+		tf_encryptionCode = "tf_west_radio_code";
+		tf_dialog = "anarc210_radio_dialog";
+		tf_subtype = "digital_lr";
+		tf_range = 25000;
+		tf_dialogUpdate = "[""%1""] call TFAR_fnc_updateLRDialogToChannel;";
+		tf_hasLRradio = 1;
+		ace_gunbag = 1;
+		maximumLoad = 500;
 	};
 
 

@@ -6,7 +6,7 @@ class CfgPatches
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = { "A3_Characters_F","OPTRE_Core" };
+		requiredAddons[] = { "A3_Characters_F" };
 	};
 };
 class CfgWeapons

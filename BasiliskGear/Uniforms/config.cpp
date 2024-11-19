@@ -6,7 +6,7 @@ class CfgPatches
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = { "A3_Characters_F","OPTRE_Core" };
+		requiredAddons[] = { "A3_Characters_F" };
 	};
 };
 class CfgWeapons
@@ -36,8 +36,10 @@ class CfgWeapons
 		};
 	};
 
+	//M52
+
 	//Dress uniforms
-	class OPTRE_UNSC_Dress_Uniform_gray;
+	//class OPTRE_UNSC_Dress_Uniform_gray;
 	/*class MEU_Dress_Uniform_Cornflakes : OPTRE_UNSC_Dress_Uniform_gray
 	{
 		displayName = "[1st] Dress Uniform (Cornflakes)";
@@ -310,7 +312,6 @@ class CfgVehicles
 		hiddenSelections[] = { "camo" };
 		hiddenSelectionsTextures[] = { "MA_Armor\data\Uniforms\H3_ODST\H3_Undersuit_co.paa" };
 	};
-
 
 	//dress uniforms?
 	/*class MEU_Dress_Uniform_Cornflakes_Soldier: Basilisk_Base_Uniform

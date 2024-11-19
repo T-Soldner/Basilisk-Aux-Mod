@@ -6,7 +6,7 @@ class CfgPatches
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = { "A3_Characters_F","OPTRE_Core" };
+		requiredAddons[] = { "A3_Characters_F" };
 	};
 };
 class XtdGearModels
@@ -17,18 +17,57 @@ class XtdGearModels
 		{
 			label = "Basilisk Helmets";
 			author = "Basilisk Mod Team";
-			options[] = {"role"};
+			options[] = { "role" };
 			class role
 			{
 				alwaysSelectable = 1;
 				label = "Role";
-				values[] = {"Standard","Soldner","Buckley","Wolf","Payne","Blackburn","Burtovski","Holland","Chop","Sabbath","Kaker","Tepfer","Lane" };
+				values[] = { "Standard","Burtovski","Chop","Sabbath" };
 				class Standard {
 					label = "Standard";
 				};
+				class Burtovski {
+					label = "Burtovski";
+				};
+				class Chop {
+					label = "Chop";
+				};
+				class Sabbath {
+					label = "Sabbath";
+				};
+			};
+		};
+		class Basilisk_Olympus_Helmets {
+			label = "Olympus Helmets";
+			author = "Basilisk Mod Team";
+			options[] = { "role" };
+			class role {
+				alwaysSelectable = 1;
+				label = "Role";
+				values[] = { "Soldner","Holland","Kaker","Tepfer" };
 				class Soldner {
 					label = "Soldner";
 				};
+				class Holland {
+					label = "Holland";
+				};
+				class Kaker {
+					label = "Kaker";
+				};
+				class Tepfer {
+					label = "Tepfer";
+				};
+			};
+		};
+		class Basilisk_Fury_Helmets {
+			label = "Fury Helmets";
+			author = "Basilisk Mod Team";
+			options[] = { "role" };
+			class role
+			{
+				alwaysSelectable = 1;
+				label = "Role";
+				values[] = { "Buckley","Wolf","Payne" };
 				class Buckley {
 					label = "Buckley";
 				};
@@ -38,53 +77,44 @@ class XtdGearModels
 				class Payne {
 					label = "Payne";
 				};
-				class Blackburn {
-					label = "Blackburn";
-				};
-				class Burtovski {
-					label = "Burtovski";
-				};
-				class Holland {
-					label = "Holland";
-				};
-				class Chop {
-					label = "Chop";
-				};
-				class Sabbath {
-					label = "Sabbath";
-				};
-				class Kaker {
-					label = "Kaker";
-				};
-				class Tepfer {
-					label = "Tepfer";
-				};
-				class Lane {
-					label = "Lane";
+			};
+			class Basilisk_covers
+			{
+				label = "Basilisk Covers";
+				author = "VorpalHotdog";
+				options[] = { "Role" };
+				class role
+				{
+					alwaysSelectable = 1;
+					label = "Role";
+					values[] = { "beret","boonie","patrol" };
+					class beret
+					{
+						label = "Beret";
+					};
+					class boonie
+					{
+						label = "Boonie";
+					};
+					class patrol
+					{
+						label = "Patrol";
+					};
 				};
 			};
 		};
-		class Basilisk_covers
+		class Basilisk_Corvus_helmets
 		{
-			label = "Basilisk Covers";
-			author = "VorpalHotdog";
-			options[] = { "Role" };
+			label = "Corvus Helmets";
+			author = "Basilisk Mod Team";
+			options[] = { "role" };
 			class role
 			{
 				alwaysSelectable = 1;
 				label = "Role";
-				values[] = { "beret","boonie","patrol" };
-				class beret
-				{
-					label = "Beret";
-				};
-				class boonie
-				{
-					label = "Boonie";
-				};
-				class patrol
-				{
-					label = "Patrol";
+				values[] = { "Blackburn" };
+				class Blackburn {
+					label = "Blackburn";
 				};
 			};
 		};
@@ -94,36 +124,12 @@ class XtdGearInfos
 {
 	class CfgWeapons
 	{
-		class Basilisk_Recruit_M56SR_Helmet {
+		class Basilisk_Standard_M56SR_Helmet {
 			role	= "Standard";
-			model	= "Basilisk_Custom_helmets";
-		};
-		class Basilisk_Soldner_Reach_Scout_Helmet {
-			role	= "Soldner";
-			model	= "Basilisk_Custom_helmets";
-		};
-		class Basilisk_Buckley_Recon_Helmet {
-			role	= "Buckley";
-			model	= "Basilisk_Custom_helmets";
-		};
-		class Basilisk_Wolf_Recon_Helmet {
-			role	= "Wolf";
-			model	= "Basilisk_Custom_helmets";
-		};
-		class Basilisk_Payne_Recon_Helmet {
-			role	= "Payne";
-			model	= "Basilisk_Custom_helmets";
-		};
-		class Basilisk_Blackburn_M56E_Helmet {
-			role	= "Blackburn";
 			model	= "Basilisk_Custom_helmets";
 		};
 		class Basilisk_Burtovski_M56SR_Helmet {
 			role	= "Burtovski";
-			model	= "Basilisk_Custom_helmets";
-		};
-		class Basilisk_Holland_M56SR_Helmet {
-			role	= "Holland";
 			model	= "Basilisk_Custom_helmets";
 		};
 		class Basilisk_Chopper_CQB_Helmet {
@@ -134,32 +140,57 @@ class XtdGearInfos
 			role	= "Sabbath";
 			model	= "Basilisk_Custom_helmets";
 		};
+
+		//Olympus
+		class Basilisk_Soldner_Reach_Scout_Helmet {
+			role	= "Soldner";
+			model	= "Basilisk_Olympus_Helmets";
+		};
+		class Basilisk_Holland_M56SR_Helmet {
+			role	= "Holland";
+			model	= "Basilisk_Olympus_Helmets";
+		};
 		class Basilisk_Kaker_Fishbowl_Helmet {
 			role	= "Kaker";
-			model	= "Basilisk_Custom_helmets";
+			model	= "Basilisk_Olympus_Helmets";
 		};
 		class Basilisk_Tepfer_M56SH_Helmet {
 			role	= "Tepfer";
-			model	= "Basilisk_Custom_helmets";
-		};
-		class Basilisk_Lane_M56SR_Helmet {
-			role	= "Lane";
-			model	= "Basilisk_Custom_helmets";
+			model	= "Basilisk_Olympus_Helmets";
 		};
 
+		//Fury
+		class Basilisk_Buckley_Recon_Helmet {
+			role	= "Buckley";
+			model	= "Basilisk_Fury_Helmets";
+		};
+		class Basilisk_Wolf_Recon_Helmet {
+			role	= "Wolf";
+			model	= "Basilisk_Fury_Helmets";
+		};
+		class Basilisk_Payne_Recon_Helmet {
+			role	= "Payne";
+			model	= "Basilisk_Fury_Helmets";
+		};
 
+		//Corvus
+		class Basilisk_Blackburn_M56E_Helmet {
+			role	= "Blackburn";
+			model	= "Basilisk_Corvus_helmets";
+		};
 
+		//Covers
 		class Basilisk_Basilisk_Beret{
-			role = "beret";
-			model = "Basilisk_covers";
+			role	= "beret";
+			model	= "Basilisk_covers";
 		};
 		class Basilisk_Basilisk_Boonie{
-			role = "boonie";
-			model = "Basilisk_covers";
+			role	= "boonie";
+			model	= "Basilisk_covers";
 		};
 		class Basilisk_Basilisk_Patrol{
-			role = "patrol";
-			model = "Basilisk_covers";
+			role	= "patrol";
+			model	= "Basilisk_covers";
 		};
 	};
 };
@@ -173,6 +204,7 @@ class CfgWeapons
 	class Basilisk_M56SH_Helmet_Base;
 	class Basilisk_Base_CQB_Helmet;
 	class Basilisk_Fishbowl_Helmet;
+	class Basilisk_M56S_Helmet_Base;
 
 	class Basilisk_Standard_M56SR_Helmet : Basilisk_M56SR_Helmet_Base
 	{
@@ -334,20 +366,6 @@ class CfgWeapons
 		class ItemInfo : ItemInfo {
 			hiddenSelections[] = { "camo1","camo2" };
 			hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Tepfer_H3_Helmet_co.paa","BasiliskGear\data\helmets\Tepfer_H3_Visor_co.paa" };
-		};
-	};
-	class Basilisk_Lane_M56SR_Helmet : Basilisk_M56SR_Helmet_Base
-	{
-		scope = 2;
-		scopeArsenal = 2;
-		author = "Lane";
-		displayName = "[Basilisk] M56S-R Helmet (Lane)";
-		hiddenSelections[] = { "camo1","camo2" };
-		hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Lane_HR_ODST_Helmet_CO.paa","BasiliskGear\data\helmets\Lane_HR_ODST_Visor_co.paa" };
-		class ItemInfo : ItemInfo
-		{
-			hiddenSelections[] = { "camo1","camo2" };
-			hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Lane_HR_ODST_Helmet_CO.paa","BasiliskGear\data\helmets\Lane_HR_ODST_Visor_co.paa" };
 		};
 	};
 	class Basilisk_Kaker_Fishbowl_Helmet : Basilisk_Fishbowl_Helmet

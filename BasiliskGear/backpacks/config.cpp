@@ -1,12 +1,14 @@
 class CfgPatches
 {
-	class BasiliskGear
+	class BasiliskGear_Backpacks
 	{
-		author = "Soldner";
+		// Use meta information from specified addon. Used to avoid repeated declarations.
+		addonRootClass = "BasiliskGear";
+
+		requiredVersion = 1.60;
+		requiredAddons[] = { "BasiliskGear" };
 		units[] = {};
 		weapons[] = {};
-		requiredVersion = 0.1;
-		requiredAddons[] = { "A3_Characters_F","OPTRE_Core" };
 	};
 };
 class XtdGearModels

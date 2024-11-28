@@ -1,12 +1,14 @@
 class CfgPatches
 {
-	class BasiliskGear
+	class BasiliskGear_Helmets
 	{
-		author = "Soldner";
+		// Use meta information from specified addon. Used to avoid repeated declarations.
+		addonRootClass = "BasiliskGear";
+
+		requiredVersion = 1.60;
+		requiredAddons[] = { "BasiliskGear" };
 		units[] = {};
 		weapons[] = {};
-		requiredVersion = 0.1;
-		requiredAddons[] = { "A3_Characters_F" };
 	};
 };
 class CfgWeapons
@@ -14,109 +16,21 @@ class CfgWeapons
 	//Helmet Inherits
 	class HeadgearItem;
 	class H_HelmetB;
-	class OPTRE_UNSC_Recon_Helmet;
-	class OPTRE_UNSC_CQB_Helmet;
-
-	//Recon Helmet
-	class Basilisk_Base_Recon_Helmet : OPTRE_UNSC_Recon_Helmet
-	{
-		class ItemInfo;
-		dlc = "Basilisk Aux Mod";
-		author = "Soldner";
-		scope = 1;
-		scopeArsenal = 1;
-		scopeCurator = 1;
-		weaponPoolAvailable = 1;
-		ace_hearing_protection = 5.0;
-		ace_hearing_lowerVolume = 0.25;
-		displayName = "Recon Helmet - Base";
-		picture = "\OPTRE_UNSC_Units\Army\icons\odst_recon";
-		hiddenSelections[] = { "camo","camo2","camo3","camo4","H_Ghillie" };
-		hiddenSelectionsTextures[] = { "optre_unsc_units\army\data\recon_co.paa","optre_unsc_units\army\data\recon_visor_co.paa","optre_unsc_units\army\data\ghillie_woodland_co.paa","optre_unsc_units\army\data\soft_packs_co.paa" };
-		class ItemInfo : ItemInfo
-		{
-			mass = 30;
-			uniformModel = "OPTRE_UNSC_Units\Army\recon_helmet";
-			hiddenSelections[] = { "camo","camo2","camo3","camo4","H_Ghillie" };
-			hiddenSelectionsTextures[] = { "optre_unsc_units\army\data\recon_co.paa","optre_unsc_units\army\data\recon_visor_co.paa","optre_unsc_units\army\data\ghillie_woodland_co.paa","optre_unsc_units\army\data\soft_packs_co.paa" };
-			class HitpointsProtectionInfo
-			{
-				class Face
-				{
-					armor = 35;
-					hitpointName = "HitFace";
-					passThrough = 0.1;
-				};
-				class Head
-				{
-					armor = 35;
-					hitPointName = "HitHead";
-					passThrough = 0.1;
-				};
-				class Neck
-				{
-					armor = 35;
-					hitpointName = "HitNeck";
-					passThrough = 0.1;
-				};
-			};
-		};
-	};
-
-	//CQB Helmet
-	class Basilisk_Base_CQB_Helmet : OPTRE_UNSC_CQB_Helmet
-	{
-		class ItemInfo;
-		dlc = "Basilisk Aux Mod";
-		author = "Soldner";
-		scope = 1;
-		scopeArsenal = 1;
-		scopeCurator = 1;
-		weaponPoolAvailable = 1;
-		ace_hearing_protection = 5.0;
-		ace_hearing_lowerVolume = 0.25;
-		displayName = "Mark V/C Helmet - Base";
-		class ItemInfo : ItemInfo
-		{
-			mass = 30;
-			class HitpointsProtectionInfo
-			{
-				class Face
-				{
-					armor = 35;
-					hitpointName = "HitFace";
-					passThrough = 0.1;
-				};
-				class Head
-				{
-					armor = 35;
-					hitPointName = "HitHead";
-					passThrough = 0.1;
-				};
-				class Neck
-				{
-					armor = 35;
-					hitpointName = "HitNeck";
-					passThrough = 0.1;
-				};
-			};
-		};
-	};
 
 	//MA Base
 	class MA_Helmet_Base;
-	class MA_Helmet_Base_o : MA_Helmet_Base
+	class Basilisk_Helmet_Base_o : MA_Helmet_Base
 	{
 		class ItemInfo;
 	};
-	class MA_Helmet_Base_on : MA_Helmet_Base_o
+	class Basilisk_Helmet_Base_on : Basilisk_Helmet_Base_o
 	{
 		class ItemInfo : ItemInfo
 		{
 			class HitpointsProtectionInfo;
 		};
 	};
-	class MA_Helmet_Base_one : MA_Helmet_Base_on
+	class Basilisk_Helmet_Base_one : Basilisk_Helmet_Base_on
 	{
 		class ItemInfo : ItemInfo
 		{
@@ -130,7 +44,7 @@ class CfgWeapons
 	};
 
 	//M56SR
-	class Basilisk_M56SR_Helmet_Base : MA_Helmet_Base_one
+	class Basilisk_M56SR_Helmet_Base : Basilisk_Helmet_Base_one
 	{
 		dlc = "Basilisk Aux Mod";
 		scope = 1;
@@ -157,19 +71,19 @@ class CfgWeapons
 			{
 				class Face
 				{
-					armor = 35;
+					armor = 25;
 					hitpointName = "HitFace";
 					passThrough = 0.1;
 				};
 				class Head
 				{
-					armor = 35;
+					armor = 25;
 					hitPointName = "HitHead";
 					passThrough = 0.1;
 				};
 				class Neck
 				{
-					armor = 35;
+					armor = 25;
 					hitpointName = "HitNeck";
 					passThrough = 0.1;
 				};
@@ -178,7 +92,7 @@ class CfgWeapons
 	};
 
 	//M56SH
-	class Basilisk_M56SH_Helmet_Base : MA_Helmet_Base_one
+	class Basilisk_M56SH_Helmet_Base : Basilisk_Helmet_Base_one
 	{
 		dlc = "Basilisk Aux Mod";
 		scope = 1;
@@ -197,19 +111,19 @@ class CfgWeapons
 			{
 				class Face
 				{
-					armor = 35;
+					armor = 25;
 					hitpointName = "HitFace";
 					passThrough = 0.1;
 				};
 				class Head
 				{
-					armor = 35;
+					armor = 25;
 					hitPointName = "HitHead";
 					passThrough = 0.1;
 				};
 				class Neck
 				{
-					armor = 35;
+					armor = 25;
 					hitpointName = "HitNeck";
 					passThrough = 0.1;
 				};
@@ -218,7 +132,7 @@ class CfgWeapons
 	};
 
 	//M56G
-	class Basilisk_M56G_Helmet_Base : MA_Helmet_Base_one
+	class Basilisk_M56G_Helmet_Base : Basilisk_Helmet_Base_one
 	{
 		dlc = "Basilisk Aux Mod";
 		scope = 1;
@@ -236,19 +150,19 @@ class CfgWeapons
 			{
 				class Face
 				{
-					armor = 35;
+					armor = 25;
 					hitpointName = "HitFace";
 					passThrough = 0.1;
 				};
 				class Head
 				{
-					armor = 35;
+					armor = 25;
 					hitPointName = "HitHead";
 					passThrough = 0.1;
 				};
 				class Neck
 				{
-					armor = 35;
+					armor = 25;
 					hitpointName = "HitNeck";
 					passThrough = 0.1;
 				};
@@ -257,7 +171,7 @@ class CfgWeapons
 	};
 
 	//M56E
-	class Basilisk_M56E_Helmet_Base : MA_Helmet_Base_one
+	class Basilisk_M56E_Helmet_Base : Basilisk_Helmet_Base_one
 	{
 		dlc = "Basilisk Aux Mod";
 		scope = 1;
@@ -275,19 +189,19 @@ class CfgWeapons
 			{
 				class Face
 				{
-					armor = 35;
+					armor = 25;
 					hitpointName = "HitFace";
 					passThrough = 0.1;
 				};
 				class Head
 				{
-					armor = 35;
+					armor = 25;
 					hitPointName = "HitHead";
 					passThrough = 0.1;
 				};
 				class Neck
 				{
-					armor = 35;
+					armor = 25;
 					hitpointName = "HitNeck";
 					passThrough = 0.1;
 				};
@@ -296,7 +210,7 @@ class CfgWeapons
 	};
 
 	//M56A
-	class Basilisk_M56S_Helmet_Base : MA_Helmet_Base_one
+	class Basilisk_M56S_Helmet_Base : Basilisk_Helmet_Base_one
 	{
 		dlc = "Basilisk Aux Mod";
 		scope = 1;
@@ -314,19 +228,19 @@ class CfgWeapons
 			{
 				class Face
 				{
-					armor = 35;
+					armor = 25;
 					hitpointName = "HitFace";
 					passThrough = 0.1;
 				};
 				class Head
 				{
-					armor = 35;
+					armor = 25;
 					hitPointName = "HitHead";
 					passThrough = 0.1;
 				};
 				class Neck
 				{
-					armor = 35;
+					armor = 25;
 					hitpointName = "HitNeck";
 					passThrough = 0.1;
 				};
@@ -335,7 +249,7 @@ class CfgWeapons
 	};
 
 	//MA CQC
-	class Basilisk_CQC_Helmet_Base : MA_Helmet_Base_one
+	class Basilisk_CQC_Helmet_Base : Basilisk_Helmet_Base_one
 	{
 		dlc = "Basilisk Aux Mod";
 		scope = 1;
@@ -353,19 +267,19 @@ class CfgWeapons
 			{
 				class Face
 				{
-					armor = 35;
+					armor = 25;
 					hitpointName = "HitFace";
 					passThrough = 0.1;
 				};
 				class Head
 				{
-					armor = 35;
+					armor = 25;
 					hitPointName = "HitHead";
 					passThrough = 0.1;
 				};
 				class Neck
 				{
-					armor = 35;
+					armor = 25;
 					hitpointName = "HitNeck";
 					passThrough = 0.1;
 				};
@@ -374,7 +288,7 @@ class CfgWeapons
 	};
 
 	//Reach Scout
-	class Basilisk_Base_Reach_Scout_Helmet : MA_Helmet_Base_one
+	class Basilisk_Base_Reach_Scout_Helmet : Basilisk_Helmet_Base_one
 	{
 		dlc = "Basilisk Aux Mod";
 		scope = 1;
@@ -391,19 +305,19 @@ class CfgWeapons
 			{
 				class Face
 				{
-					armor = 35;
+					armor = 25;
 					hitpointName = "HitFace";
 					passThrough = 0.1;
 				};
 				class Head
 				{
-					armor = 35;
+					armor = 25;
 					hitPointName = "HitHead";
 					passThrough = 0.1;
 				};
 				class Neck
 				{
-					armor = 35;
+					armor = 25;
 					hitpointName = "HitNeck";
 					passThrough = 0.1;
 				};
@@ -412,7 +326,7 @@ class CfgWeapons
 	};
 
 	//M56A Air Assault
-	class Basilisk_Base_M56A_Helmet : MA_Helmet_Base_one
+	class Basilisk_Base_M56A_Helmet : Basilisk_Helmet_Base_one
 	{
 		dlc = "Basilisk Aux Mod";
 		scope = 1;
@@ -431,19 +345,19 @@ class CfgWeapons
 			{
 				class Face
 				{
-					armor = 35;
+					armor = 25;
 					hitpointName = "HitFace";
 					passThrough = 0.1;
 				};
 				class Head
 				{
-					armor = 35;
+					armor = 25;
 					hitPointName = "HitHead";
 					passThrough = 0.1;
 				};
 				class Neck
 				{
-					armor = 35;
+					armor = 25;
 					hitpointName = "HitNeck";
 					passThrough = 0.1;
 				};
@@ -452,7 +366,7 @@ class CfgWeapons
 	};
 
 	//Pilot Helmet
-	class Basilisk_Fishbowl_Helmet : MA_Helmet_Base_one
+	class Basilisk_Fishbowl_Helmet : Basilisk_Helmet_Base_one
 	{
 		dlc = "Basilisk Aux Mod";
 		scope = 1;
@@ -470,19 +384,172 @@ class CfgWeapons
 			{
 				class Face
 				{
-					armor = 35;
+					armor = 25;
 					hitpointName = "HitFace";
 					passThrough = 0.1;
 				};
 				class Head
 				{
-					armor = 35;
+					armor = 25;
 					hitPointName = "HitHead";
 					passThrough = 0.1;
 				};
 				class Neck
 				{
-					armor = 35;
+					armor = 25;
+					hitpointName = "HitNeck";
+					passThrough = 0.1;
+				};
+			};
+		};
+	};
+
+	//Recon Helmet
+	class Basilisk_Recon_Helmet : Basilisk_Helmet_Base_one
+	{
+		dlc = "Basilisk Aux Mod";
+		scope = 1;
+		scopeCurator = 1;
+		scopeArsenal = 1;
+		displayName = "[Basilisk] Recon Helmet";
+		model = "MA_Armor\data\Helmets\Recon\Recon_Helmet.p3d";
+		hiddenSelections[] = { "Camo1","Camo2" };
+		hiddenSelectionsTextures[] = { "MA_Armor\data\Helmets\Recon\Helmets\Black_Recon_Helmet_CO.paa","MA_Armor\data\Helmets\Recon\Visors\Base_Recon_Visor_CO.paa" };
+		class ItemInfo : ItemInfo
+		{
+			uniformModel = "MA_Armor\data\Helmets\Recon\Recon_Helmet.p3d";
+			hiddenSelectionsTextures[] = { "MA_Armor\data\Helmets\Recon\Helmets\Black_Recon_Helmet_CO.paa","MA_Armor\data\Helmets\Recon\Visors\Base_Recon_Visor_CO.paa" };
+			class HitpointsProtectionInfo
+			{
+				class Face
+				{
+					armor = 25;
+					hitpointName = "HitFace";
+					passThrough = 0.1;
+				};
+				class Head
+				{
+					armor = 25;
+					hitPointName = "HitHead";
+					passThrough = 0.1;
+				};
+				class Neck
+				{
+					armor = 25;
+					hitpointName = "HitNeck";
+					passThrough = 0.1;
+				};
+			};
+		};
+	};
+
+	//Grenadier Helmet
+	class Basilisk_Grenadier_Helmet : Basilisk_Helmet_Base_one
+	{
+		dlc = "Basilisk Aux Mod";
+		scope = 1;
+		scopeCurator = 1;
+		scopeArsenal = 1;
+		displayName = "[Basilisk]  Grenadier Helmet";
+		model = "MA_Armor\data\Helmets\Grenadier\Grenadier_Helmet.p3d";
+		hiddenSelections[] = { "camo1","camo2" };
+		hiddenSelectionsTextures[] = { "MA_Armor\data\Helmets\Grenadier\Helmets\Olive_Grenadier_Helmet_CO.paa","MA_Armor\data\Helmets\Grenadier\Visors\Base_Grenadier_Visor_CO.paa" };
+		class ItemInfo : ItemInfo
+		{
+			uniformModel = "MA_Armor\data\Helmets\Grenadier\Grenadier_Helmet.p3d";
+			class HitpointsProtectionInfo
+			{
+				class Face
+				{
+					armor = 25;
+					hitpointName = "HitFace";
+					passThrough = 0.1;
+				};
+				class Head
+				{
+					armor = 25;
+					hitPointName = "HitHead";
+					passThrough = 0.1;
+				};
+				class Neck
+				{
+					armor = 25;
+					hitpointName = "HitNeck";
+					passThrough = 0.1;
+				};
+			};
+		};
+	};
+
+	//SPI
+	class Basilisk_SPI_Helmet : Basilisk_Helmet_Base_one
+	{
+		dlc = "Basilisk Aux Mod";
+		scope = 1;
+		scopeCurator = 1;
+		scopeArsenal = 1;
+		displayName = "[Basilisk] SPI Helmet";
+		model = "MA_Armor\data\Helmets\SPI\SPI_Helmet.p3d";
+		hiddenSelections[] = { "camo1","camo2" };
+		hiddenSelectionsTextures[] = { "MA_Armor\data\Helmets\SPI\Helmets\Olive_SPI_Helmet_CO.paa","MA_Armor\data\Helmets\SPI\Visors\Base_SPI_Visor_CO.paa" };
+		class ItemInfo : ItemInfo
+		{
+			uniformModel = "MA_Armor\data\Helmets\SPI\SPI_Helmet.p3d";
+			class HitpointsProtectionInfo
+			{
+				class Face
+				{
+					armor = 25;
+					hitpointName = "HitFace";
+					passThrough = 0.1;
+				};
+				class Head
+				{
+					armor = 25;
+					hitPointName = "HitHead";
+					passThrough = 0.1;
+				};
+				class Neck
+				{
+					armor = 25;
+					hitpointName = "HitNeck";
+					passThrough = 0.1;
+				};
+			};
+		};
+	};
+
+	//HR EOD
+	class Basilisk_HR_EOD_Helmet : Basilisk_Helmet_Base_one
+	{
+		dlc = "Basilisk Aux Mod";
+		scope = 1;
+		scopeCurator = 1;
+		scopeArsenal = 1;
+		displayName = "[Basilisk] HR EOD Helmet";
+		model = "MA_Armor\data\Helmets\HR_EOD\HR_EOD_Helmet.p3d";
+		hiddenSelections[] = { "camo1","camo2" };
+		hiddenSelectionsTextures[] = { "MA_Armor\data\Helmets\HR_EOD\Helmets\Olive_EOD_Helmet_R_CO.paa","MA_Armor\data\Helmets\HR_EOD\Visors\Base_EOD_Visor_R_CO.paa" };
+		class ItemInfo : ItemInfo
+		{
+			uniformModel = "MA_Armor\data\Helmets\HR_EOD\HR_EOD_Helmet.p3d";
+			class HitpointsProtectionInfo
+			{
+				class Face
+				{
+					armor = 25;
+					hitpointName = "HitFace";
+					passThrough = 0.1;
+				};
+				class Head
+				{
+					armor = 25;
+					hitPointName = "HitHead";
+					passThrough = 0.1;
+				};
+				class Neck
+				{
+					armor = 25;
 					hitpointName = "HitNeck";
 					passThrough = 0.1;
 				};

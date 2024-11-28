@@ -1,18 +1,28 @@
-#define _ARMA_
-
 class CfgPatches
 {
-	class Basilisk_patch_vehicle
+	class BasiliskVehicles
 	{
+		// Meta information for editor
+		name = "Basilisk AUX Mod";
 		author = "Soldner";
-		requiredAddons[] = {};
-		requiredVersion = 0.1;
-		units[] = { 
+		url = "https://discord.gg/ZpeRJyyddS";
+
+		// Minimum compatible version. When the game's version is lower, pop-up warning will appear when launching the game. Note: was disabled on purpose some time late into Arma 2: OA.
+		requiredVersion = 1.60;
+		// Required addons, used for setting load order. (CfgPatches classname NOT PBO filename!)
+		// When any of the addons are missing, a pop-up warning will appear when launching the game.
+		requiredAddons[] = { "A3_Data_F_Decade_Loadorder" };
+		// List of objects (CfgVehicles classes) contained in the addon. Important also for Zeus content (units and groups) unlocking.
+		units[] = {
 			"Basilisk_SDV_01",
 			"Basilisk_Aurora",
 			"Basilisk_Searcher_Mk1",
 		};
-		weapons[] = {"Basilisk_Searcher_Drone_Item"};
+		// List of weapons (CfgWeapons classes) contained in the addon.
+		weapons[] = { "Basilisk_Searcher_Drone_Item" };
+
+		// Optional. If this is 1, if any of requiredAddons[] entry is missing in your game the entire config will be ignored and return no error (but in rpt) so useful to make a compat Mod (Since Arma 3 2.14)
+		skipWhenMissingDependencies = 1;
 	};
 };
 class CfgVehicles
@@ -83,11 +93,11 @@ class CfgVehicles
 	//	armor = 400
 	//	hiddenSelections[] = { "Camo1","Camo2","camo_details","camo_interior","camo_doors" };
 	//	hiddenSelectionsTextures[] = { 
-	//		"PHVehicles\Textures\m12_Basilisk_co.paa",
+	//		"BasiliskVehicles\Textures\m12_Basilisk_co.paa",
 	//		"\OPTRE_Vehicles\Warthog\data\night\M12HogMaav_extunder_night_co.paa",
 	//		"\OPTRE_Vehicles\Warthog\data\decals_ca.paa",
 	//		"\OPTRE_Vehicles\Warthog\data\night\m12hogmaav_interior_night_co.paa",
-	//		"PHVehicles\Textures\m12_Basilisk_apc_co.paa" 
+	//		"BasiliskVehicles\Textures\m12_Basilisk_apc_co.paa" 
 	//	};
 	//};
 	//class Basilisk_M12_LAAG : Basilisk_M12_FAV
@@ -243,7 +253,7 @@ class CfgVehicles
 	//		};
 	//	};
 	//	hiddenSelections[] = { "Camo1","Camo2","Camo3","camo_details","camo_interior","camo_turret_decal","camo_sight","camo_doors" };
-	//	hiddenSelectionsTextures[] = { "PHVehicles\Textures\m12_Basilisk_co.paa","\OPTRE_Vehicles\Warthog\data\night\M12HogMaav_extunder_night_co.paa","\OPTRE_Vehicles\Warthog\data\night\m12_turret_night_co.paa","\OPTRE_Vehicles\warthog\data\decals_ca.paa","\OPTRE_Vehicles\warthog\data\night\m12hogmaav_interior_night_co.paa","\OPTRE_Vehicles\warthog\data\turrets\m12_turret_decals_ca.paa","PHVehicles\Textures\m12_Basilisk_apc_co.paa" };
+	//	hiddenSelectionsTextures[] = { "BasiliskVehicles\Textures\m12_Basilisk_co.paa","\OPTRE_Vehicles\Warthog\data\night\M12HogMaav_extunder_night_co.paa","\OPTRE_Vehicles\Warthog\data\night\m12_turret_night_co.paa","\OPTRE_Vehicles\warthog\data\decals_ca.paa","\OPTRE_Vehicles\warthog\data\night\m12hogmaav_interior_night_co.paa","\OPTRE_Vehicles\warthog\data\turrets\m12_turret_decals_ca.paa","BasiliskVehicles\Textures\m12_Basilisk_apc_co.paa" };
 	//};
 	//class Basilisk_M12_APC : Basilisk_M12_FAV
 	//{
@@ -254,7 +264,7 @@ class CfgVehicles
 	//	cargoAction[] = { "passenger_generic01_foldhands" };
 	//	class Turrets : Turrets {};
 	//	hiddenSelections[] = { "Camo1","Camo2","Camo3","Camo4","camo_details","camo_interior","camo_transport_details","camo_net" };
-	//	hiddenSelectionsTextures[] = { "PHVehicles\Textures\m12_Basilisk_co.paa","\OPTRE_Vehicles\Warthog\data\night\M12HogMaav_extunder_night_co.paa","\OPTRE_Vehicles\Warthog\data\night\transp_lopo_night_co.paa","PHVehicles\Textures\m12_Basilisk_apc_co.paa","\OPTRE_Vehicles\warthog\data\decals_ca.paa","\OPTRE_Vehicles\warthog\data\night\M12HogMaav_interior_night_co.paa","\OPTRE_Vehicles\warthog\data\warthog_transport_decals_ca.paa","\OPTRE_Vehicles\warthog\data\warthog_transport_net_ca.paa" };
+	//	hiddenSelectionsTextures[] = { "BasiliskVehicles\Textures\m12_Basilisk_co.paa","\OPTRE_Vehicles\Warthog\data\night\M12HogMaav_extunder_night_co.paa","\OPTRE_Vehicles\Warthog\data\night\transp_lopo_night_co.paa","BasiliskVehicles\Textures\m12_Basilisk_apc_co.paa","\OPTRE_Vehicles\warthog\data\decals_ca.paa","\OPTRE_Vehicles\warthog\data\night\M12HogMaav_interior_night_co.paa","\OPTRE_Vehicles\warthog\data\warthog_transport_decals_ca.paa","\OPTRE_Vehicles\warthog\data\warthog_transport_net_ca.paa" };
 	//};
 	//class Basilisk_M12_APC_MED : Basilisk_M12_FAV
 	//{
@@ -266,7 +276,7 @@ class CfgVehicles
 	//	class AnimationSources {};
 	//	class Turrets : Turrets {};
 	//	hiddenSelections[] = { "Camo1","Camo2","Camo3","Camo4","camo_details","camo_interior","camo_transport_details","camo_net","camo_medical" };
-	//	hiddenSelectionsTextures[] = { "PHVehicles\Textures\m12_Basilisk_co.paa","\OPTRE_Vehicles\Warthog\data\night\M12HogMaav_extunder_night_co.paa","\OPTRE_Vehicles\Warthog\data\night\M12HogMaav_interior_night_co.paa","PHVehicles\Textures\m12_Basilisk_medicalapc_co.paa","\OPTRE_Vehicles\warthog\data\decals_ca.paa","\OPTRE_Vehicles\warthog\data\m12hogmaav_interior_co.paa","\OPTRE_Vehicles\warthog\data\warthog_transport_decals_ca.paa","\OPTRE_Vehicles\warthog\data\warthog_transport_net_ca.paa","\OPTRE_Vehicles\warthog\data\medical_lopo_co.paa" };
+	//	hiddenSelectionsTextures[] = { "BasiliskVehicles\Textures\m12_Basilisk_co.paa","\OPTRE_Vehicles\Warthog\data\night\M12HogMaav_extunder_night_co.paa","\OPTRE_Vehicles\Warthog\data\night\M12HogMaav_interior_night_co.paa","BasiliskVehicles\Textures\m12_Basilisk_medicalapc_co.paa","\OPTRE_Vehicles\warthog\data\decals_ca.paa","\OPTRE_Vehicles\warthog\data\m12hogmaav_interior_co.paa","\OPTRE_Vehicles\warthog\data\warthog_transport_decals_ca.paa","\OPTRE_Vehicles\warthog\data\warthog_transport_net_ca.paa","\OPTRE_Vehicles\warthog\data\medical_lopo_co.paa" };
 	//};
 	//class Basilisk_M12_Gauss : Basilisk_M12_FAV
 	//{
@@ -418,7 +428,7 @@ class CfgVehicles
 	//		};
 	//	};
 	//	hiddenSelections[] = { "Camo1","Camo2","Camo3","Camo4","camo_details","camo_interior","camo_doors" };
-	//	hiddenSelectionsTextures[] = { "PHVehicles\Textures\m12_Basilisk_co.paa","\OPTRE_Vehicles\Warthog\data\night\M12HogMaav_extunder_night_co.paa","\OPTRE_Vehicles\Warthog\data\night\m68_turret_night_co.paa","\OPTRE_Vehicles\Warthog\data\night\m12_turret_night_co.paa","\OPTRE_Vehicles\warthog\data\decals_ca.paa","\OPTRE_Vehicles\warthog\data\night\M12HogMaav_interior_night_co.paa","PHVehicles\Textures\m12_Basilisk_apc_co.paa" };
+	//	hiddenSelectionsTextures[] = { "BasiliskVehicles\Textures\m12_Basilisk_co.paa","\OPTRE_Vehicles\Warthog\data\night\M12HogMaav_extunder_night_co.paa","\OPTRE_Vehicles\Warthog\data\night\m68_turret_night_co.paa","\OPTRE_Vehicles\Warthog\data\night\m12_turret_night_co.paa","\OPTRE_Vehicles\warthog\data\decals_ca.paa","\OPTRE_Vehicles\warthog\data\night\M12HogMaav_interior_night_co.paa","BasiliskVehicles\Textures\m12_Basilisk_apc_co.paa" };
 	//};
 	//class Basilisk_M12_AA : Basilisk_M12_FAV
 	//{
@@ -545,7 +555,7 @@ class CfgVehicles
 	//		};
 	//	};
 	//	hiddenSelections[] = { "Camo1","Camo2","Camo3","camo_details","camo_interior","camo_doors" };
-	//	hiddenSelectionsTextures[] = { "PHVehicles\Textures\m12_Basilisk_co.paa","\OPTRE_Vehicles\Warthog\data\night\M12HogMaav_extunder_night_co.paa","\OPTRE_Vehicles\Warthog\data\night\m79_turret_night_co.paa","\OPTRE_Vehicles\warthog\data\decals_ca.paa","\OPTRE_Vehicles\warthog\data\night\M12HogMaav_interior_night_co.paa","PHVehicles\Textures\m12_Basilisk_apc_co.paa" };
+	//	hiddenSelectionsTextures[] = { "BasiliskVehicles\Textures\m12_Basilisk_co.paa","\OPTRE_Vehicles\Warthog\data\night\M12HogMaav_extunder_night_co.paa","\OPTRE_Vehicles\Warthog\data\night\m79_turret_night_co.paa","\OPTRE_Vehicles\warthog\data\decals_ca.paa","\OPTRE_Vehicles\warthog\data\night\M12HogMaav_interior_night_co.paa","BasiliskVehicles\Textures\m12_Basilisk_apc_co.paa" };
 	//	class AnimationSources
 	//	{
 	//		class Missiles_revolving
@@ -706,7 +716,7 @@ class CfgVehicles
 	//		};
 	//	};
 	//	hiddenSelections[] = { "Camo1","Camo2","Camo3","camo_details","camo_interior","camo_net","camo_transport_decal" };
-	//	hiddenSelectionsTextures[] = { "PHVehicles\Textures\m12_Basilisk_co.paa","\OPTRE_Vehicles\Warthog\data\night\M12HogMaav_extunder_night_co.paa","\OPTRE_Vehicles\Warthog\data\night\transp_lopo_night_co.paa","\OPTRE_Vehicles\warthog\data\decals_ca.paa","\OPTRE_Vehicles\warthog\data\night\M12HogMaav_interior_night_co.paa","\OPTRE_Vehicles\warthog\data\warthog_transport_net_ca.paa","\OPTRE_Vehicles\warthog\data\warthog_transport_decals_ca.paa","PHVehicles\Textures\m12_Basilisk_apc_co.paa" };
+	//	hiddenSelectionsTextures[] = { "BasiliskVehicles\Textures\m12_Basilisk_co.paa","\OPTRE_Vehicles\Warthog\data\night\M12HogMaav_extunder_night_co.paa","\OPTRE_Vehicles\Warthog\data\night\transp_lopo_night_co.paa","\OPTRE_Vehicles\warthog\data\decals_ca.paa","\OPTRE_Vehicles\warthog\data\night\M12HogMaav_interior_night_co.paa","\OPTRE_Vehicles\warthog\data\warthog_transport_net_ca.paa","\OPTRE_Vehicles\warthog\data\warthog_transport_decals_ca.paa","BasiliskVehicles\Textures\m12_Basilisk_apc_co.paa" };
 	//};
 
 	////Falcon UH and MH variants
@@ -719,7 +729,7 @@ class CfgVehicles
 	//	displayName = "[Basilisk] UH-144 Falcon";
 	//	visionMode[] = { "Normal","NVG","Ti" };
 	//	hiddenSelections[] = { "camo1","camo2","camo3","camoGlass","camoGlassPilot" };
-	//	hiddenSelectionsTextures[] = { "PHVehicles\Textures\Basilisk_Falcon_Main_co.paa","PHVehicles\Textures\Basilisk_Falcon_Attachments_co.paa","\OPTRE_Vehicles_Air\falcon\data\falcon_interior_co.paa","\optre_vehicles_air\falcon\data\falcon_glass_ca.paa","\optre_vehicles_air\falcon\data\falcon_glass_ca.paa" };
+	//	hiddenSelectionsTextures[] = { "BasiliskVehicles\Textures\Basilisk_Falcon_Main_co.paa","BasiliskVehicles\Textures\Basilisk_Falcon_Attachments_co.paa","\OPTRE_Vehicles_Air\falcon\data\falcon_interior_co.paa","\optre_vehicles_air\falcon\data\falcon_glass_ca.paa","\optre_vehicles_air\falcon\data\falcon_glass_ca.paa" };
 	//};
 	//class Basilisk_MH_144_Falcon : OPTRE_UNSC_falcon_armed {
 	//	author = "Soldner";
@@ -729,7 +739,7 @@ class CfgVehicles
 	//	displayName = "[Basilisk] MH-144 Falcon";
 	//	visionMode[] = { "Normal","NVG","Ti" };
 	//	hiddenSelections[] = { "camo1","camo2","camo3","camoGlass","camoGlassPilot" };
-	//	hiddenSelectionsTextures[] = { "PHVehicles\Textures\Basilisk_Falcon_Main_co.paa","PHVehicles\Textures\Basilisk_Falcon_Attachments_co.paa","\OPTRE_Vehicles_Air\falcon\data\falcon_interior_co.paa","\optre_vehicles_air\falcon\data\falcon_glass_ca.paa","\optre_vehicles_air\falcon\data\falcon_glass_ca.paa" };
+	//	hiddenSelectionsTextures[] = { "BasiliskVehicles\Textures\Basilisk_Falcon_Main_co.paa","BasiliskVehicles\Textures\Basilisk_Falcon_Attachments_co.paa","\OPTRE_Vehicles_Air\falcon\data\falcon_interior_co.paa","\optre_vehicles_air\falcon\data\falcon_glass_ca.paa","\optre_vehicles_air\falcon\data\falcon_glass_ca.paa" };
 	//};
 
 	////Pelican
@@ -741,7 +751,7 @@ class CfgVehicles
 	//	editorSubcategory = "Basilisk_EdSubCat_Helicopters";
 	//	faction = "Gladius_Faction";
 	//	displayName = "[Basilisk] D77-TC Pelican";
-	//	hiddenSelectionsTextures[] = { "PHVehicles\Textures\Basilisk_pelican_body_co.paa","PHVehicles\Textures\Basilisk_wings_and_gear_co.paa","PHVehicles\Textures\Basilisk_weaponry_co.paa" };
+	//	hiddenSelectionsTextures[] = { "BasiliskVehicles\Textures\Basilisk_pelican_body_co.paa","BasiliskVehicles\Textures\Basilisk_wings_and_gear_co.paa","BasiliskVehicles\Textures\Basilisk_weaponry_co.paa" };
 	//	class SimpleObject
 	//	{
 	//		eden = 0;
@@ -942,7 +952,7 @@ class CfgVehicles
 			displayName = "";
 			dissasembleTo[] = {};
 		};
-		hiddenSelectionsTextures[] = { "PHVehicles\Textures\Searcher_Drone.paa" };
+		hiddenSelectionsTextures[] = { "BasiliskVehicles\Textures\Searcher_Drone.paa" };
 		class ACE_Actions : ACE_Actions
 		{
 			class ACE_MainActions : ACE_MainActions

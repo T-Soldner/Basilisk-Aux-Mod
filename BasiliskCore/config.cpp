@@ -1,82 +1,85 @@
-#define _ARMA_
-
 class CfgPatches
 {
-	class Mainmenu_Core
+	class BasiliskCore
 	{
-		author = "Mainmenu Mod Team";
-		name = "Mainmenu Aux Mod";
-		url = "https://discord.gg/vSnh2zBTCu";
-		units[] = {""};
+		// Meta information for editor
+		name = "Basilisk AUX Mod";
+		author = "Soldner";
+		url = "https://discord.gg/ZpeRJyyddS";
+
+		// Minimum compatible version. When the game's version is lower, pop-up warning will appear when launching the game. Note: was disabled on purpose some time late into Arma 2: OA.
+		requiredVersion = 1.60;
+		// Required addons, used for setting load order. (CfgPatches classname NOT PBO filename!)
+		// When any of the addons are missing, a pop-up warning will appear when launching the game.
+		requiredAddons[] = { "A3_Data_F_Decade_Loadorder", "1st_MEU_patch_main_loadingScreens" };
+		// List of objects (CfgVehicles classes) contained in the addon. Important also for Zeus content (units and groups) unlocking.
+		units[] = {};
+		// List of weapons (CfgWeapons classes) contained in the addon.
 		weapons[] = {};
-		magazines[] = {};
-		ammo[] = {};
-		requiredVersion = 0.1;
-		requiredAddons[] = {
-			"1st_MEU_patch_main_loadingScreens"
-			// we dont actually extend anything from 1MEU, this is just to ensure our loading screen overwrites theirs
-		};
+
+		// Optional. If this is 1, if any of requiredAddons[] entry is missing in your game the entire config will be ignored and return no error (but in rpt) so useful to make a compat Mod (Since Arma 3 2.14)
+		skipWhenMissingDependencies = 1;
 	};
 };
 class CfgMods
 {
 	class Mod_Base;
-	class Mainmenu_Core: Mod_Base
+	class Basilisk_Core: Mod_Base
 	{
 		logo = "BasiliskCore\textures\logo.paa";
 		picture = "BasiliskCore\textures\logo.paa";
-		name = "Mainmenu Aux Mod";
+		name = "Basilisk Aux Mod";
 	};
 };
 class CfgAddons
 {
 	class PreloadAddons
 	{
-		class Mainmenu_Core
+		class Basilisk_Core
 		{
-			list[] = {"Mainmenu_Core"};
+			list[] = {"BasiliskCore"};
 		};
 	};
 };
 class CfgEditorCategories
 {
-	class Mainmenu_AUX_EdCat
+	class Basilisk_AUX_EdCat
 	{
-		displayName = "Mainmenu Company";
+		displayName = "Basilisk Company";
 	};
 };
 class CfgEditorSubcategories
 {
-	class Mainmenu_EdSubCat_ODSTs
+	class Basilisk_EdSubCat_ODSTs
 	{
 		displayName = "ODSTs";
 	};
-	class Mainmenu_EdSubCat_Cars
+	class Basilisk_EdSubCat_Cars
 	{
 		displayName = "Cars";
 	};
-	class Mainmenu_EdSubCat_Armored
+	class Basilisk_EdSubCat_Armored
 	{
 		displayName = "Armored";
 	};
-	class Mainmenu_EdSubCat_Helicopters
+	class Basilisk_EdSubCat_Helicopters
 	{
 		displayName = "Helicopters";
 	};
-	class Mainmenu_EdSubCat_Water
+	class Basilisk_EdSubCat_Water
 	{
 		displayName = "Boats";
 	};
-	class Mainmenu_EdSubCat_Drones
+	class Basilisk_EdSubCat_Drones
 	{
 		displayName = "Drones";
 	};
 };
 class cfgFactionClasses
 {
-	class Mainmenu_Faction
+	class Basilisk_Faction
 	{
-		displayName = "Mainmenu Company";
+		displayName = "Basilisk Company";
 		priority = 1;
 		side = 1;
 		icon = "";

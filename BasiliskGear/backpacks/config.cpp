@@ -294,7 +294,7 @@ class CfgVehicles
 	class Basilisk_Soldner_Rucksack_Gunbag : Basilisk_ANPRC_515
 	{
 		_generalMacro = "ace_gunbag_Tan";
-		displayName = "[Basilisk] M56 ILCS Gunbag (Soldner)";
+		displayName = "[Basilisk] Soldner's ILCS AN/PRC-515";
 		hiddenSelectionsTextures[] = { "BasiliskGear\data\packs\Soldner_prc515_co.paa" };
 		tf_isolatedAmount = 0.65;
 		tf_encryptionCode = "tf_west_radio_code";

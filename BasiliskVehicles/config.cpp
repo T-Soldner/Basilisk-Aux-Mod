@@ -46,6 +46,12 @@ class CfgVehicles
 	class OPTRE_UNSC_falcon;
 	class OPTRE_UNSC_falcon_armed;
 	class Splits_UNSC_D77_TC_Pelican;
+	class HitPoints;
+	class HitLFWheel;
+	class HitLF2Wheel;
+	class HitRFWheel;
+	class HitRF2Wheel;
+	class HitBody;
 
 	//Submarine
 	class B_SDV_01_F: SDV_01_base_F
@@ -78,16 +84,69 @@ class CfgVehicles
 	class C_Kart_01_Blu_F;
 	class Basilisk_Kart_base : C_Kart_01_Blu_F {
 		maxSpeed = 200;
-		fuelCapacity = 900;
-		peakTorque = 1750;
-		enginePower = 625;
-		maxOmega = 385;
+		fuelCapacity = 20;
+		peakTorque = 500;
+		enginePower = 400;
+		maxOmega = 800;
 		redRpm = 4500;
 		armor = 400;
 		scope = 1;
 		scopeCurator = 1;
 		DLC = "Kart";
 		crew = "C_Driver_2_F";
+		side = 1;
+		class HitPoints : HitPoints
+		{
+			class HitLFWheel : HitLFWheel
+			{
+				armor = 10;
+				radius = 0.2;
+				visual = "wheel_1_1_hide";
+			};
+			class HitLF2Wheel : HitLF2Wheel
+			{
+				armor = 10;
+				radius = 0.2;
+				visual = "wheel_1_2_hide";
+			};
+			class HitRFWheel : HitRFWheel
+			{
+				armor = 10;
+				radius = 0.2;
+				visual = "wheel_2_1_hide";
+			};
+			class HitRF2Wheel : HitRF2Wheel
+			{
+				armor = 10;
+				radius = 0.2;
+				visual = "wheel_2_2_hide";
+			};
+			class HitFuel
+			{
+				armor = 50;
+				material = -1;
+				name = "fuel";
+				visual = "";
+				passThrough = 0.2;
+				radius = 0.2;
+			};
+			class HitEngine
+			{
+				armor = 20;
+				material = -1;
+				name = "engine";
+				visual = "";
+				passThrough = 0.2;
+				radius = 0.2;
+			};
+			class HitBody : HitBody
+			{
+				armor = 10;
+				visual = "zbytek";
+				passThrough = 1;
+				radius = 0.2;
+			};
+		};
 	};
 	class Basilisk_Kaker_Kart : Basilisk_Kart_base
 	{
@@ -100,7 +159,7 @@ class CfgVehicles
 		editorPreview = "\A3\EditorPreviews_F\Data\CfgVehicles\C_Kart_01_Red_F.jpg";
 		_generalMacro = "Basilisk_Kaker_Kart";
 		displayName = "Kaker's Kart";
-		hiddenSelectionsTextures[] = { "\a3\Soft_F_Kart\Kart_01\Data\Kart_01_blu_CO.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_01_logos_blu_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_8_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_7_CA.paa" };
+		hiddenSelectionsTextures[] = { "BasiliskVehicles\Textures\Kaker_Kart_CO.paa","BasiliskVehicles\Textures\Kaker_Kart_Logos_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_8_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_7_CA.paa" };
 	};
 	class Basilisk_Soldner_Kart : Basilisk_Kart_base
 	{
@@ -115,7 +174,7 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Soldner's Kart";
-		hiddenSelectionsTextures[] = { "\a3\Soft_F_Kart\Kart_01\Data\Kart_01_blu_CO.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_01_logos_blu_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_8_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_7_CA.paa" };
+		hiddenSelectionsTextures[] = { "BasiliskVehicles\Textures\Soldner_Kart_CO.paa","BasiliskVehicles\Textures\Soldner_Kart_Logos_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_7_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_7_CA.paa" };
 	};
 
 	//Searcher Drone

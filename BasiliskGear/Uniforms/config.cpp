@@ -11,6 +11,44 @@ class CfgPatches
 		weapons[] = {};
 	};
 };
+class XtdGearModels
+{
+	class CfgWeapons
+	{
+		class Basilisk_Undersuits
+		{
+			label = "Undersuits";
+			author = "Basilisk Mod Team";
+			options[] = { "role" };
+			class role
+			{
+				alwaysSelectable = 1;
+				label = "Role";
+				values[] = { "M56","SPI" };
+				class M56 {
+					label = "M56";
+				};
+				class SPI {
+					label = "SPI";
+				};
+			};
+		};
+	};
+};
+class XtdGearInfos
+{
+	class CfgWeapons
+	{
+		class Basilisk_M56_BDU {
+			role = "M56";
+			model = "Basilisk_Undersuits";
+		};
+		class Basilisk_SPI_Undersuit {
+			role = "SPI";
+			model = "Basilisk_Undersuits";
+		};
+	};
+};
 class CfgWeapons
 {
 	class ItemInfo;
@@ -20,6 +58,7 @@ class CfgWeapons
 	class MA_M56S_BDU;
 	class Basilisk_M56_BDU : MA_M56S_BDU
 	{
+		dlc = "Basilisk Aux Mod";
 		scope = 2;
 		scopeCurator = 2;
 		scopeArsenal = 2;
@@ -38,21 +77,29 @@ class CfgWeapons
 		};
 	};
 
-	//M52
-
-	//Dress uniforms
-	//class OPTRE_UNSC_Dress_Uniform_gray;
-	/*class MEU_Dress_Uniform_Cornflakes : OPTRE_UNSC_Dress_Uniform_gray
+	//SPI Undersuit
+	class Basilisk_SPI_Undersuit : MA_M56S_BDU
 	{
-		displayName = "[1st] Dress Uniform (Cornflakes)";
-		class ItemInfo : ItemInfo
+		dlc = "Basilisk Aux Mod";
+		scope = 2;
+		scopeCurator = 2;
+		scopeArsenal = 2;
+		author = "Soldner";
+		displayName = "[Basilisk] SPI Undersuit";
+		picture = "\OPTRE_UNSC_Units\Army\icons\army_uniform_wdl_hvy.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
+		CBRN_protectionLevel = "4 + 8";
+		ACE_GForceCoef = 0.9;
+		class ItemInfo : UniformItem
 		{
-			uniformClass = "MEU_Dress_Uniform_Cornflakes_Soldier";
-			containerClass = "Supply100";
-			mass = 40;
 			uniformModel = "-";
+			uniformClass = "Basilisk_SPI_Undersuit_Base";
+			containerClass = "Supply150";
+			mass = 10;
+			uniformType = "Neopren";
+			modelSides[] = { 6 };
 		};
-	};*/
+	};
 };
 class CfgVehicles
 {
@@ -314,6 +361,19 @@ class CfgVehicles
 		hiddenSelections[] = { "camo" };
 		hiddenSelectionsTextures[] = { "MA_Armor\data\Uniforms\H3_ODST\H3_Undersuit_co.paa" };
 	};
+
+	//SPI Undersuit
+
+	class Basilisk_SPI_Undersuit_Base : Basilisk_Base_Uniform
+	{
+		scope = 1;
+		dlc = "Basilisk Aux Mod";
+		uniformClass = "Basilisk_SPI_Undersuit";
+		model = "\OPTRE_UNSC_Units\Army\undersuit_human.p3d";
+		picture = "\MA_Armor\data\Icons\H3_ODST_Uniform.paa";
+		hiddenSelections[] = { "camo" };
+		hiddenSelectionsTextures[] = { "optre_mjolnir_units\data\undersuit_co.paa" };
+	}
 
 	//dress uniforms?
 	/*class MEU_Dress_Uniform_Cornflakes_Soldier: Basilisk_Base_Uniform

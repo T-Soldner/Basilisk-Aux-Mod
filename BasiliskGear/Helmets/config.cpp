@@ -209,7 +209,7 @@ class CfgWeapons
 		};
 	};
 
-	//M56A
+	//M56S
 	class Basilisk_M56S_Helmet_Base : Basilisk_Helmet_Base_one
 	{
 		dlc = "Basilisk Aux Mod";
@@ -533,6 +533,122 @@ class CfgWeapons
 		class ItemInfo : ItemInfo
 		{
 			uniformModel = "MA_Armor\data\Helmets\HR_EOD\HR_EOD_Helmet.p3d";
+			class HitpointsProtectionInfo
+			{
+				class Face
+				{
+					armor = 25;
+					hitpointName = "HitFace";
+					passThrough = 0.1;
+				};
+				class Head
+				{
+					armor = 25;
+					hitPointName = "HitHead";
+					passThrough = 0.1;
+				};
+				class Neck
+				{
+					armor = 25;
+					hitpointName = "HitNeck";
+					passThrough = 0.1;
+				};
+			};
+		};
+	};
+
+	//H3 EOD
+	class Basilisk_H3_EOD_Helmet : Basilisk_Helmet_Base_one
+	{
+		dlc = "Basilisk Aux Mod";
+		scope = 1;
+		scopeCurator = 1;
+		scopeArsenal = 1;
+		displayName = "[Basilisk] HR EOD Helmet";
+		model = "MA_Armor\data\Helmets\H3_EOD\H3_EOD_Helmet.p3d";
+		hiddenSelections[] = { "camo1","camo2" };
+		hiddenSelectionsTextures[] = { "MA_Armor\data\Helmets\H3_EOD\Helmets\Olive_EOD_Helmet_H3_CO.paa","MA_Armor\data\Helmets\H3_EOD\Visors\Base_EOD_Visor_H3_CO.paa" };
+		class ItemInfo : ItemInfo
+		{
+			model = "MA_Armor\data\Helmets\H3_EOD\H3_EOD_Helmet.p3d";
+			class HitpointsProtectionInfo
+			{
+				class Face
+				{
+					armor = 25;
+					hitpointName = "HitFace";
+					passThrough = 0.1;
+				};
+				class Head
+				{
+					armor = 25;
+					hitPointName = "HitHead";
+					passThrough = 0.1;
+				};
+				class Neck
+				{
+					armor = 25;
+					hitpointName = "HitNeck";
+					passThrough = 0.1;
+				};
+			};
+		};
+	};
+
+	//Rogue
+	class Basilisk_Rogue_Helmet : Basilisk_Helmet_Base_one
+	{
+		dlc = "Basilisk Aux Mod";
+		scope = 1;
+		scopeCurator = 1;
+		scopeArsenal = 1;
+		displayName = "[Basilisk] Rogue Helmet";
+		model = "OPTRE_FC_Units\Spartan\Human\Mark_VI_Rogue_Helmet.p3d";
+		hiddenSelections[] = { "camo" };
+		hiddenSelectionsTextures[] = { "OPTRE_FC_Units\Spartan\data\Mark_VI_Rogue_CO.paa" };
+		class ItemInfo : ItemInfo
+		{
+			uniformModel = "OPTRE_FC_Units\Spartan\Human\Mark_VI_Rogue_Helmet.p3d";
+			hiddenSelectionsTextures[] = { "OPTRE_FC_Units\Spartan\data\Mark_VI_Rogue_CO.paa" };
+			class HitpointsProtectionInfo
+			{
+				class Face
+				{
+					armor = 25;
+					hitpointName = "HitFace";
+					passThrough = 0.1;
+				};
+				class Head
+				{
+					armor = 25;
+					hitPointName = "HitHead";
+					passThrough = 0.1;
+				};
+				class Neck
+				{
+					armor = 25;
+					hitpointName = "HitNeck";
+					passThrough = 0.1;
+				};
+			};
+		};
+	};
+
+	//CH252A
+	class Basilisk_CH252A_Helmet : Basilisk_Helmet_Base_one {
+		dlc = "Basilisk Aux Mod";
+		scope = 1;
+		scopeCurator = 1;
+		scopeArsenal = 1;
+		displayName = "[Basilisk] CH252A";
+		picture = "\OPTRE_UNSC_Units\Army\icons\odst_helmet.paa";
+		model = "\OPTRE_UNSC_Units\Army\aa_helmet.p3d";
+		hiddenSelections[] = { "camo" };
+		hiddenSelectionsTextures[] = { "optre_unsc_units\army\data\aa_helmet_co.paa" };
+		class ItemInfo : ItemInfo
+		{
+			uniformModel = "\OPTRE_UNSC_Units\Army\aa_helmet.p3d";
+			hiddenSelectionsTextures[] = { "optre_unsc_units\army\data\aa_helmet_co.paa" };
 			class HitpointsProtectionInfo
 			{
 				class Face

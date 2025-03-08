@@ -404,3 +404,10 @@ class H3ToTurnATide
 	duration = 335;
 	musicClass = "BasiliskMusic";
 };
+class GoGoPowerRangersInstrumental
+{
+	name = "Power Rangers Theme Instrumental";
+	sound[] = { "BasiliskMusic\data\Tracks\PowerRangersThemeInstrumental.ogg",db + 0,1 };
+	duration = 364;
+	musicClass = "BasiliskGoofy";
+};

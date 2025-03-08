@@ -20,15 +20,19 @@ class CfgWeapons
 		author = "Soldner";
 		scope = 1;
 		scopeArsenal = 1;
+		mass = 20;
 		displayName = "Basilisk M56R Body Armor - BASE";
+		descriptionShort = "ODST Style armor";
 		vestType = "Rebreather";
+		picture = "";
 		model = "MA_Armor\data\Vests\H3_ODST\H3_ODST_Armor.p3d";
 		picture = "MA_Armor\data\Icons\H3ODST_Vest.paa";
 		class ItemInfo: ItemInfo
 		{
 			vestType = "Rebreather";
-			uniformModel = "MA_Armor\data\Vests\H3_ODST\H3_ODST_Armor.p3d";
 			containerClass = "Supply200";
+			mass = 20;
+			uniformModel = "MA_Armor\data\Vests\H3_ODST\H3_ODST_Armor.p3d";
 			hiddenSelections[] = {
 				"camo1",
 				"camo2",
@@ -75,6 +79,79 @@ class CfgWeapons
 				"MA_Armor\data\Vests\Reach_ODST\Addons\CQB_Shoulders\CQB_co.paa",
 				"MA_Armor\data\Vests\Reach_ODST\Addons\Reach_Shoulder_Radio\Shoulder_Radio_Green_co.paa"
 			};
+			passThrough = 0.1;
+			modelSides[] = { 6 };
+			class HitpointsProtectionInfo
+			{
+				class Neck
+				{
+					hitpointName = "HitNeck";
+					armor = 40;
+					passThrough = 0.1;
+				};
+				class Arms
+				{
+					hitpointName = "HitArms";
+					armor = 40;
+					passThrough = 0.1;
+				};
+				class Chest
+				{
+					hitpointName = "HitChest";
+					armor = 45;
+					passThrough = 0.1;
+				};
+				class Diaphragm
+				{
+					hitpointName = "HitDiaphragm";
+					armor = 45;
+					passThrough = 0.1;
+				};
+				class Abdomen
+				{
+					hitpointName = "HitAbdomen";
+					armor = 45;
+					passThrough = 0.1;
+				};
+				class Body
+				{
+					hitpointName = "HitBody";
+					passThrough = 0.1;
+					armor = 45;
+				};
+				class Legs
+				{
+					hitpointName = "HitLegs";
+					armor = 40;
+					passThrough = 0.1;
+				};
+			};
+		};
+	};
+
+	class Basilisk_Base_SPI_Armor : MA_Vest_Base
+	{
+		author = "Soldner";
+		scope = 1;
+		scopeArsenal = 1;
+		mass = 20;
+		displayName = "Basilisk SPI Body Armor - BASE";
+		descriptionShort = "Semi-Powered Infiltration Armour";
+		vestType = "Rebreather";
+		picture = "";
+		model = "MA_Armor\data\Vests\SPI\SPI_Armor.p3d";
+		hiddenSelections[] = { "camo" };
+		hiddenSelectionsTextures[] = { "MA_Armor\data\Vests\SPI\Color_Variants\Olive_SPI_Armour_CO.paa" };
+		class ItemInfo : ItemInfo
+		{
+			vestType = "Rebreather";
+			containerClass = "Supply200";
+			mass = 20;
+			uniformModel = "MA_Armor\data\Vests\SPI\SPI_Armor.p3d";
+			hiddenSelections[] = { "camo" };
+			hiddenSelectionsTextures[] = { "MA_Armor\data\Vests\SPI\Color_Variants\Olive_SPI_Armour_CO.paa" };
+			passThrough = 0.1;
+			modelSides[] = { 6 };
 			class HitpointsProtectionInfo
 			{
 				class Neck

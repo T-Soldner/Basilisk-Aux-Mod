@@ -180,7 +180,7 @@ class CfgVehicles
 		tf_dialogUpdate = "[""%1""] call TFAR_fnc_updateLRDialogToChannel;";
 		tf_hasLRradio = 1;
 		hiddenSelectionsTextures[] = {"BasiliskGear\data\packs\prc515_CO.paa"};
-		maximumLoad = 350;
+		maximumLoad = 500;
 	};
 	class OPTRE_ANPRC_521_green;
 	class Basilisk_ANPRC_521: OPTRE_ANPRC_521_green
@@ -198,7 +198,7 @@ class CfgVehicles
 		tf_range = 25000;
 		tf_dialogUpdate = "[""%1""] call TFAR_fnc_updateLRDialogToChannel;";
 		tf_hasLRradio = 1;
-		maximumLoad = 400;
+		maximumLoad = 500;
 	};
 	class Basilisk_ANPRC_521_Holland: OPTRE_ANPRC_521_green
 	{
@@ -227,7 +227,7 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		scopeArsenal = 2;
-		maximumLoad = 400;
+		maximumLoad = 500;
 		mass = 50;
 		hiddenSelections[] = {"camo","camo2","B_Addons","B_Medic","B_Radio"};
 		hiddenSelectionsTextures[] = {"BasiliskGear\data\packs\soft_backpack_co.paa"};
@@ -240,7 +240,7 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		scopeArsenal = 2;
-		maximumLoad = 400;
+		maximumLoad = 500;
 		mass = 50;
 		hiddenSelections[] = {"camo","B_Addons","B_Radio"};
 		hiddenSelectionsTextures[] = {"BasiliskGear\data\packs\soft_backpack_co.paa"};
@@ -255,7 +255,7 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		scopeArsenal = 2;
-		maximumLoad = 400;
+		maximumLoad = 500;
 		mass = 50;
 		hiddenSelections[] = {"camo1","camo2","Radio"};
 		hiddenSelectionsTextures[] = {"MA_Armor\data\Backpacks\ODST_Rucksack\ODST_Ruck_co.paa","MA_Armor\data\Backpacks\ODST_Rucksack\Attachments\Backpack_Radio_ODST_co.paa"};
@@ -267,7 +267,7 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		scopeArsenal = 2;
-		maximumLoad = 400;
+		maximumLoad = 500;
 		mass = 50;
 		hiddenSelections[] = {"camo1","camo2","Radio"};
 		hiddenSelectionsTextures[] = {"MA_Armor\data\Backpacks\ODST_Rucksack\Medical_ODST_Ruck_co.paa","MA_Armor\data\Backpacks\ODST_Rucksack\Attachments\Backpack_Radio_ODST_co.paa"};
@@ -279,7 +279,7 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		scopeArsenal = 2;
-		maximumLoad = 400;
+		maximumLoad = 500;
 		mass = 50;
 		hiddenSelections[] = {"camo1","camo2"};
 		hiddenSelectionsTextures[] = {"MA_Armor\data\Backpacks\ODST_Rucksack\ODST_Ruck_co.paa","MA_Armor\data\Backpacks\ODST_Rucksack\Attachments\Backpack_Radio_ODST_co.paa"};

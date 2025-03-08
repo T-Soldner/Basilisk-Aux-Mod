@@ -41,7 +41,6 @@ class CfgVehicles
 	class EventHandlers;
 	class SensorTemplateIR;
 	class SDV_01_base_F;
-	class HMCS;
 	class OPTRE_M12_Base;
 	class OPTRE_UNSC_falcon;
 	class OPTRE_UNSC_falcon_armed;

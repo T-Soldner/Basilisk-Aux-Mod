@@ -564,13 +564,13 @@ class CfgWeapons
 		scope = 1;
 		scopeCurator = 1;
 		scopeArsenal = 1;
-		displayName = "[Basilisk] HR EOD Helmet";
+		displayName = "[Basilisk] H3 EOD Helmet";
 		model = "MA_Armor\data\Helmets\H3_EOD\H3_EOD_Helmet.p3d";
 		hiddenSelections[] = { "camo1","camo2" };
 		hiddenSelectionsTextures[] = { "MA_Armor\data\Helmets\H3_EOD\Helmets\Olive_EOD_Helmet_H3_CO.paa","MA_Armor\data\Helmets\H3_EOD\Visors\Base_EOD_Visor_H3_CO.paa" };
 		class ItemInfo : ItemInfo
 		{
-			model = "MA_Armor\data\Helmets\H3_EOD\H3_EOD_Helmet.p3d";
+			uniformModel = "MA_Armor\data\Helmets\H3_EOD\H3_EOD_Helmet.p3d";
 			class HitpointsProtectionInfo
 			{
 				class Face

@@ -398,10 +398,10 @@ class CfgWeapons
 		author = "Soldner";
 		displayName = "[Basilisk] H3 EOD Helmet (Vargo)";
 		hiddenSelections[] = { "Camo1","Camo2" };
-		hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Blue_H3_EOD_Helm.paa","BasiliskGear\data\helmets\Blue_EOD_Visor_H3_CO.paa" };
+		hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Vargo_H3_EOD_Helm.paa","BasiliskGear\data\helmets\Vargo_EOD_Visor_H3_CO.paa" };
 		class ItemInfo : ItemInfo {
 			hiddenSelections[] = { "camo1","camo2" };
-			hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Blue_H3_EOD_Helm.paa","BasiliskGear\data\helmets\Blue_EOD_Visor_H3_CO.paa" };
+			hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Vargo_H3_EOD_Helm.paa","BasiliskGear\data\helmets\Vargo_EOD_Visor_H3_CO.paa" };
 		};
 	};
 

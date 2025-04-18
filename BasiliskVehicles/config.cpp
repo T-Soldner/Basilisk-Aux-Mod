@@ -176,25 +176,20 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = { "BasiliskVehicles\Textures\Soldner_Kart_CO.paa","BasiliskVehicles\Textures\Soldner_Kart_Logos_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_7_CA.paa","\a3\Soft_F_Kart\Kart_01\Data\Kart_num_7_CA.paa" };
 	};
 
-	//Searcher Drone
+	//Quadcopter Drone
 	class CAManBase : Man
 	{
 		class ACE_SelfActions
 		{
 			class ACE_Equipment
 			{
-				class ITC_Land_Unpack
+				class Basilisk_Searcher_Drone_place
 				{
-					class ITC_Land_Unpack_AR2_B;
-					class Basilisk_Unpack_Searcher {
-						displayName = "[Basilisk] Searcher Drone";
-						condition = "'Basilisk_Searcher_Drone_Item' in (items _player)";
-						statement = "['Basilisk_Searcher_Drone_Item',_player] call itc_land_packable_fnc_unPack";
-						priority = 1;
-						showDisabled = 1;
-						exceptions[] = { "isNotInside","isNotSitting" };
-						enableInside = 0;
-					};
+					displayName = "Deploy Raven";
+					condition = "[_player, 'Basilisk_Searcher_Drone_Item'] call ace_common_fnc_hasItem";
+					statement = "[_player, 'Basilisk_Searcher_Mk1', 'Basilisk_Searcher_Drone_Item'] call aux_1stMEU_fnc_place_down_vic";
+					showDisabled = 0;
+					icon = "\1st_meu_functions\place_down\data\rave_icon.paa";
 				};
 			};
 		};
@@ -262,6 +257,14 @@ class CfgVehicles
 		crew = "B_UAV_AI";
 		typicalCargo[] = { "B_UAV_AI" };
 		accuracy = 0.5;
+		class Turrets : Turrets
+		{
+			class MainTurret : MainTurret
+			{
+				weapons[] = { "Laserdesignator_mounted" };
+				magazines[] = { "Laserbatteries" };
+			};
+		};
 		class assembleInfo
 		{
 			primary = 1;
@@ -271,99 +274,65 @@ class CfgVehicles
 			dissasembleTo[] = {};
 		};
 		hiddenSelectionsTextures[] = { "BasiliskVehicles\Textures\Searcher_Drone.paa" };
-		class ACE_Actions : ACE_Actions
+		class ACE_Actions
 		{
-			class ACE_MainActions : ACE_MainActions
+			class ACE_MainActions
 			{
-				class ITC_Land_PackDarter
+				selection = "interaction_point";
+				distance = 5;
+				condition = "(true)";
+				class ACE_Pickup
 				{
-					displayName = "Repack UAV";
-					condition = "((alive _target) && ( ACE_Player distance _target ) < 3) && ( count (( UAVControl _target) select 1 ) < 1 )";
-					statement = "[_target,_player] call itc_land_packable_fnc_Pack";
+					selection = "";
+					displayName = "Pick Up Drone";
+					distance = 5;
+					condition = "(alive _target)";
+					statement = "[_player, _target, 'Basilisk_Searcher_Drone_Item'] call aux_1stMEU_fnc_pick_up_vic";
+					showDisabled = 0;
+					exceptions[] = {};
+					//icon = "\1st_meu_vehicles\air\drones\data\rave_icon.paa";
 				};
-			};
-		};
-	};
-
-	//Wombat
-	class OPTRE_Wombat_Base;
-	class Basilisk_Aurora : OPTRE_Wombat_Base
-	{
-		maximumLoad = 2000;
-		scope = 2;
-		scopeCurator = 2;
-		author = "Soldner";
-		displayName = "[Basilisk] Aurora Drone";
-		fuelCapacity = 2000;
-		fuelConsumptionRate = 0.01;
-		editorCategory = "Basilisk_AUX_EdCat";
-		editorSubcategory = "Basilisk_EdSubCat_Drones";
-		maxHeight = 2500;
-		avgHeight = 1250;
-		radarTargetSize = 0.01;
-		maxSpeed = 400;
-		landingAoa = 0.1309;
-		landingSpeed = 140;
-		stallSpeed = 50;
-		stallWarningTreshold = 0.07;
-		wheelSteeringSensitivity = 1.3;
-		airBrake = 1;
-		airBrakeFrictionCoef = 2;
-		flaps = 1;
-		flapsFrictionCoef = 0.2;
-		gearsUpFrictionCoef = 0.35;
-		airFrictionCoefs0[] = { 0.0,0.0,0.0 };
-		airFrictionCoefs1[] = { 0.1,0.7,0.005 };
-		airFrictionCoefs2[] = { 0.001,0.0075,6e-05 };
-		angleOfIndicence = 0;
-		envelope[] = { 0.0,0.07,0.26,0.59,1.04,1.63,1.98,2.7,3.2,4.05,4.68,5.49,6.19,7.04,7.53,7.9,8.2,8.4,8.5,8.2,7.0 };
-		altNoForce = 13000;
-		altFullForce = 2000;
-		thrustCoef[] = { 1.36,1.25,1.14,1.04,0.95,0.86,0.78,0.7,0.61,0.3,0.0,0.0,0.0 };
-		aileronSensitivity = 0.6;
-		aileronCoef[] = { 0.0,0.12,0.46,0.65,0.75,0.82,0.88,0.92,0.95,0.97,0.99,1.0,1.01 };
-		elevatorSensitivity = 0.7;
-		elevatorCoef[] = { 0.0,0.2,0.7,0.47,0.38,0.32,0.28,0.25,0.22,0.19,0.17,0.15,0.13 };
-		rudderInfluence = 0.9397;
-		rudderCoef[] = { 0.0,0.6,1.2,1.5,1.7,1.8,1.9,1.9,2.0,2.0,2.0,1.8,1.4 };
-		aileronControlsSensitivityCoef = 3.0;
-		elevatorControlsSensitivityCoef = 3.0;
-		rudderControlsSensitivityCoef = 3.0;
-		draconicForceXCoef = 8.0;
-		draconicForceYCoef = 1.1;
-		draconicForceZCoef = 1.0;
-		draconicTorqueXCoef[] = { 2.0,2.5,3.1,3.7,4.4,5.1,5.9,6.5,7.0,7.5,7.9,8.3,8.5 };
-		draconicTorqueYCoef[] = { 12.0,8.0,3.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0 };
-		maxOmega = 6000;
-		class Components : Components
-		{
-			class TransportPylonsComponent
-			{
-				uiPicture = "\A3\Air_F_Gamma\Plane_Fighter_03\Data\UI\Plane_A143_3DEN_CA.paa";
-				class Pylons {};
-			};
-		};
-		class Turrets : Turrets
-		{
-			class MainTurret : MainTurret
-			{
-				weapons[] = { "missiles_SCALPEL","Laserdesignator_mounted" };
-				magazines[] = { "Laserbatteries","8Rnd_LG_scalpel" };
 			};
 		};
 	};
 };
 class CfgWeapons
 {
-	//inherted stuff
-	class ITC_Land_UAV_Packed_base;
-
-	class Basilisk_Searcher_Drone_Item : ITC_Land_UAV_Packed_base
+	class ACE_ItemCore;
+	class CBA_MiscItem_ItemInfo;
+	class Basilisk_Searcher_Drone_Item : ACE_ItemCore
 	{
 		author = "Soldner";
 		scope = 2;
-		scopeCurator = 2;
 		displayName = "[Basilisk] Searcher Drone";
-		itc_land_unPacksTo = "Basilisk_Searcher_Mk1";
+		descriptionShort = "";
+		model = "\A3\Drones_F\Air_F_Gamma\UAV_01\UAV_01_F.p3d";
+		picture = "\1st_meu_vehicles\air\drones\data\rave_icon.paa";
+		class ItemInfo : CBA_MiscItem_ItemInfo
+		{
+			mass = 60;
+		};
+	};
+};
+
+class Extended_PreInit_EventHandlers
+{
+	class 1st_meu_place_and_pick
+	{
+		init = "call compile preprocessFileLineNumbers '1st_meu_functions\place_down\xeh_preinit.sqf'";
+	};
+};
+class Extended_Init_EventHandlers
+{
+	class Basilisk_Searcher_Mk1
+	{
+		class 1st_MEU_Raven_Drone_Carry
+		{
+			init = "[_this select 0, true, [0, 1, 1], 0] call ace_dragging_fnc_setCarryable;";
+		};
+		class 1st_MEU_Raven_Drone_Drag
+		{
+			init = "[_this select 0, true, [0, 1.5, 0], 0] call ace_dragging_fnc_setDraggable;";
+		};
 	};
 };

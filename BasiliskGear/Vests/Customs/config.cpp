@@ -25,7 +25,7 @@ class XtdGearModels
 			{
 				alwaysSelectable = 1;
 				label = "Role";
-				values[] = { "Standard","Burtovski","Sabbath" };
+				values[] = { "Standard","Burtovski","Sabbath","Tepfer" };
 				class Standard {
 					label = "Standard";
 				};
@@ -34,6 +34,9 @@ class XtdGearModels
 				};
 				class Sabbath {
 					label = "Sabbath";
+				};
+				class Tepfer {
+					label = "Tepfer";
 				};
 			};
 		};
@@ -46,7 +49,7 @@ class XtdGearModels
 			{
 				alwaysSelectable = 1;
 				label = "Role";
-				values[] = { "Soldner","Holland","Kaker","Tepfer" };
+				values[] = { "Soldner","Holland","Kaker","Havoc"};
 				class Soldner {
 					label = "Soldner";
 				};
@@ -56,8 +59,8 @@ class XtdGearModels
 				class Kaker {
 					label = "Kaker";
 				};
-				class Tepfer {
-					label = "Tepfer";
+				class Kaker {
+					label = "Kaker";
 				};
 			};
 		};
@@ -131,6 +134,10 @@ class XtdGearInfos
 			model	= "Basilisk_custom_vests";
 			role	= "Sabbath";
 		};
+		class Basilisk_Tepfer_M56R_Armor {
+			model	= "Basilisk_custom_vests";
+			role	= "Tepfer";
+		};
 
 		//Olympus
 		class Basilisk_Holland_M56R_Armor {
@@ -145,9 +152,9 @@ class XtdGearInfos
 			model	= "Basilisk_Olympus_vests";
 			role	= "Kaker";
 		};
-		class Basilisk_Tepfer_M56R_Armor {
+		class Basilisk_Havoc_M56R_Armor {
 			model	= "Basilisk_Olympus_vests";
-			role	= "Tepfer";
+			role	= "Havoc";
 		};
 
 		//Fury
@@ -272,6 +279,23 @@ class CfgWeapons
 			hiddenSelectionsTextures[] = { "MA_Armor\data\Vests\H3_ODST\H3_Upper_Armor_co.paa","MA_Armor\data\Vests\H3_ODST\H3_Lower_Armor_co.paa","MA_Armor\data\Vests\H3_ODST\Addons\Thigh_Pouch_co.paa","BasiliskGear\data\armor\Sabbath_Reach_Armor_Upper_co.paa","BasiliskGear\data\armor\Sabbath_Reach_Armor_Lower_co.paa","BasiliskGear\data\armor\Sabbath_Canisters_co.paa","BasiliskGear\data\armor\Sabbath_Forearm_Vents_co.paa","BasiliskGear\data\armor\Sabbath_Sniper_co.paa","MA_Armor\data\Vests\Reach_ODST\Addons\CQB_Shoulders\CQB_co.paa","BasiliskGear\data\armor\Sabbath_Shoulder_Radio_co.paa" };
 		};
 	};
+	class Basilisk_Tepfer_M56R_Armor : Basilisk_Base_M56R_Armor
+	{
+		scope = 2;
+		scopeArsenal = 2;
+		author = "Soldner";
+		displayName = "[Basilisk] M56R Combat Armor (Tepfer)";
+		hiddenSelections[] = { "camo1","camo2","camo3","camo4","camo5","camo6","camo7","camo8","camo9","camo10","Reach_Forearm_Left","Reach_Forearm_Right","H3_Pauldron_Left","Reach_Pauldron_Right","Reach_Shoulder_Radio_Right","Reach_Sniper_Pauldron_Left","Reach_Sniper_Pauldron_Right","Reach_CQB_Pauldron_Left","Reach_CQB_Pauldron_Right","Thigh_Pouch","Reach_Armor_Upper","Reach_Armor_Lower" };
+		hiddenSelectionsTextures[] = { "BasiliskGear\data\armor\Tepfer_H3_Armor_Upper_co.paa","BasiliskGear\data\armor\Tepfer_H3_Armor_Lower_co.paa","MA_Armor\data\Vests\H3_ODST\Addons\Medic_Thigh_Pouch_co.paa","BasiliskGear\data\armor\Tepfer_Reach_Armor_Upper_co.paa","MA_Armor\data\Vests\Reach_ODST\Reach_Armor_Lower_co.paa","MA_Armor\data\Vests\Reach_ODST\Canisters_co.paa","MA_Armor\data\Vests\Reach_ODST\Forearm_Vents_co.paa","MA_Armor\data\Vests\Reach_ODST\Addons\Sniper_Shoulders\Sniper_co.paa","MA_Armor\data\Vests\Reach_ODST\CQB_co.paa","MA_Armor\data\Vests\Reach_ODST\Addons\Reach_Shoulder_Radio\Shoulder_Radio_ODST_co.paa" };
+		class ItemInfo : ItemInfo
+		{
+			vestType = "Rebreather";
+			uniformModel = "MA_Armor\data\Vests\H3_ODST\H3_ODST_Armor.p3d";
+			containerClass = "Supply200";
+			hiddenSelections[] = { "camo1","camo2","camo3","camo4","camo5","camo6","camo7","camo8","camo9","camo10","Reach_Forearm_Left","Reach_Forearm_Right","H3_Pauldron_Left","Reach_Pauldron_Right","Reach_Shoulder_Radio_Right","Reach_Sniper_Pauldron_Left","Reach_Sniper_Pauldron_Right","Reach_CQB_Pauldron_Left","Reach_CQB_Pauldron_Right","Thigh_Pouch","Reach_Armor_Upper","Reach_Armor_Lower" };
+			hiddenSelectionsTextures[] = { "BasiliskGear\data\armor\Tepfer_H3_Armor_Upper_co.paa","BasiliskGear\data\armor\Tepfer_H3_Armor_Lower_co.paa","MA_Armor\data\Vests\H3_ODST\Addons\Medic_Thigh_Pouch_co.paa","BasiliskGear\data\armor\Tepfer_Reach_Armor_Upper_co.paa","MA_Armor\data\Vests\Reach_ODST\Reach_Armor_Lower_co.paa","MA_Armor\data\Vests\Reach_ODST\Canisters_co.paa","MA_Armor\data\Vests\Reach_ODST\Forearm_Vents_co.paa","MA_Armor\data\Vests\Reach_ODST\Addons\Sniper_Shoulders\Sniper_co.paa","MA_Armor\data\Vests\Reach_ODST\CQB_co.paa","MA_Armor\data\Vests\Reach_ODST\Addons\Reach_Shoulder_Radio\Shoulder_Radio_ODST_co.paa" };
+		};
+	};
 
 	//Olympus
 	class Basilisk_Soldner_M56R_Armor: Basilisk_Base_M56R_Armor
@@ -349,21 +373,21 @@ class CfgWeapons
 			hiddenSelectionsTextures[] = { "MA_Armor\data\Vests\Reach_ODST\H3_Upper_Armor_co.paa","BasiliskGear\data\armor\kaker_H3_Armor_Lower_co.paa","MA_Armor\data\Vests\H3_ODST\Addons\Medic_Thigh_Pouch_co.paa","BasiliskGear\data\armor\kaker_Reach_Armor_Upper_co.paa","MA_Armor\data\Vests\Reach_ODST\Reach_Armor_Lower_co.paa","MA_Armor\data\Vests\Reach_ODST\Canisters_co.paa","MA_Armor\data\Vests\Reach_ODST\Forearm_Vents_co.paa","MA_Armor\data\Vests\Reach_ODST\Addons\Sniper_Shoulders\Sniper_co.paa","BasiliskGear\data\armor\kaker_CQB_co.paa","BasiliskGear\data\armor\kaker_Shoulder_Radio_ODST_co.paa" };
 		};
 	};
-	class Basilisk_Tepfer_M56R_Armor : Basilisk_Base_M56R_Armor
+	class Basilisk_Havoc_M56R_Armor : Basilisk_Base_M56R_Armor
 	{
 		scope = 2;
 		scopeArsenal = 2;
-		author = "Soldner";
-		displayName = "[Basilisk] M56R Combat Armor (Tepfer)";
-		hiddenSelections[] = { "camo1","camo2","camo3","camo4","camo5","camo6","camo7","camo8","camo9","camo10","Reach_Forearm_Left","Reach_Forearm_Right","H3_Pauldron_Left","Reach_Pauldron_Right","Reach_Shoulder_Radio_Right","Reach_Sniper_Pauldron_Left","Reach_Sniper_Pauldron_Right","Reach_CQB_Pauldron_Left","Reach_CQB_Pauldron_Right","Thigh_Pouch","Reach_Armor_Upper","Reach_Armor_Lower" };
-		hiddenSelectionsTextures[] = { "BasiliskGear\data\armor\Tepfer_H3_Armor_Upper_co.paa","BasiliskGear\data\armor\Tepfer_H3_Armor_Lower_co.paa","MA_Armor\data\Vests\H3_ODST\Addons\Medic_Thigh_Pouch_co.paa","BasiliskGear\data\armor\Tepfer_Reach_Armor_Upper_co.paa","MA_Armor\data\Vests\Reach_ODST\Reach_Armor_Lower_co.paa","MA_Armor\data\Vests\Reach_ODST\Canisters_co.paa","MA_Armor\data\Vests\Reach_ODST\Forearm_Vents_co.paa","MA_Armor\data\Vests\Reach_ODST\Addons\Sniper_Shoulders\Sniper_co.paa","MA_Armor\data\Vests\Reach_ODST\CQB_co.paa","MA_Armor\data\Vests\Reach_ODST\Addons\Reach_Shoulder_Radio\Shoulder_Radio_ODST_co.paa" };
+		author = "Sabbath";
+		displayName = "[Basilisk] M56R Combat Armor (Havoc)";
+		hiddenSelections[] = { "camo1","camo2","camo3","camo4","camo5","camo6","camo7","camo8","camo9","camo10","H3_Forearm_Left","H3_Forearm_Right","H3_Pauldron_Left","H3_Pauldron_Right","Reach_Pauldron_Left","Reach_Shoulder_Radio_Left","Reach_Sniper_Pauldron_Left","Reach_Sniper_Pauldron_Right","Reach_CQB_Pauldron_Right","H3_Armor_Upper","H3_Armor_Lower","Canisters" };
+		hiddenSelectionsTextures[] = { "MA_Armor\data\Vests\H3_ODST\H3_Armor_Upper_co.paa","MA_Armor\data\Vests\H3_ODST\H3_Armor_Lower_co.paa","MA_Armor\data\Vests\H3_ODST\Addons\Medic_Thigh_Pouch_co.paa","BasiliskGear\data\armor\Havoc_Reach_Armor_Upper_co.paa","BasiliskGear\data\armor\Havoc_Reach_Armor_Lower_co.paa","MA_Armor\data\Vests\Reach_ODST\Canisters_co.paa","MA_Armor\data\Vests\Reach_ODST\Forearm_Vents_co.paa","MA_Armor\data\Vests\Reach_ODST\Addons\Sniper_Shoulders\Sniper_co.paa","BasiliskGear\data\armor\Havoc_CQB_co.paa","MA_Armor\data\Vests\Reach_ODST\Addons\Reach_Shoulder_Radio\Shoulder_Radio_ODST_co.paa" };
 		class ItemInfo : ItemInfo
 		{
 			vestType = "Rebreather";
 			uniformModel = "MA_Armor\data\Vests\H3_ODST\H3_ODST_Armor.p3d";
 			containerClass = "Supply200";
-			hiddenSelections[] = { "camo1","camo2","camo3","camo4","camo5","camo6","camo7","camo8","camo9","camo10","Reach_Forearm_Left","Reach_Forearm_Right","H3_Pauldron_Left","Reach_Pauldron_Right","Reach_Shoulder_Radio_Right","Reach_Sniper_Pauldron_Left","Reach_Sniper_Pauldron_Right","Reach_CQB_Pauldron_Left","Reach_CQB_Pauldron_Right","Thigh_Pouch","Reach_Armor_Upper","Reach_Armor_Lower" };
-			hiddenSelectionsTextures[] = { "BasiliskGear\data\armor\Tepfer_H3_Armor_Upper_co.paa","BasiliskGear\data\armor\Tepfer_H3_Armor_Lower_co.paa","MA_Armor\data\Vests\H3_ODST\Addons\Medic_Thigh_Pouch_co.paa","BasiliskGear\data\armor\Tepfer_Reach_Armor_Upper_co.paa","MA_Armor\data\Vests\Reach_ODST\Reach_Armor_Lower_co.paa","MA_Armor\data\Vests\Reach_ODST\Canisters_co.paa","MA_Armor\data\Vests\Reach_ODST\Forearm_Vents_co.paa","MA_Armor\data\Vests\Reach_ODST\Addons\Sniper_Shoulders\Sniper_co.paa","MA_Armor\data\Vests\Reach_ODST\CQB_co.paa","MA_Armor\data\Vests\Reach_ODST\Addons\Reach_Shoulder_Radio\Shoulder_Radio_ODST_co.paa" };
+			hiddenSelections[] = { "camo1","camo2","camo3","camo4","camo5","camo6","camo7","camo8","camo9","camo10","H3_Forearm_Left","H3_Forearm_Right","H3_Pauldron_Left","H3_Pauldron_Right","Reach_Pauldron_Left","Reach_Shoulder_Radio_Left","Reach_Sniper_Pauldron_Left","Reach_Sniper_Pauldron_Right","Reach_CQB_Pauldron_Right","H3_Armor_Upper","H3_Armor_Lower","Canisters" };
+			hiddenSelectionsTextures[] = { "MA_Armor\data\Vests\H3_ODST\H3_Armor_Upper_co.paa","MA_Armor\data\Vests\H3_ODST\H3_Armor_Lower_co.paa","MA_Armor\data\Vests\H3_ODST\Addons\Medic_Thigh_Pouch_co.paa","BasiliskGear\data\armor\Havoc_Reach_Armor_Upper_co.paa","BasiliskGear\data\armor\Havoc_Reach_Armor_Lower_co.paa","MA_Armor\data\Vests\Reach_ODST\Canisters_co.paa","MA_Armor\data\Vests\Reach_ODST\Forearm_Vents_co.paa","MA_Armor\data\Vests\Reach_ODST\Addons\Sniper_Shoulders\Sniper_co.paa","BasiliskGear\data\armor\Havoc_CQB_co.paa","MA_Armor\data\Vests\Reach_ODST\Addons\Reach_Shoulder_Radio\Shoulder_Radio_ODST_co.paa" };
 		};
 	};
 

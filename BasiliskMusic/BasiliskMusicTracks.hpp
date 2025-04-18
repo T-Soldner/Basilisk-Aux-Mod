@@ -411,3 +411,17 @@ class GoGoPowerRangersInstrumental
 	duration = 364;
 	musicClass = "BasiliskGoofy";
 };
+class LastResortDMC
+{
+	name = "Last Resort - Papa Roach";
+	sound[] = { "BasiliskMusic\data\Tracks\LastResortPR.ogg",db + 0,1 };
+	duration = 153;
+	musicClass = "BasiliskMusic";
+};
+class ImperiumsDream
+{
+	name = "Imperium's Dream";
+	sound[] = { "BasiliskMusic\data\Tracks\ImperiumsDream.ogg",db + 0,1 };
+	duration = 203;
+	musicClass = "BasiliskMusic";
+};

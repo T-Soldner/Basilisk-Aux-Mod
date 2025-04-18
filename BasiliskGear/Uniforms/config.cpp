@@ -33,6 +33,24 @@ class XtdGearModels
 				};
 			};
 		};
+		class Basilisk_Garrison_Armor
+		{
+			label = "Garrison Armors";
+			author = "Basilisk Mod Team";
+			options[] = { "role" };
+			class role
+			{
+				alwaysSelectable = 1;
+				label = "Role";
+				values[] = { "Standard","Medic" };
+				class Standard {
+					label = "Standard";
+				};
+				class Medic {
+					label = "Medic";
+				};
+			};
+		};
 	};
 };
 class XtdGearInfos
@@ -40,12 +58,20 @@ class XtdGearInfos
 	class CfgWeapons
 	{
 		class Basilisk_M56_BDU {
-			role = "M56";
-			model = "Basilisk_Undersuits";
+			role	= "M56";
+			model	= "Basilisk_Undersuits";
 		};
 		class Basilisk_SPI_Undersuit {
-			role = "SPI";
-			model = "Basilisk_Undersuits";
+			role	= "SPI";
+			model	= "Basilisk_Undersuits";
+		};
+		class Basilisk_HW {
+			role	= "Standard";
+			model	= "Basilisk_Garrison_Armor";
+		};
+		class Basilisk_HW_Corpsman {
+			role	= "Medic";
+			model	= "Basilisk_Garrison_Armor";
 		};
 	};
 };
@@ -98,6 +124,47 @@ class CfgWeapons
 			mass = 10;
 			uniformType = "Neopren";
 			modelSides[] = { 6 };
+		};
+	};
+
+	//Garrison Armors
+	class 19th_H2A_g;
+	class Basilisk_HW : 19th_H2A_g {
+		dlc = "Basilisk Aux Mod";
+		scope = 2;
+		scopeCurator = 2;
+		scopeArsenal = 2;
+		author = "Soldner";
+		displayName = "[Basilisk] Garrison armor";
+		picture = "\19th_H2A_armor\textures\H2A_marine_icon";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
+		class ItemInfo : UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "Basilisk_H2A_Base";
+			containerClass = "Supply150";
+			mass = 100;
+			allowedSlots[] = {"701","801","901"};
+			armor = 1;
+		};
+	};
+	class Basilisk_HW_Corpsman : 19th_H2A_g {
+		dlc = "Basilisk Aux Mod";
+		scope = 2;
+		scopeCurator = 2;
+		scopeArsenal = 2;
+		author = "Soldner";
+		displayName = "[Basilisk] Garrison Corpsman armor";
+		picture = "\19th_H2A_armor\textures\H2A_marine_icon";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
+		class ItemInfo : UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "Basilisk_H2A_Corpsman_Base";
+			containerClass = "Supply150";
+			mass = 100;
+			allowedSlots[] = {"701","801","901"};
+			armor = 1;
 		};
 	};
 };
@@ -363,7 +430,6 @@ class CfgVehicles
 	};
 
 	//SPI Undersuit
-
 	class Basilisk_SPI_Undersuit_Base : Basilisk_Base_Uniform
 	{
 		scope = 1;
@@ -374,6 +440,23 @@ class CfgVehicles
 		hiddenSelections[] = { "camo" };
 		hiddenSelectionsTextures[] = { "optre_mjolnir_units\data\undersuit_co.paa" };
 	}
+
+	//Garison Armor
+	class 19th_H2A_U_g;
+	class Basilisk_H2A_Base : 19th_H2A_U_g {
+		dlc = "Basilisk Aux Mod";
+		uniformClass = "Basilisk_HW";
+		scope = 1;
+		hiddenSelections[] = {"camo","camo1","camo2","camo3","camo4"};
+		hiddenSelectionsTextures[] = {"BasiliskGear\data\uniforms\chest_co.paa","BasiliskGear\data\uniforms\arms_co.paa","BasiliskGear\data\uniforms\legs_co.paa","BasiliskGear\data\uniforms\bdu_co.paa","BasiliskGear\data\uniforms\misc_co.paa"};
+	};
+	class Basilisk_H2A_Corpsman_Base : 19th_H2A_U_g {
+		dlc = "Basilisk Aux Mod";
+		uniformClass = "Basilisk_HW_Corpsman";
+		scope = 1;
+		hiddenSelections[] = {"camo","camo1","camo2","camo3","camo4"};
+		hiddenSelectionsTextures[] = {"BasiliskGear\data\uniforms\chest_co.paa","BasiliskGear\data\uniforms\arms_medic_co.paa","BasiliskGear\data\uniforms\legs_co.paa","BasiliskGear\data\uniforms\bdu_co.paa","BasiliskGear\data\uniforms\misc_co.paa"};
+	};
 
 	//dress uniforms?
 	/*class MEU_Dress_Uniform_Cornflakes_Soldier: Basilisk_Base_Uniform

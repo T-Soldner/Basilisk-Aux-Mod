@@ -22,7 +22,7 @@ class cfgWeapons
 		displayname = "[Basilisk] Olympus Sprays";
 		descriptionShort = "An item that lets you tag walls.";
 		model = "\A3\Structures_F\Items\Food\Can_V3_F.p3d";
-		icon = "BasiliskGear\Sprays\Data\logo.paa";
+		icon = "BasiliskGear\Sprays\Data\Olympus\Olympus.paa";
 		class ItemInfo: CBA_MiscItem_ItemInfo
 		{
 			mass = 0.1;
@@ -70,7 +70,7 @@ class ACE_Tags
 	{
 		displayName = "Olympus";
 		textures[] = { "BasiliskGear\Sprays\Data\Olympus\Olympus.paa" };
-		icon = "BasiliskGear\Sprays\Data\Olympus\Olympus\Olympus.paa";
+		icon = "BasiliskGear\Sprays\Data\Olympus\Olympus.paa";
 	};
 	class Basilisk_Fries_Spray : Basilisk_Olympus_Logo_Spray
 	{
@@ -119,6 +119,12 @@ class ACE_Tags
 		displayName = "Missing";
 		textures[] = { "BasiliskGear\Sprays\Data\Olympus\Missing.paa" };
 		icon = "BasiliskGear\Sprays\Data\Olympus\Missing.paa";
+	};
+	class Basilisk_Sniper_Spray : Basilisk_Olympus_Logo_Spray
+	{
+		displayName = "Sniper at Work";
+		textures[] = { "BasiliskGear\Sprays\Data\Olympus\Sniper.paa" };
+		icon = "BasiliskGear\Sprays\Data\Olympus\Sniper.paa";
 	};
 	
 	//Furry Sprays

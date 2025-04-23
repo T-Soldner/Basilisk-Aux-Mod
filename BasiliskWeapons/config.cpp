@@ -273,15 +273,48 @@ class CfgWeapons
 		hiddenSelectionsTextures[] = {"BasiliskWeapons\data\Soldner_DMR_01_co.paa","BasiliskWeapons\data\Soldner_DMR_02_co.paa"};
 		magazines[] = { "Basilisk_20Rnd_762x51_Mag" };
 	};
+	
+	//Havoc GL
+	class MA_GRL_45;
+	class Basilisk_GRL_45_Havoc: MA_GRL_45
+	{
+		dlc = "Basilisk AUX Mod";
+		displayName="[Basilisk] Havoc's GRL-45";
+		baseWeapon="Basilisk_GRL_45_Havoc";
+		scope=2;
+		scopeArsenal=2;
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+			"camo3"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\MA_Weapons\data\GRL45\GL_Black_co.paa",
+			"\MA_Weapons\data\GRL45\GL_Black2_co.paa",
+			"\MA_Weapons\data\GRL45\GL_Sight_ca.paa"
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+		};
+		magazines[]={
+			"GRL45_6rnd_DroneHE"
+		};
+		magazineWell[]=
+		{
+			"CBA_40mm_M203_6rnds"
+		};
+	};
 };
 
 
 class CfgMagazines
 {
-	//Railgun Ammo
+	//Railgun Magazine
 	class OPTRE_FC_Railgun_Slug;
-	class Basilisk_Railgun_Slug : OPTRE_FC_Railgun_Slug
-	{
+	class Basilisk_Railgun_Slug : OPTRE_FC_Railgun_Slug {
+		dlc = "Basilisk AUX Mod";
 		displayName = "[Basilisk] Railgun";
 		displayNameShort = "16x65mm Slug";
 		ammo = "Basilisk_16x65mm_Slug";
@@ -292,15 +325,25 @@ class CfgMagazines
 		ace_arsenal_hide = -1;
 	};
 
-	//45 Ammo
+	//DMR Magazine
 	class ACE_20Rnd_762x51_M993_AP_Mag;
 	class Basilisk_20Rnd_762x51_Mag : ACE_20Rnd_762x51_M993_AP_Mag {
+		dlc = "Basilisk AUX Mod";
 		author = "Soldner";
 		displayName = "[Basilisk] 7.62 mm 20rnd Mag";
 		ammo = "Basilisk_762";
 		count = 20;
 		tracersEvery = 0;
 		lastRoundsTracer = 0;
+	};
+	
+	//GL Magazine
+	class GRL45_6rnd_HE;
+	class GRL45_6rnd_DroneHE : GRL45_6rnd_HE {
+		dlc = "Basilisk AUX Mod";
+		author = "Soldner";
+		displayName = "[Basilisk] 6rnd DroneHE";
+		ammo = "G_RC40_HE_fake_RF";
 	};
 };
 class CfgAmmo {

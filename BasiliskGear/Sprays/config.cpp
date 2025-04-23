@@ -15,14 +15,40 @@ class cfgWeapons
 {
 	class CBA_MiscItem;
 	class CBA_MiscItem_ItemInfo;
-	class Basilisk_SprayCan: CBA_MiscItem 
+	class Basilisk_Olympus_SprayCan: CBA_MiscItem 
 	{
 		author = "Soldner";
 		scope = 2;
-		displayname = "[Basilisk] Spray Paint";
+		displayname = "[Basilisk] Olympus Sprays";
 		descriptionShort = "An item that lets you tag walls.";
 		model = "\A3\Structures_F\Items\Food\Can_V3_F.p3d";
-		icon = "BasiliskSprays\Sprays\logo.paa";
+		icon = "BasiliskGear\Sprays\Data\logo.paa";
+		class ItemInfo: CBA_MiscItem_ItemInfo
+		{
+			mass = 0.1;
+		};
+	};
+	class Basilisk_Fury_SprayCan: CBA_MiscItem 
+	{
+		author = "Soldner";
+		scope = 2;
+		displayname = "[Basilisk] Fury Sprays";
+		descriptionShort = "An item that lets you tag walls.";
+		model = "\A3\Structures_F\Items\Food\Can_V3_F.p3d";
+		icon = "BasiliskGear\Sprays\Data\logo.paa";
+		class ItemInfo: CBA_MiscItem_ItemInfo
+		{
+			mass = 0.1;
+		};
+	};
+	class Basilisk_Corvus_SprayCan: CBA_MiscItem 
+	{
+		author = "Soldner";
+		scope = 2;
+		displayname = "[Basilisk] Corvus Sprays";
+		descriptionShort = "An item that lets you tag walls.";
+		model = "\A3\Structures_F\Items\Food\Can_V3_F.p3d";
+		icon = "BasiliskGear\Sprays\Data\logo.paa";
 		class ItemInfo: CBA_MiscItem_ItemInfo
 		{
 			mass = 0.1;
@@ -31,49 +57,123 @@ class cfgWeapons
 };
 class ACE_Tags
 {
-	//Kaker Sprays
-	class Basilisk_Logo_Spray
+	//Olympus Sprays
+	class Basilisk_Olympus_Logo_Spray
 	{
 		displayName = "Basilisk";
-		requiredItem = "Basilisk_SprayCan";
+		requiredItem = "Basilisk_Olympus_SprayCan";
 		materials[] = {};
-		textures[] = { "BasiliskSprays\Sprays\logo.paa" };
-		icon = "BasiliskSprays\Sprays\logo.paa";
+		textures[] = { "BasiliskGear\Sprays\Data\logo.paa" };
+		icon = "BasiliskGear\Sprays\Data\logo.paa";
 	};
-	class Basilisk_Logo_1A_Spray : Basilisk_Logo_Spray
+	class Basilisk_Olympus_Spray : Basilisk_Olympus_Logo_Spray
 	{
-		displayName = "Kronos";
-		textures[] = {"BasiliskSprays\Sprays\1-A.paa"};
-		icon = "BasiliskSprays\Sprays\1-A.paa";
+		displayName = "Olympus";
+		textures[] = { "BasiliskGear\Sprays\Data\Olympus\Olympus.paa" };
+		icon = "BasiliskGear\Sprays\Data\Olympus\Olympus\Olympus.paa";
 	};
-	class Basilisk_Logo_11_Spray : Basilisk_Logo_Spray
+	class Basilisk_Fries_Spray : Basilisk_Olympus_Logo_Spray
 	{
-		displayName = "Hydra";
-		textures[] = {"BasiliskSprays\Sprays\1-1.paa"};
-		icon = "BasiliskSprays\Sprays\1-1.paa";
+		displayName = "Fries";
+		textures[] = { "BasiliskGear\Sprays\Data\Olympus\Fries.paa" };
+		icon = "BasiliskGear\Sprays\Data\Olympus\Fries.paa";
 	};
-	class Basilisk_Logo_12_Spray : Basilisk_Logo_Spray
+	class Basilisk_BK_Spray : Basilisk_Olympus_Logo_Spray
 	{
-		displayName = "Phoenix";
-		textures[] = {"BasiliskSprays\Sprays\1-2.paa"};
-		icon = "BasiliskSprays\Sprays\1-2.paa";
+		displayName = "BK";
+		textures[] = { "BasiliskGear\Sprays\Data\Olympus\BK.paa" };
+		icon = "BasiliskGear\Sprays\Data\Olympus\BK.paa";
 	};
-	class Basilisk_Logo_13_Spray : Basilisk_Logo_Spray
+	class Basilisk_GucciMan_Spray : Basilisk_Olympus_Logo_Spray
 	{
-		displayName = "Misfit";
-		textures[] = {"BasiliskSprays\Sprays\1-3.paa"};
-		icon = "BasiliskSprays\Sprays\1-3.paa";
+		displayName = "Gucci Man";
+		textures[] = { "BasiliskGear\Sprays\Data\Olympus\GucciMan.paa" };
+		icon = "BasiliskGear\Sprays\Data\Olympus\GucciMan.paa";
 	};
-	class Basilisk_CCP_Spray : Basilisk_Logo_Spray
-	{
-		displayName = "CCP";
-		textures[] = { "BasiliskSprays\Sprays\CCP-Logo.paa" };
-		icon = "BasiliskSprays\Sprays\CCP-Logo.paa";
-	};
-	class Basilisk_Assman_Spray : Basilisk_Logo_Spray
+	class Basilisk_Assman_Spray : Basilisk_Olympus_Logo_Spray
 	{
 		displayName = "Assman";
-		textures[] = { "BasiliskSprays\Sprays\Sabbath-was-here.paa" };
-		icon = "BasiliskSprays\Sprays\Sabbath-was-here.paa";
+		textures[] = { "BasiliskGear\Sprays\Data\Olympus\Sabbath-was-here.paa" };
+		icon = "BasiliskGear\Sprays\Data\Olympus\Sabbath-was-here.paa";
+	};
+	class Basilisk_Etilka_Spray : Basilisk_Olympus_Logo_Spray
+	{
+		displayName = "Dead Etilka";
+		textures[] = { "BasiliskGear\Sprays\Data\Olympus\Lancer.paa" };
+		icon = "BasiliskGear\Sprays\Data\Olympus\Lancer.paa";
+	};
+	class Basilisk_Syndrome_Spray : Basilisk_Olympus_Logo_Spray
+	{
+		displayName = "Syndrome";
+		textures[] = { "BasiliskGear\Sprays\Data\Olympus\Syndrome.paa" };
+		icon = "BasiliskGear\Sprays\Data\Olympus\Syndrome.paa";
+	};
+	class Basilisk_Docky_Spray : Basilisk_Olympus_Logo_Spray
+	{
+		displayName = "Docky Way";
+		textures[] = { "BasiliskGear\Sprays\Data\Olympus\Docky.paa" };
+		icon = "BasiliskGear\Sprays\Data\Olympus\Docky.paa";
+	};
+	class Basilisk_Missing_Spray : Basilisk_Olympus_Logo_Spray
+	{
+		displayName = "Missing";
+		textures[] = { "BasiliskGear\Sprays\Data\Olympus\Missing.paa" };
+		icon = "BasiliskGear\Sprays\Data\Olympus\Missing.paa";
+	};
+	
+	//Furry Sprays
+	class Basilisk_Fury_Logo_Spray
+	{
+		displayName = "Basilisk";
+		requiredItem = "Basilisk_Fury_SprayCan";
+		materials[] = {};
+		textures[] = { "BasiliskGear\Sprays\Data\logo.paa" };
+		icon = "BasiliskGear\Sprays\Data\logo.paa";
+	};
+	
+	//Corvus Sprays
+	class Basilisk_Corvus_Logo_Spray
+	{
+		displayName = "Basilisk";
+		requiredItem = "Basilisk_Corvus_SprayCan";
+		materials[] = {};
+		textures[] = { "BasiliskGear\Sprays\Data\logo.paa" };
+		icon = "BasiliskGear\Sprays\Data\logo.paa";
+	};
+	class Basilisk_Corvus_Spray : Basilisk_Corvus_Logo_Spray
+	{
+		displayName = "Corvus";
+		textures[] = { "BasiliskGear\Sprays\Data\Corvus\Corvus.paa" };
+		icon = "BasiliskGear\Sprays\Data\Corvus\Corvus.paa";
+	};
+	class Basilisk_Driver_Spray : Basilisk_Corvus_Logo_Spray
+	{
+		displayName = "Student Driver";
+		textures[] = { "BasiliskGear\Sprays\Data\Corvus\Driver.paa" };
+		icon = "BasiliskGear\Sprays\Data\Corvus\Driver.paa";
+	};
+	class Basilisk_Columbine_Spray : Basilisk_Corvus_Logo_Spray
+	{
+		displayName = "Erik and Dylan";
+		textures[] = { "BasiliskGear\Sprays\Data\Corvus\Columbine.paa" };
+		icon = "BasiliskGear\Sprays\Data\Corvus\Columbine.paa";
+	};
+	class Basilisk_Money_Spray : Basilisk_Corvus_Logo_Spray
+	{
+		displayName = "Money Bird";
+		textures[] = { "BasiliskGear\Sprays\Data\Corvus\Money.paa" };
+		icon = "BasiliskGear\Sprays\Data\Corvus\Money.paa";
+	};
+	class Basilisk_Needler_Spray : Basilisk_Corvus_Logo_Spray
+	{
+		displayName = "Needler";
+		textures[] = { "BasiliskGear\Sprays\Data\Corvus\Needler.paa" };
+		icon = "BasiliskGear\Sprays\Data\Corvus\Needler.paa";
+	};
+	class Basilisk_Secure_Spray : Basilisk_Corvus_Logo_Spray
+	{
+		displayName = "Secure";
+		textures[] = { "BasiliskGear\Sprays\Data\Corvus\Secure.paa" };
+		icon = "BasiliskGear\Sprays\Data\Corvus\Secure.paa";
 	};
 };

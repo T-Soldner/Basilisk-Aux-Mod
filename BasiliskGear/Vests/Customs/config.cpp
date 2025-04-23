@@ -466,14 +466,14 @@ class CfgWeapons
 		author = "Sabbath";
 		displayName = "[Basilisk] SPI Body Armor (Vargo)";
 		hiddenSelections[] = { "camo" };
-		hiddenSelectionsTextures[] = { "BasiliskGear\data\armor\Blue_SPI_mk1.paa" };
+		hiddenSelectionsTextures[] = { "BasiliskGear\data\armor\Vargo_Spi_Mk1.paa" };
 		class ItemInfo : ItemInfo
 		{
 			vestType = "Rebreather";
 			uniformModel = "MA_Armor\data\Vests\SPI\SPI_Armor.p3d";
 			containerClass = "Supply200";
 			hiddenSelections[] = { "camo" };
-			hiddenSelectionsTextures[] = { "BasiliskGear\data\armor\Blue_SPI_mk1.paa" };
+			hiddenSelectionsTextures[] = { "BasiliskGear\data\armor\Vargo_Spi_Mk1.paa" };
 		};
 	};
 

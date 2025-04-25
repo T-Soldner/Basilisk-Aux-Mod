@@ -50,9 +50,9 @@ class CfgEditorCategories
 };
 class CfgEditorSubcategories
 {
-	class Basilisk_EdSubCat_ODSTs
+	class Basilisk_EdSubCat_Garrison
 	{
-		displayName = "ODSTs";
+		displayName = "Garrison";
 	};
 	class Basilisk_EdSubCat_Cars
 	{

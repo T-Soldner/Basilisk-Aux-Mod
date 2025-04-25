@@ -727,4 +727,21 @@ class CfgWeapons
 			};
 		};
 	};
+
+	//Garrison helmets
+	class 19th_Helmet_green;
+	class Basilisk_HW_Helmet : 19th_Helmet_green {
+		dlc = "Basilisk Aux Mod";
+		displayName = "[Basilisk] Garrison Helmet";
+		scope = 2;
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"BasiliskGear\data\helmets\Helm_co.paa"};
+	};
+	class Basilisk_HW_Corpsman_Helmet : 19th_Helmet_green {
+		dlc = "Basilisk Aux Mod";
+		displayName = "[Basilisk] Garrison Corpsman Helmet";
+		scope = 2;
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"BasiliskGear\data\helmets\Helm_Corpsman_co.paa"};
+	};
 };

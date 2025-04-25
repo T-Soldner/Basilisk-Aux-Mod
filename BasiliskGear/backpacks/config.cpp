@@ -200,23 +200,6 @@ class CfgVehicles
 		tf_hasLRradio = 1;
 		maximumLoad = 500;
 	};
-	class Basilisk_ANPRC_521_Holland: OPTRE_ANPRC_521_green
-	{
-		author = "Holland";
-		displayName = "[Basilisk] Holland's ILCS AN/PRC-521";
-		scope = 2;
-		scopeCurator = 2;
-		scopeArsenal = 2;
-		hiddenSelectionsTextures[] = {"BasiliskGear\data\packs\soft_backpack_co.paa","BasiliskGear\data\packs\holland_prc521_co.paa"};
-		tf_isolatedAmount = 0.65;
-		tf_encryptionCode = "tf_west_radio_code";
-		tf_dialog = "anarc210_radio_dialog";
-		tf_subtype = "digital_lr";
-		tf_range = 50000;
-		tf_dialogUpdate = "[""%1""] call TFAR_fnc_updateLRDialogToChannel;";
-		tf_hasLRradio = 1;
-		maximumLoad = 500;
-	};
 
 	//Marine Rucksack	
 	class OPTRE_UNSC_Rucksack;
@@ -291,6 +274,8 @@ class CfgVehicles
 		maximumLoad = 250;
 		ace_gunbag = 1;
 	};
+
+	//Customs
 	class Basilisk_Soldner_Rucksack_Gunbag : Basilisk_ANPRC_515
 	{
 		_generalMacro = "ace_gunbag_Tan";
@@ -305,6 +290,39 @@ class CfgVehicles
 		tf_hasLRradio = 1;
 		ace_gunbag = 1;
 		maximumLoad = 500;
+	};
+	class Basilisk_ANPRC_521_Holland : OPTRE_ANPRC_521_green
+	{
+		author = "Holland";
+		displayName = "[Basilisk] Holland's ILCS AN/PRC-521";
+		scope = 2;
+		scopeCurator = 2;
+		scopeArsenal = 2;
+		hiddenSelectionsTextures[] = { "BasiliskGear\data\packs\soft_backpack_co.paa","BasiliskGear\data\packs\holland_prc521_co.paa" };
+		tf_isolatedAmount = 0.65;
+		tf_encryptionCode = "tf_west_radio_code";
+		tf_dialog = "anarc210_radio_dialog";
+		tf_subtype = "digital_lr";
+		tf_range = 50000;
+		tf_dialogUpdate = "[""%1""] call TFAR_fnc_updateLRDialogToChannel;";
+		tf_hasLRradio = 1;
+		maximumLoad = 500;
+	};
+
+	//Garrison Backpack
+	class 19th_H2A_marine_backpack;
+	class Basilisk_H2A : 19th_H2A_marine_backpack
+	{
+		author = "Split Jaw";
+		scope = 2;
+		picture = "";
+		displayName = "[Basilisk] Garrison Backpack";
+		hiddenSelections[] = {"main","pouches","roll","radio"};
+		hiddenSelectionsTextures[] = {"BasiliskGear\data\packs\HW_backpack_co.paa","BasiliskGear\data\packs\HW_backpack_co.paa","",""};
+		maximumLoad = 300;
+		mass = 20;
+		class TransportMagazines {};
+		class TransportItems {};
 	};
 
 

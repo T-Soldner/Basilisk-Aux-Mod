@@ -35,15 +35,12 @@ class XtdGearModels
 			class type {
 				alwaysSelectable = 1;
 				label = "Type";
-				values[] = {"VulcanM7","TemplarMA5","OlympusM7"};
+				values[] = {"VulcanM7","TemplarMA5"};
 				class VulcanM7 {
 					label = "Vulcan M7";
 				};
 				class TemplarMA5 {
 					label = "Templar";
-				};
-				class OlympusM7 {
-					label = "Olympus M7";
 				};
 			};
 			class GL {
@@ -65,9 +62,12 @@ class XtdGearModels
 			class type {
 				alwaysSelectable = 1;
 				label = "Owner";
-				values[] = {"HollandAK120"};
+				values[] = {"HollandAK120","SoldnerDMR"};
 				class HollandAK120 {
 					label = "Holland";
+				};
+				class SoldnerDMR {
+					label = "Soldner";
 				};
 			};
 		};
@@ -77,11 +77,6 @@ class XtdGearInfos
 {
 	class CfgWeapons
 	{
-		class Basilisk_Olympus_M7 {
-			model = "Basilisk_squad_weapons";
-			type = "OlympusM7";
-			GL = "NoGL";
-		};
 		class Basilisk_Vulcan_M7 {
 			model = "Basilisk_squad_weapons";
 			type = "VulcanM7";
@@ -100,6 +95,10 @@ class XtdGearInfos
 		class Basilisk_Holland_AK120 {
 			model = "Basilisk_personal_primary_weapons";
 			type = "HollandAK120";
+		};
+		class Basilisk_Soldner_DMR {
+			model = "Basilisk_personal_primary_weapons";
+			type = "SoldnerDMR";
 		};
 	};
 };
@@ -243,36 +242,6 @@ class CfgWeapons
 		};
 	};
 
-	//Olympus M7
-	class Basilisk_Olympus_M7 : OPTRE_M7
-	{
-		dlc = "Basilisk AUX Mod";
-		author = "Soldner";
-		baseWeapon = "Basilisk_Olympus_M7";
-		scope = 2;
-		scopearsenal = 2;
-		displayName = "[Basilisk] Olympus M7X Caseless SMG";
-		canShootInWater = 1;
-		hiddenSelections[] = { "camo","camo1" };
-		hiddenSelectionsTextures[] = { "BasiliskWeapons\data\Olympus_m7_co.paa","OPTRE_Weapons\smg\data\m7_magazine_co.paa" };
-		class WeaponSlotsInfo : WeaponSlotsInfo
-		{
-			mass = 30;
-			class MuzzleSlot : MuzzleSlot
-			{
-				compatibleitems[] = { "optre_m7_silencer" };
-			};
-			class CowsSlot : CowsSlot
-			{
-				compatibleitems[] = { "MEU_REC_HOLO_DMR","optic_hamr","OPTRE_M7_Sight" };
-			};
-			class PointerSlot : PointerSlot
-			{
-				compatibleitems[] = { "OPTRE_M7_Flashlight","OPTRE_M7_Laser","MEU_M7_Vis_Laser" };
-			};
-		};
-	};
-
 	//Basilisk Railgun
 	class OPTRE_FC_Railgun;
 	class Basilisk_Railgun : OPTRE_FC_Railgun
@@ -289,15 +258,63 @@ class CfgWeapons
 		hiddenSelections[] = { "camo","camo1" };
 		hiddenSelectionsTextures[] = { "BasiliskWeapons\data\railgun_co.paa","optre_fc_weapons\railgun\data\r_railgun_ca.paa" };
 	};
+
+	//Soldner DMR
+	class srifle_DMR_03_F;
+	class Basilisk_Soldner_DMR : srifle_DMR_03_F
+	{
+		dlc = "Basilisk AUX Mod";
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[Basilisk] Soldner's DMR";
+		author = "Soldner";
+		baseWeapon = "Basilisk_Soldner_DMR";
+		hiddenSelections[] = {"Camo1","Camo2"};
+		hiddenSelectionsTextures[] = {"BasiliskWeapons\data\Soldner_DMR_01_co.paa","BasiliskWeapons\data\Soldner_DMR_02_co.paa"};
+		magazines[] = { "Basilisk_20Rnd_762x51_Mag" };
+	};
+	
+	//Havoc GL
+	class MA_GRL_45;
+	class Basilisk_GRL_45_Havoc: MA_GRL_45
+	{
+		dlc = "Basilisk AUX Mod";
+		displayName="[Basilisk] Havoc's GRL-45";
+		baseWeapon="Basilisk_GRL_45_Havoc";
+		scope=2;
+		scopeArsenal=2;
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2",
+			"camo3"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\MA_Weapons\data\GRL45\GL_Black_co.paa",
+			"\MA_Weapons\data\GRL45\GL_Black2_co.paa",
+			"\MA_Weapons\data\GRL45\GL_Sight_ca.paa"
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+		};
+		magazines[]={
+			"GRL45_6rnd_DroneHE"
+		};
+		magazineWell[]=
+		{
+			"CBA_40mm_M203_6rnds"
+		};
+	};
 };
 
 
 class CfgMagazines
 {
-	//Railgun Ammo
+	//Railgun Magazine
 	class OPTRE_FC_Railgun_Slug;
-	class Basilisk_Railgun_Slug : OPTRE_FC_Railgun_Slug
-	{
+	class Basilisk_Railgun_Slug : OPTRE_FC_Railgun_Slug {
+		dlc = "Basilisk AUX Mod";
 		displayName = "[Basilisk] Railgun";
 		displayNameShort = "16x65mm Slug";
 		ammo = "Basilisk_16x65mm_Slug";
@@ -308,17 +325,26 @@ class CfgMagazines
 		ace_arsenal_hide = -1;
 	};
 
-	//45 Ammo
-	class 11Rnd_45ACP_Mag;
-	class Basilisk_20Rnd_45ACP_Mag : 11Rnd_45ACP_Mag {
-		displayName = "[Basilisk] 20rnd 45ACP";
-		ammo = "Basilisk_45ACP";
+	//DMR Magazine
+	class ACE_20Rnd_762x51_M993_AP_Mag;
+	class Basilisk_20Rnd_762x51_Mag : ACE_20Rnd_762x51_M993_AP_Mag {
+		dlc = "Basilisk AUX Mod";
+		author = "Soldner";
+		displayName = "[Basilisk] 7.62 mm 20rnd Mag";
+		ammo = "Basilisk_762";
 		count = 20;
 		tracersEvery = 0;
 		lastRoundsTracer = 0;
-		initSpeed = 700;
 	};
-
+	
+	//GL Magazine
+	class GRL45_6rnd_HE;
+	class GRL45_6rnd_DroneHE : GRL45_6rnd_HE {
+		dlc = "Basilisk AUX Mod";
+		author = "Soldner";
+		displayName = "[Basilisk] 6rnd DroneHE";
+		ammo = "G_RC40_HE_fake_RF";
+	};
 };
 class CfgAmmo {
 	//Railgun Ammo
@@ -330,13 +356,11 @@ class CfgAmmo {
 		indirectHitRange = 5;
 		caliber = 2000;
 	};
-	
-	//45 Ammo
-	class B_45ACP_Ball;
-	class Basilisk_45ACP : B_45ACP_Ball
-	{
-		hit = 20;
+
+	//762 Ammo
+	class ACE_762x51_Ball_M993_AP;
+	class Basilisk_762 : ACE_762x51_Ball_M993_AP {
 		caliber = 6;
-		typicalSpeed = 300;
+		hit = 20;
 	};
 };

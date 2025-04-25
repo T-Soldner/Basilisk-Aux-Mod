@@ -24,7 +24,7 @@ class XtdGearModels
 			{
 				alwaysSelectable = 1;
 				label = "Role";
-				values[] = { "Standard","Burtovski","Sabbath" };
+				values[] = { "Standard","Burtovski","Sabbath","Tepfer" };
 				class Standard {
 					label = "Standard";
 				};
@@ -33,6 +33,9 @@ class XtdGearModels
 				};
 				class Sabbath {
 					label = "Sabbath";
+				};
+				class Tepfer {
+					label = "Tepfer";
 				};
 			};
 		};
@@ -43,7 +46,7 @@ class XtdGearModels
 			class role {
 				alwaysSelectable = 1;
 				label = "Owner";
-				values[] = { "Soldner","Holland","Kaker","Tepfer" };
+				values[] = { "Soldner","Holland","Kaker","Havoc"};
 				class Soldner {
 					label = "Soldner";
 				};
@@ -53,8 +56,8 @@ class XtdGearModels
 				class Kaker {
 					label = "Kaker";
 				};
-				class Tepfer {
-					label = "Tepfer";
+				class Havoc {
+					label = "Havoc";
 				};
 			};
 		};
@@ -151,6 +154,10 @@ class XtdGearInfos
 			role	= "Sabbath";
 			model	= "Basilisk_Custom_helmets";
 		};
+		class Basilisk_Tepfer_M56SH_Helmet {
+			role	= "Tepfer";
+			model	= "Basilisk_Olympus_Helmets";
+		};
 
 		//Olympus
 		class Basilisk_Soldner_Rogue_Helmet {
@@ -165,8 +172,8 @@ class XtdGearInfos
 			role	= "Kaker";
 			model	= "Basilisk_Olympus_Helmets";
 		};
-		class Basilisk_Tepfer_M56SH_Helmet {
-			role	= "Tepfer";
+		class Basilisk_Havoc_M56SR_Helmet {
+			role	= "Havoc";
 			model	= "Basilisk_Olympus_Helmets";
 		};
 
@@ -282,6 +289,18 @@ class CfgWeapons
 			hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Sabbath_HR_ODST_Helmet_CO.paa","BasiliskGear\data\helmets\Sabbath_HR_ODST_Visor_co.paa" };
 		};
 	};
+	class Basilisk_Tepfer_M56SH_Helmet : Basilisk_M56SH_Helmet_Base {
+		scope = 2;
+		scopeArsenal = 2;
+		author = "Soldner";
+		displayName = "[Basilisk] M56SH (Tepfer)";
+		hiddenSelections[] = { "camo1","camo2" };
+		hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Tepfer_H3_Helmet_co.paa","BasiliskGear\data\helmets\Tepfer_H3_Visor_co.paa" };
+		class ItemInfo : ItemInfo {
+			hiddenSelections[] = { "camo1","camo2" };
+			hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Tepfer_H3_Helmet_co.paa","BasiliskGear\data\helmets\Tepfer_H3_Visor_co.paa" };
+		};
+	};
 
 	//Olympus
 	class Basilisk_Soldner_Rogue_Helmet : Basilisk_Rogue_Helmet {
@@ -311,18 +330,6 @@ class CfgWeapons
 			hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\holland_HR_ODST_Helmet_CO.paa","BasiliskGear\data\helmets\holland_HR_ODST_Visor_Blue_co.paa" };
 		};
 	};
-	class Basilisk_Tepfer_M56SH_Helmet : Basilisk_M56SH_Helmet_Base {
-		scope = 2;
-		scopeArsenal = 2;
-		author = "Soldner";
-		displayName = "[Basilisk] M56SH (Tepfer)";
-		hiddenSelections[] = { "camo1","camo2" };
-		hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Tepfer_H3_Helmet_co.paa","BasiliskGear\data\helmets\Tepfer_H3_Visor_co.paa" };
-		class ItemInfo : ItemInfo {
-			hiddenSelections[] = { "camo1","camo2" };
-			hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Tepfer_H3_Helmet_co.paa","BasiliskGear\data\helmets\Tepfer_H3_Visor_co.paa" };
-		};
-	};
 	class Basilisk_Kaker_Fishbowl_Helmet : Basilisk_Fishbowl_Helmet {
 		scope = 2;
 		scopeArsenal = 2;
@@ -334,6 +341,20 @@ class CfgWeapons
 		{
 			hiddenSelections[] = { "camo1","camo2" };
 			hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Kaker_Pilot_Helmet_CO.paa","BasiliskGear\data\helmets\Kaker_Pilot_Visor_co.paa" };
+		};
+	};
+	class Basilisk_Havoc_M56SR_Helmet : Basilisk_M56SR_Helmet_Base
+	{
+		scope = 2;
+		scopeArsenal = 2;
+		author = "Sabbath";
+		displayName = "[Basilisk] M56S-R Helmet (Havoc)";
+		hiddenSelections[] = { "camo1","camo2" };
+		hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Havoc_HR_ODST_Helmet_CO.paa","BasiliskGear\data\helmets\Havoc_HR_ODST_Visor_co.paa" };
+		class ItemInfo : ItemInfo
+		{
+			hiddenSelections[] = { "camo1","camo2" };
+			hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Havoc_HR_ODST_Helmet_CO.paa","BasiliskGear\data\helmets\Havoc_HR_ODST_Visor_co.paa" };
 		};
 	};
 
@@ -464,7 +485,7 @@ class CfgWeapons
 		};
 	};
 
-
+	//Covers
 	class Basilisk_Base_Beret;
 	class Basilisk_Base_Boonie;
 	class H_MilCap_Blue;

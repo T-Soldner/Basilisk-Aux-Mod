@@ -141,11 +141,13 @@ class CfgWeapons
 		displayName = "[Basilisk] M56-G Helmet - Base";
 		model = "MA_Armor\data\Helmets\Gungnir\Gungnir_Helmet.p3d";
 		picture = "MA_Armor\data\Icons\Gungnir_Helmet.paa";
-		hiddenSelectionsTextures[] = { "MA_Armor\data\Helmets\Gungnir\Gungnir_co.paa","MA_Armor\data\Helmets\Gungnir\Gungnir_Visor_Blue_co.paa" };
+		hiddenSelections[] = {"Camo1"};
+		hiddenSelectionsTextures[] = {"MA_Armor\data\Helmets\Gungnir\Helmets\Olive_Gungnir_Helmet_CO.paa"};
 		class ItemInfo : ItemInfo
 		{
 			uniformModel = "MA_Armor\data\Helmets\Gungnir\Gungnir_Helmet.p3d";
-			hiddenSelectionsTextures[] = { "MA_Armor\data\Helmets\Gungnir\Gungnir_co.paa","MA_Armor\data\Helmets\Gungnir\Gungnir_Visor_Blue_co.paa" };
+			hiddenSelections[] = {"Camo1"};
+			hiddenSelectionsTextures[] = {"MA_Armor\data\Helmets\Gungnir\Helmets\Olive_Gungnir_Helmet_CO.paa"};
 			class HitpointsProtectionInfo
 			{
 				class Face

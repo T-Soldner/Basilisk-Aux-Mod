@@ -46,7 +46,7 @@ class XtdGearModels
 			class role {
 				alwaysSelectable = 1;
 				label = "Owner";
-				values[] = { "Soldner","Holland","Kaker","Havoc"};
+				values[] = { "Soldner","Holland","Kaker","Havoc","Ksiazek","Ishra"};
 				class Soldner {
 					label = "Soldner";
 				};
@@ -58,6 +58,12 @@ class XtdGearModels
 				};
 				class Havoc {
 					label = "Havoc";
+				};
+				class Ksiazek {
+					label = "Ksiazek";
+				};
+				class Ishra {
+					label = "Ishra";
 				};
 			};
 		};
@@ -87,8 +93,7 @@ class XtdGearModels
 				};
 			};
 		};
-		class Basilisk_Corvus_helmets
-		{
+		class Basilisk_Corvus_helmets {
 			label = "Corvus Helmets";
 			author = "Basilisk Mod Team";
 			options[] = { "role" };
@@ -111,8 +116,7 @@ class XtdGearModels
 				};
 			};
 		};
-		class Basilisk_covers
-		{
+		class Basilisk_covers {
 			label = "Basilisk Covers";
 			author = "VorpalHotdog";
 			options[] = { "Role" };
@@ -137,10 +141,8 @@ class XtdGearModels
 		};
 	};
 };
-class XtdGearInfos
-{
-	class CfgWeapons
-	{
+class XtdGearInfos {
+	class CfgWeapons {
 		//Standard/auxilary
 		class Basilisk_Standard_M56SR_Helmet {
 			role	= "Standard";
@@ -174,6 +176,14 @@ class XtdGearInfos
 		};
 		class Basilisk_Havoc_M56SR_Helmet {
 			role	= "Havoc";
+			model	= "Basilisk_Olympus_Helmets";
+		};
+		class Basilisk_Ksiazek_M56G_Helmet {
+			role	= "Ksiazek";
+			model	= "Basilisk_Olympus_Helmets";
+		};
+		class Basilisk_Ishra_M56SR_Helmet {
+			role	= "Ishra";
 			model	= "Basilisk_Olympus_Helmets";
 		};
 
@@ -218,15 +228,15 @@ class XtdGearInfos
 		};
 
 		//Covers
-		class Basilisk_Basilisk_Beret{
+		class Basilisk_Basilisk_Beret {
 			role	= "beret";
 			model	= "Basilisk_covers";
 		};
-		class Basilisk_Basilisk_Boonie{
+		class Basilisk_Basilisk_Boonie {
 			role	= "boonie";
 			model	= "Basilisk_covers";
 		};
-		class Basilisk_Basilisk_Patrol{
+		class Basilisk_Basilisk_Patrol {
 			role	= "patrol";
 			model	= "Basilisk_covers";
 		};
@@ -248,6 +258,7 @@ class CfgWeapons
 	class Basilisk_H3_EOD_Helmet;
 	class Basilisk_Rogue_Helmet;
 	class Basilisk_CH252A_Helmet;
+	class Basilisk_M56G_Helmet_Base;
 
 	//Standard/auxilary
 	class Basilisk_Standard_M56SR_Helmet : Basilisk_M56SR_Helmet_Base {
@@ -355,6 +366,33 @@ class CfgWeapons
 		{
 			hiddenSelections[] = { "camo1","camo2" };
 			hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Havoc_HR_ODST_Helmet_CO.paa","BasiliskGear\data\helmets\Havoc_HR_ODST_Visor_co.paa" };
+		};
+	};
+	class Basilisk_Ksiazek_M56G_Helmet : Basilisk_M56G_Helmet_Base
+	{
+		scope = 2;
+		scopeArsenal = 2;
+		author = "Sabbath";
+		displayName = "[Basilisk] M56G Helmet (Ksiazek)";
+		hiddenSelections[] = {"Camo1"};
+		hiddenSelectionsTextures[] = {"BasiliskGear\data\helmets\Ksiazek_Gungnir_Helmet_co.paa"};
+		class ItemInfo : ItemInfo
+		{
+			hiddenSelections[] = {"Camo1"};
+			hiddenSelectionsTextures[] = {"BasiliskGear\data\helmets\Ksiazek_Gungnir_Helmet_co.paa"};
+		};
+	};
+	class Basilisk_Ishra_M56SR_Helmet : Basilisk_M56SR_Helmet_Base {
+		scope = 2;
+		scopeArsenal = 2;
+		author = "Sabbath";
+		displayName = "[Basilisk] M56S-R Helmet (Ishra)";
+		hiddenSelections[] = { "camo1","camo2" };
+		hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Ishra_HR_ODST_Helmet_CO.paa","BasiliskGear\data\helmets\Ishra_HR_ODST_Visor_co.paa" };
+		class ItemInfo : ItemInfo
+		{
+			hiddenSelections[] = { "camo1","camo2" };
+			hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Ishra_HR_ODST_Helmet_CO.paa","BasiliskGear\data\helmets\Ishra_HR_ODST_Visor_co.paa" };
 		};
 	};
 

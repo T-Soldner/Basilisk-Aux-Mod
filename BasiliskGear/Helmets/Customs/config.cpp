@@ -101,7 +101,7 @@ class XtdGearModels
 			{
 				alwaysSelectable = 1;
 				label = "Owner";
-				values[] = { "Blackburn","Pjetrovic","Lancer","Grimshaw"};
+				values[] = { "Blackburn","Pjetrovic","Lancer","Grimshaw","Kincaid"};
 				class Blackburn {
 					label = "Blackburn";
 				};
@@ -113,6 +113,9 @@ class XtdGearModels
 				};
 				class Grimshaw {
 					label = "Grimshaw";
+				};
+				class Kincaid {
+					label = "Kincaid";
 				};
 			};
 		};
@@ -224,6 +227,10 @@ class XtdGearInfos {
 		};
 		class Basilisk_Grimshaw_M56SR_Helmet {
 			role	= "Grimshaw";
+			model	= "Basilisk_Corvus_helmets";
+		};
+		class Basilisk_Kincaid_M56S_Helmet {
+			role	= "Kincaid";
 			model	= "Basilisk_Corvus_helmets";
 		};
 
@@ -515,11 +522,25 @@ class CfgWeapons
 		author = "Sir Chungus";
 		displayName = "[Basilisk] M56S-R Helmet (Grimshaw)";
 		hiddenSelections[] = { "camo1","camo2" };
-		hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Grimshaw_HR_ODST_Helmet_CO.paa","BasiliskGear\data\helmets\HR_ODST_Visor_Black_co.paa" };
+		hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Grimshaw_HR_ODST_Helmet_CO.paa","BasiliskGear\data\helmets\Grimshaw_HR_ODST_Visor_co.paa" };
 		class ItemInfo : ItemInfo
 		{
 			hiddenSelections[] = { "camo1","camo2" };
-			hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Grimshaw_HR_ODST_Helmet_CO.paa","BasiliskGear\data\helmets\HR_ODST_Visor_Black_co.paa" };
+			hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Grimshaw_HR_ODST_Helmet_CO.paa","BasiliskGear\data\helmets\Grimshaw_HR_ODST_Visor_co.paa" };
+		};
+	};
+	class Basilisk_Kincaid_M56S_Helmet : Basilisk_M56S_Helmet_Base
+	{
+		scope = 2;
+		scopeArsenal = 2;
+		author = "Sir Chungus";
+		displayName = "[Basilisk] M56S Helmet (Kincaid)";
+		hiddenSelections[] = { "camo1","camo2" };
+		hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Kincaid_H4_Scout_Helmet_CO.paa","MA_Armor\data\Helmets\H4_Scout\Scout_Visor_Black_co.paa" };
+		class ItemInfo : ItemInfo
+		{
+			hiddenSelections[] = { "camo1","camo2" };
+			hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Kincaid_H4_Scout_Helmet_CO.paa","MA_Armor\data\Helmets\H4_Scout\Scout_Visor_Black_co.paa"  };
 		};
 	};
 

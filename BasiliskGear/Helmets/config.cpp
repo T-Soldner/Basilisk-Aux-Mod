@@ -212,8 +212,7 @@ class CfgWeapons
 	};
 
 	//M56S
-	class Basilisk_M56S_Helmet_Base : Basilisk_Helmet_Base_one
-	{
+	class Basilisk_M56S_Helmet_Base : Basilisk_Helmet_Base_one {
 		dlc = "Basilisk Aux Mod";
 		scope = 1;
 		scopeCurator = 1;

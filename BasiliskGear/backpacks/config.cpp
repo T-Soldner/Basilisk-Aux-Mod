@@ -288,7 +288,6 @@ class CfgVehicles
 		tf_range = 25000;
 		tf_dialogUpdate = "[""%1""] call TFAR_fnc_updateLRDialogToChannel;";
 		tf_hasLRradio = 1;
-		ace_gunbag = 1;
 		maximumLoad = 500;
 	};
 	class Basilisk_ANPRC_521_Holland : OPTRE_ANPRC_521_green

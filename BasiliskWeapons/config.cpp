@@ -1,7 +1,5 @@
-class CfgPatches
-{
-	class BasiliskWeapons
-	{
+class CfgPatches {
+	class BasiliskWeapons {
 		// Meta information for editor
 		name = "Basilisk AUX Mod";
 		author = "Soldner";
@@ -24,12 +22,9 @@ class CfgPatches
 
 //ace arsenal stuff
 
-class XtdGearModels
-{
-	class CfgWeapons
-	{
-		class Basilisk_squad_weapons
-		{
+class XtdGearModels {
+	class CfgWeapons {
+		class Basilisk_squad_weapons {
 			label = "Basilisk Squad Weapons";
 			options[] = {"type","GL"};
 			class type {
@@ -55,67 +50,74 @@ class XtdGearModels
 				};
 			};
 		};
-		class Basilisk_personal_primary_weapons
-		{
+		class Basilisk_personal_primary_weapons {
 			label = "Basilisk Personal Weapons";
 			options[] = {"type"};
 			class type {
 				alwaysSelectable = 1;
 				label = "Owner";
-				values[] = {"HollandAK120","SoldnerDMR"};
+				values[] = {"HollandAK120","SoldnerDMR","HavocGL","PayneRailgun"};
 				class HollandAK120 {
 					label = "Holland";
 				};
 				class SoldnerDMR {
 					label = "Soldner";
 				};
+				class HavocGL {
+					label = "Havoc";
+				};
+				class PayneRailgun {
+					label = "Payne";
+				};				
 			};
 		};
 	};		
 };
-class XtdGearInfos
-{
-	class CfgWeapons
-	{
+class XtdGearInfos {
+	class CfgWeapons {
 		class Basilisk_Vulcan_M7 {
-			model = "Basilisk_squad_weapons";
-			type = "VulcanM7";
-			GL = "NoGL";
+			model 	= "Basilisk_squad_weapons";
+			type 	= "VulcanM7";
+			GL 		= "NoGL";
 		};
 		class Basilisk_Templar_MA5B {
-			model = "Basilisk_squad_weapons";
-			type = "TemplarMA5";
-			GL = "NoGL";
+			model 	= "Basilisk_squad_weapons";
+			type 	= "TemplarMA5";
+			GL 		= "NoGL";
 		};
 		class Basilisk_Templar_MA5BGL {
-			model = "Basilisk_squad_weapons";
-			type = "TemplarMA5";
-			GL = "GL";
+			model 	= "Basilisk_squad_weapons";
+			type 	= "TemplarMA5";
+			GL 		= "GL";
 		};
 		class Basilisk_Holland_AK120 {
-			model = "Basilisk_personal_primary_weapons";
-			type = "HollandAK120";
+			model 	= "Basilisk_personal_primary_weapons";
+			type 	= "HollandAK120";
 		};
 		class Basilisk_Soldner_DMR {
-			model = "Basilisk_personal_primary_weapons";
-			type = "SoldnerDMR";
+			model 	= "Basilisk_personal_primary_weapons";
+			type 	= "SoldnerDMR";
+		};
+		class Basilisk_Railgun {
+			model 	= "Basilisk_personal_primary_weapons";
+			type 	= "PayneRailgun";
 		};
 	};
 };
 
+//Actual info
 
-class WeaponSlotsInfo;
-class MuzzleSlot;
-class CowsSlot;
-class PointerSlot;
-class UnderBarrelSlot;
-
-class CfgWeapons
-{
+class CfgWeapons {
+	//Inherits
+	class WeaponSlotsInfo;
+	class MuzzleSlot;
+	class CowsSlot;
+	class PointerSlot;
+	class UnderBarrelSlot;
+	
 	//Vulcan M7
 	class OPTRE_M7;	
-	class Basilisk_Vulcan_M7 : OPTRE_M7
-	{
+	class Basilisk_Vulcan_M7 : OPTRE_M7 {
 		dlc = "Basilisk AUX Mod";
 		author = "Soldner";
 		baseWeapon = "Basilisk_Vulcan_M7";
@@ -147,8 +149,7 @@ class CfgWeapons
 	class OPTRE_MA5B;
 	class OPTRE_MA5BGL;
 	class OPTRE_M301UGL;
-	class Basilisk_Templar_MA5B: OPTRE_MA5B
-	{
+	class Basilisk_Templar_MA5B: OPTRE_MA5B {
 		dlc = "Basilisk AUX Mod";
 		author = "Soldner";
 		baseWeapon = "Basilisk_Templar_MA5B";
@@ -174,8 +175,7 @@ class CfgWeapons
 			};
 		};
 	};
-	class Basilisk_Templar_MA5BGL: OPTRE_MA5BGL
-	{
+	class Basilisk_Templar_MA5BGL: OPTRE_MA5BGL {
 		dlc = "Basilisk AUX Mod";
 		author = "Soldner";
 		baseWeapon = "Basilisk_Templar_MA5BGL";
@@ -209,8 +209,7 @@ class CfgWeapons
 	
 	//Holland AK
 	class arifle_AK12_GL_F;
-	class Basilisk_Holland_AK120 : arifle_AK12_GL_F
-	{
+	class Basilisk_Holland_AK120 : arifle_AK12_GL_F {
 		dlc = "Basilisk AUX Mod";
 		author = "VorpalHotdog";
 		baseWeapon = "Basilisk_Holland_AK120";
@@ -244,8 +243,7 @@ class CfgWeapons
 
 	//Basilisk Railgun
 	class OPTRE_FC_Railgun;
-	class Basilisk_Railgun : OPTRE_FC_Railgun
-	{
+	class Basilisk_Railgun : OPTRE_FC_Railgun {
 		dlc = "Basilisk AUX Mod";
 		scope = 2;
 		scopearsenal = 2;
@@ -261,8 +259,7 @@ class CfgWeapons
 
 	//Soldner DMR
 	class srifle_DMR_03_F;
-	class Basilisk_Soldner_DMR : srifle_DMR_03_F
-	{
+	class Basilisk_Soldner_DMR : srifle_DMR_03_F {
 		dlc = "Basilisk AUX Mod";
 		scope = 2;
 		scopearsenal = 2;
@@ -276,8 +273,7 @@ class CfgWeapons
 	
 	//Havoc GL
 	class MA_GRL_45;
-	class Basilisk_GRL_45_Havoc: MA_GRL_45
-	{
+	class Basilisk_GRL_45_Havoc: MA_GRL_45 {
 		dlc = "Basilisk AUX Mod";
 		displayName="[Basilisk] Havoc's GRL-45";
 		baseWeapon="Basilisk_GRL_45_Havoc";
@@ -307,10 +303,7 @@ class CfgWeapons
 		};
 	};
 };
-
-
-class CfgMagazines
-{
+class CfgMagazines {
 	//Railgun Magazine
 	class OPTRE_FC_Railgun_Slug;
 	class Basilisk_Railgun_Slug : OPTRE_FC_Railgun_Slug {
@@ -349,8 +342,7 @@ class CfgMagazines
 class CfgAmmo {
 	//Railgun Ammo
 	class OPTRE_FC_16x65mm_Slug;
-	class Basilisk_16x65mm_Slug : OPTRE_FC_16x65mm_Slug
-	{
+	class Basilisk_16x65mm_Slug : OPTRE_FC_16x65mm_Slug {
 		hit = 2000;
 		indirectHit = 50;
 		indirectHitRange = 5;
@@ -360,7 +352,7 @@ class CfgAmmo {
 	//762 Ammo
 	class ACE_762x51_Ball_M993_AP;
 	class Basilisk_762 : ACE_762x51_Ball_M993_AP {
-		caliber = 6;
-		hit = 20;
+		caliber = 8;
+		hit = 25;
 	};
 };

@@ -1,5 +1,4 @@
-class CfgPatches
-{
+class CfgPatches {
 	class BasiliskGear_Uniforms
 	{
 		// Use meta information from specified addon. Used to avoid repeated declarations.
@@ -11,8 +10,7 @@ class CfgPatches
 		weapons[] = {};
 	};
 };
-class XtdGearModels
-{
+class XtdGearModels {
 	class CfgWeapons
 	{
 		class Basilisk_Undersuits
@@ -53,8 +51,7 @@ class XtdGearModels
 		};
 	};
 };
-class XtdGearInfos
-{
+class XtdGearInfos {
 	class CfgWeapons
 	{
 		class Basilisk_M56_BDU {
@@ -75,8 +72,7 @@ class XtdGearInfos
 		};
 	};
 };
-class CfgWeapons
-{
+class CfgWeapons {
 	class ItemInfo;
 	class UniformItem;
 
@@ -168,19 +164,16 @@ class CfgWeapons
 		};
 	};
 };
-class CfgVehicles
-{
+class CfgVehicles {
 	//Base setup
 	class SoldierWB;
-	class Basilisk_Soldier_Base : SoldierWB
-	{
+	class Basilisk_Soldier_Base : SoldierWB {
 		class HitPoints;
 		scope = 1;
 		scopeCurator = 1;
 		scopeArsenal = 1;
 	};
-	class Basilisk_Soldier_WDL : Basilisk_Soldier_Base
-	{
+	class Basilisk_Soldier_WDL : Basilisk_Soldier_Base {
 		class HitPoints : HitPoints
 		{
 			class HitFace;
@@ -202,8 +195,7 @@ class CfgVehicles
 			class ACE_HDBracket;
 		};
 	};
-	class Basilisk_Base_Uniform : Basilisk_Soldier_WDL
-	{
+	class Basilisk_Base_Uniform : Basilisk_Soldier_WDL {
 		class HitPoints : HitPoints
 		{
 			class HitFace : HitFace
@@ -418,8 +410,7 @@ class CfgVehicles
 	};
 
 	//M56 BDU
-	class Basilisk_M56_BDU_Base : Basilisk_Base_Uniform
-	{
+	class Basilisk_M56_BDU_Base : Basilisk_Base_Uniform {
 		scope = 1;		
 		dlc = "Basilisk Aux Mod";
 		UniformClass = "Basilisk_M56_BDU";
@@ -430,8 +421,7 @@ class CfgVehicles
 	};
 
 	//SPI Undersuit
-	class Basilisk_SPI_Undersuit_Base : Basilisk_Base_Uniform
-	{
+	class Basilisk_SPI_Undersuit_Base : Basilisk_Base_Uniform {
 		scope = 1;
 		dlc = "Basilisk Aux Mod";
 		uniformClass = "Basilisk_SPI_Undersuit";

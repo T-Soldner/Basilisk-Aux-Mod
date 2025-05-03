@@ -11,12 +11,9 @@ class CfgPatches
 		weapons[] = {};
 	};
 };
-class XtdGearModels
-{
-	class CfgWeapons
-	{
-		class Basilisk_Custom_helmets
-		{
+class XtdGearModels {
+	class CfgWeapons {
+		class Basilisk_Custom_helmets {
 			label = "Auxiliary Helmets";
 			author = "Basilisk Mod Team";
 			options[] = { "role" };
@@ -46,7 +43,7 @@ class XtdGearModels
 			class role {
 				alwaysSelectable = 1;
 				label = "Owner";
-				values[] = { "Soldner","Holland","Kaker","Havoc","Ksiazek","Ishra"};
+				values[] = { "Soldner","Holland","Kaker","Havoc","Ksiazek","Ishra","Grimshaw"};
 				class Soldner {
 					label = "Soldner";
 				};
@@ -64,6 +61,9 @@ class XtdGearModels
 				};
 				class Ishra {
 					label = "Ishra";
+				};
+				class Grimshaw {
+					label = "Grimshaw";
 				};
 			};
 		};
@@ -101,7 +101,7 @@ class XtdGearModels
 			{
 				alwaysSelectable = 1;
 				label = "Owner";
-				values[] = { "Blackburn","Pjetrovic","Lancer","Grimshaw","Kincaid"};
+				values[] = { "Blackburn","Pjetrovic","Lancer","Kincaid"};
 				class Blackburn {
 					label = "Blackburn";
 				};
@@ -110,9 +110,6 @@ class XtdGearModels
 				};
 				class Lancer {
 					label = "Lancer";
-				};
-				class Grimshaw {
-					label = "Grimshaw";
 				};
 				class Kincaid {
 					label = "Kincaid";
@@ -189,6 +186,10 @@ class XtdGearInfos {
 			role	= "Ishra";
 			model	= "Basilisk_Olympus_Helmets";
 		};
+		class Basilisk_Grimshaw_M56SR_Helmet {
+			role	= "Grimshaw";
+			model	= "Basilisk_Olympus_Helmets";
+		};
 
 		//Fury
 		class Basilisk_Buckley_Recon_Helmet {
@@ -223,10 +224,6 @@ class XtdGearInfos {
 		};
 		class Basilisk_Lancer_Grenadier_Helmet {
 			role	= "Lancer";
-			model	= "Basilisk_Corvus_helmets";
-		};
-		class Basilisk_Grimshaw_M56SR_Helmet {
-			role	= "Grimshaw";
 			model	= "Basilisk_Corvus_helmets";
 		};
 		class Basilisk_Kincaid_M56S_Helmet {
@@ -402,6 +399,20 @@ class CfgWeapons
 			hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Ishra_HR_ODST_Helmet_CO.paa","BasiliskGear\data\helmets\Ishra_HR_ODST_Visor_co.paa" };
 		};
 	};
+	class Basilisk_Grimshaw_M56SR_Helmet : Basilisk_M56SR_Helmet_Base
+	{
+		scope = 2;
+		scopeArsenal = 2;
+		author = "Sir Chungus";
+		displayName = "[Basilisk] M56S-R Helmet (Grimshaw)";
+		hiddenSelections[] = { "camo1","camo2" };
+		hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Grimshaw_HR_ODST_Helmet_CO.paa","BasiliskGear\data\helmets\Grimshaw_HR_ODST_Visor_co.paa" };
+		class ItemInfo : ItemInfo
+		{
+			hiddenSelections[] = { "camo1","camo2" };
+			hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Grimshaw_HR_ODST_Helmet_CO.paa","BasiliskGear\data\helmets\Grimshaw_HR_ODST_Visor_co.paa" };
+		};
+	};
 
 	//Fury
 	class Basilisk_Buckley_Recon_Helmet : Basilisk_Recon_Helmet {
@@ -513,20 +524,6 @@ class CfgWeapons
 		{
 			hiddenSelections[] = { "camo1","camo2" };
 			hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Lancer_Grenadier_Helmet_co.paa","MA_Armor\data\Helmets\Grenadier\Visors\Sky_Grenadier_Visor_CO.paa" };
-		};
-	};
-	class Basilisk_Grimshaw_M56SR_Helmet : Basilisk_M56SR_Helmet_Base
-	{
-		scope = 2;
-		scopeArsenal = 2;
-		author = "Sir Chungus";
-		displayName = "[Basilisk] M56S-R Helmet (Grimshaw)";
-		hiddenSelections[] = { "camo1","camo2" };
-		hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Grimshaw_HR_ODST_Helmet_CO.paa","BasiliskGear\data\helmets\Grimshaw_HR_ODST_Visor_co.paa" };
-		class ItemInfo : ItemInfo
-		{
-			hiddenSelections[] = { "camo1","camo2" };
-			hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Grimshaw_HR_ODST_Helmet_CO.paa","BasiliskGear\data\helmets\Grimshaw_HR_ODST_Visor_co.paa" };
 		};
 	};
 	class Basilisk_Kincaid_M56S_Helmet : Basilisk_M56S_Helmet_Base

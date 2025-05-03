@@ -377,7 +377,7 @@ class SmokeandAshes {
 	musicClass = "BasiliskIdle";
 };
 class ChocolateOutline {
-	name = "Smoke and Ashes";
+	name = "Chocolate Outline";
 	sound[] = { "BasiliskMusic\data\Tracks\ChocolateOutline.ogg",db + 0,1 };
 	duration = 217;
 	musicClass = "BasiliskIdle";

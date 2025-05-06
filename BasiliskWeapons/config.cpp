@@ -98,6 +98,10 @@ class XtdGearInfos {
 			model 	= "Basilisk_personal_primary_weapons";
 			type 	= "SoldnerDMR";
 		};
+		class Basilisk_GRL_45_Havoc {
+			model 	= "Basilisk_personal_primary_weapons";
+			type 	= "HavocGL";
+		};
 		class Basilisk_Railgun {
 			model 	= "Basilisk_personal_primary_weapons";
 			type 	= "PayneRailgun";
@@ -105,18 +109,16 @@ class XtdGearInfos {
 	};
 };
 
-//Actual info
+//Inherits need to be here for some reason, if moved inside cfgWeapons the attachments on some guns break.
+class WeaponSlotsInfo;
+class MuzzleSlot;
+class CowsSlot;
+class PointerSlot;
+class UnderBarrelSlot;
 
-class CfgWeapons {
-	//Inherits
-	class WeaponSlotsInfo;
-	class MuzzleSlot;
-	class CowsSlot;
-	class PointerSlot;
-	class UnderBarrelSlot;
-	
+class CfgWeapons {	
 	//Vulcan M7
-	class OPTRE_M7;	
+ 	class OPTRE_M7;	
 	class Basilisk_Vulcan_M7 : OPTRE_M7 {
 		dlc = "Basilisk AUX Mod";
 		author = "Soldner";
@@ -127,19 +129,15 @@ class CfgWeapons {
 		canShootInWater = 1;
 		hiddenSelections[] = {"camo","camo1"};
 		hiddenSelectionsTextures[] = {"BasiliskWeapons\data\Vulcan_m7_co.paa","OPTRE_Weapons\smg\data\m7_magazine_co.paa"};
-		class WeaponSlotsInfo: WeaponSlotsInfo
-		{
+		class WeaponSlotsInfo: WeaponSlotsInfo {
 			mass = 30;
-			class MuzzleSlot: MuzzleSlot
-			{
+			class MuzzleSlot: MuzzleSlot {
 				compatibleitems[] = {"optre_m7_silencer","optre_ma5suppressor"};
 			};
-			class CowsSlot: CowsSlot
-			{
+			class CowsSlot: CowsSlot {
 				compatibleitems[] = {"MEU_REC_HOLO_Red","optic_hamr","OPTRE_M7_Sight"};
 			};
-			class PointerSlot: PointerSlot
-			{
+			class PointerSlot: PointerSlot {
 				compatibleitems[] = {"OPTRE_M7_Flashlight","OPTRE_M7_Laser","ace_acc_pointer_green","MEU_M7_Vis_Laser","OPTRE_BMR_Laser"};
 			};
 		};
@@ -147,7 +145,7 @@ class CfgWeapons {
 	
 	//Templar MA5B
 	class OPTRE_MA5B;
-	class OPTRE_MA5BGL;
+ 	class OPTRE_MA5BGL;
 	class OPTRE_M301UGL;
 	class Basilisk_Templar_MA5B: OPTRE_MA5B {
 		dlc = "Basilisk AUX Mod";
@@ -158,19 +156,14 @@ class CfgWeapons {
 		magazineWell[] = {"MEU_rifle_uw","MEU_60rnd_762_51"};
 		magazines[] = {};
 		hiddenSelectionsTextures[] = {"BasiliskWeapons\data\templarWeapon_CO.paa","BasiliskWeapons\data\templarSmartlink_co.paa","BasiliskWeapons\data\templarCover_co.paa","optre_weapons\optics\data\reticles\ma5_reticle.paa"};
-		class WeaponSlotsInfo: WeaponSlotsInfo
-		{
+		class WeaponSlotsInfo: WeaponSlotsInfo {
 			mass = 80;
-			class MuzzleSlot: MuzzleSlot
-			{
-				compatibleitems[] = {"muzzle_snds_h_mg_blk_f","muzzle_snds_l","optre_ma5suppressor","ace_muzzle_mzls_b","muzzle_snds_b","OPTRE_MA37KSuppressor","muzzle_snds_65_TI_blk_F"};
-			};
-			class CowsSlot: CowsSlot
-			{
+			class MuzzleSlot: MuzzleSlot {
+				compatibleitems[] = {"muzzle_snds_h_mg_blk_f","muzzle_snds_l","optre_ma5suppressor","ace_muzzle_mzls_b","muzzle_snds_b","OPTRE_MA37KSuppressor","muzzle_snds_65_TI_blk_F"};};
+			class CowsSlot: CowsSlot {
 				compatibleitems[] = {"MEU_REC_HOLO","MEU_REC_HOLO_Red","MEU_REC_HOLO_Gre","optic_Yorris","optic_DMS","optic_DMS_ghex_F","optic_ERCO_blk_F","optic_ERCO_khk_F","optic_ERCO_snd_F","optic_MRCO","optic_Arco","optic_Arco_ghex_F","optic_Arco_blk_F","optic_aco","optic_ACO_grn","optic_aco_smg","optic_ACO_grn_smg","optic_hamr","optic_Hamr_khk_F","optic_Holosight","optic_Holosight_smg","optic_Holosight_blk_F","optic_Holosight_khk_F","optic_Holosight_smg_blk_F","optic_Holosight_smg_khk_F","OPTRE_M392_Scope","OPTRE_BR55HB_Scope","OPTRE_M7_Sight","OPTRE_M393_Scope","OPTRE_M393_ACOG","OPTRE_M393_EOTECH","OPTRE_M73_SmartLink","OPTRE_MA5_SmartLink","OPTRE_MA5_SmartLink_v2","OPTRE_MA5C_SmartLink_v2","OPTRE_MA5_SmartLink_legacy","OPTRE_MA5C_SmartLink_legacy","OPTRE_M12_Optic","optic_ico_01_black_f","OPTRE_BR45_Scope"};
 			};
-			class PointerSlot: PointerSlot
-			{
+			class PointerSlot: PointerSlot {
 				compatibleitems[] = {"OPTRE_M7_Flashlight","OPTRE_M7_Laser","acc_pointer_ir","acc_flashlight","OPTRE_BMR_Laser","optre_m12_laser","ace_acc_pointer_green","optre_m45_flashlight","optre_m45_flashlight_red","acc_pointer_vis_red","MEU_M12_Vis_Laser","MEU_BMR_Vis_Laser","MEU_M7_Vis_Laser","MEU_M6G_Laser"};
 			};
 		};
@@ -184,24 +177,19 @@ class CfgWeapons {
 		magazineWell[] = {"MEU_rifle_uw","MEU_60rnd_762_51"};
 		magazines[] = {};
 		hiddenSelectionsTextures[] = {"BasiliskWeapons\data\templarWeapon_CO.paa","BasiliskWeapons\data\templarSmartlink_co.paa","BasiliskWeapons\data\templarCover_co.paa","optre_weapons\optics\data\reticles\ma5_reticle.paa"};
-		class WeaponSlotsInfo: WeaponSlotsInfo
-		{
+		class WeaponSlotsInfo: WeaponSlotsInfo {
 			mass = 80;
-			class MuzzleSlot: MuzzleSlot
-			{
+			class MuzzleSlot: MuzzleSlot {
 				compatibleitems[] = {"muzzle_snds_h_mg_blk_f","muzzle_snds_l","optre_ma5suppressor","ace_muzzle_mzls_b","muzzle_snds_b","OPTRE_MA37KSuppressor","muzzle_snds_65_TI_blk_F"};
 			};
-			class CowsSlot: CowsSlot
-			{
+			class CowsSlot: CowsSlot {
 				compatibleitems[] = {"MEU_REC_HOLO","MEU_REC_HOLO_Red","MEU_REC_HOLO_Gre","optic_Yorris","optic_DMS","optic_DMS_ghex_F","optic_ERCO_blk_F","optic_ERCO_khk_F","optic_ERCO_snd_F","optic_MRCO","optic_Arco","optic_Arco_ghex_F","optic_Arco_blk_F","optic_aco","optic_ACO_grn","optic_aco_smg","optic_ACO_grn_smg","optic_hamr","optic_Hamr_khk_F","optic_Holosight","optic_Holosight_smg","optic_Holosight_blk_F","optic_Holosight_khk_F","optic_Holosight_smg_blk_F","optic_Holosight_smg_khk_F","OPTRE_M392_Scope","OPTRE_BR55HB_Scope","OPTRE_M7_Sight","OPTRE_M393_Scope","OPTRE_M393_ACOG","OPTRE_M393_EOTECH","OPTRE_M73_SmartLink","OPTRE_MA5_SmartLink","OPTRE_MA5_SmartLink_v2","OPTRE_MA5C_SmartLink_v2","OPTRE_MA5_SmartLink_legacy","OPTRE_MA5C_SmartLink_legacy","OPTRE_M12_Optic","optic_ico_01_black_f","OPTRE_BR45_Scope"};
 			};
-			class PointerSlot: PointerSlot
-			{
+			class PointerSlot: PointerSlot {
 				compatibleitems[] = {"OPTRE_M7_Flashlight","OPTRE_M7_Laser","acc_pointer_ir","acc_flashlight","OPTRE_BMR_Laser","optre_m12_laser","ace_acc_pointer_green","optre_m45_flashlight","optre_m45_flashlight_red","acc_pointer_vis_red","MEU_M12_Vis_Laser","MEU_BMR_Vis_Laser","MEU_M7_Vis_Laser","MEU_M6G_Laser"};
 			};
 		};
-		class OPTRE_M301UGL: OPTRE_M301UGL
-		{
+		class OPTRE_M301UGL: OPTRE_M301UGL {
 			magazines[] = {};
 			magazineWell[] = {"MEU_GL_Explosive_Lethal","MEU_GL_Smokes","MEU_GL_Tactile","MEU_GL_Flares"};
 		};
@@ -219,23 +207,18 @@ class CfgWeapons {
 		canShootInWater = 1;
 		hiddenSelections[] = {"camo1","camo2"};
 		hiddenSelectionsTextures[] = {"BasiliskWeapons\data\Holland_ak120_1.paa","BasiliskWeapons\data\Holland_ak120_2.paa"};
-		class WeaponSlotsInfo: WeaponSlotsInfo
-		{
+		class WeaponSlotsInfo: WeaponSlotsInfo {
 			mass = 60;
-			class MuzzleSlot: MuzzleSlot
-			{
+			class MuzzleSlot: MuzzleSlot {
 				compatibleitems[] = {"OPTRE_MA5Suppressor"};
 			}; 
-			class CowsSlot: CowsSlot
-			{
+			class CowsSlot: CowsSlot {
 				compatibleitems[] = {"optic_Nightstalker","optic_tws","optic_tws_mg","optic_NVS","optic_DMS","optic_LRPS","optic_ams","optic_AMS_snd","optic_AMS_khk","optic_KHS_blk","optic_KHS_tan","optic_KHS_hex","optic_KHS_old","optic_SOS","optic_MRCO","optic_Arco","optic_aco","optic_ACO_grn","optic_aco_smg","optic_ACO_grn_smg","optic_hamr","optic_Holosight","optic_Holosight_smg","optic_Hamr_khk_F","optic_SOS_khk_F","optic_Arco_ghex_F","optic_Arco_blk_F","optic_DMS_ghex_F","optic_ERCO_blk_F","optic_ERCO_khk_F","optic_ERCO_snd_F","optic_LRPS_ghex_F","optic_LRPS_tna_F","optic_Holosight_blk_F","optic_Holosight_khk_F","optic_Holosight_smg_blk_F","optic_Holosight_smg_khk_F","OPTRE_M392_Scope","OPTRE_BR55HB_Scope","OPTRE_M7_Sight","OPTRE_M393_Scope","OPTRE_M393_ACOG","OPTRE_M393_EOTECH","tcf_ma1b_ammocounter",};
 			};
-			class PointerSlot: PointerSlot
-			{
+			class PointerSlot: PointerSlot {
 				compatibleItems[] = {"acc_flashlight","acc_pointer_IR","OPTRE_BMR_Laser"};
 			};
-			class UnderBarrelSlot: UnderBarrelSlot
-			{
+			class UnderBarrelSlot: UnderBarrelSlot {
 				compatibleItems[] = {"bipod_01_F_blk","bipod_02_F_blk","bipod_03_F_blk"};
 			};
 		};
@@ -251,7 +234,7 @@ class CfgWeapons {
 		author = "Soldner";
 		baseWeapon = "Basilisk_Railgun";
 		magazines[] = { "Basilisk_Railgun_Slug" };
-		initspeed = 1000;
+		initspeed = 200;
 		maxZeroing = 1000;
 		hiddenSelections[] = { "camo","camo1" };
 		hiddenSelectionsTextures[] = { "BasiliskWeapons\data\railgun_co.paa","optre_fc_weapons\railgun\data\r_railgun_ca.paa" };
@@ -343,10 +326,10 @@ class CfgAmmo {
 	//Railgun Ammo
 	class OPTRE_FC_16x65mm_Slug;
 	class Basilisk_16x65mm_Slug : OPTRE_FC_16x65mm_Slug {
-		hit = 2000;
-		indirectHit = 50;
-		indirectHitRange = 5;
-		caliber = 2000;
+		hit = 100;
+		indirectHit = 10;
+		indirectHitRange = 1;
+		caliber = 100;
 	};
 
 	//762 Ammo

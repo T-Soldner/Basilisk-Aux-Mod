@@ -27,16 +27,16 @@ class CfgMusic
 };
 class CfgMusicClasses
 {
-	class BasiliskMusic
-	{
-		displayName = "Basilisk - Music Pack";
+	class BasiliskAction {
+		displayName = "Basilisk - Action";
 	};
-	class BasiliskClip
-	{
-		displayName = "Basilisk - Short Audio Clips";
+	class BasiliskSuspense {
+		displayName = "Basilisk - Suspense";
 	};
-	class BasiliskGoofy
-	{
+	class BasiliskIdle {
+		displayName = "Basilisk - Idle";
+	};
+	class BasiliskGoofy {
 		displayName = "Basilisk - Goofy";
 	};
 };

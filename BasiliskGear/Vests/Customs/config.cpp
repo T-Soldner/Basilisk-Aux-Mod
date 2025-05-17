@@ -82,7 +82,7 @@ class XtdGearModels
 			{
 				alwaysSelectable = 1;
 				label = "Role";
-				values[] = { "Buckley","Payne","Wolf","Chop","Vargo"};
+				values[] = { "Buckley","Payne","Wolf","Chop","Vargo","Famous"};
 				class Buckley {
 					label = "Buckley";
 				};
@@ -98,6 +98,9 @@ class XtdGearModels
 				class Vargo {
 					label = "Vargo";
 				};
+				class Famous {
+					label = "Famous";
+				};
 			};
 		};
 		class Basilisk_Corvus_vests
@@ -109,7 +112,7 @@ class XtdGearModels
 			{
 				alwaysSelectable = 1;
 				label = "Role";
-				values[] = { "Blackburn","Pjetrovic","Lancer","Kincaid"};
+				values[] = { "Blackburn","Pjetrovic","Lancer","Kincaid","Bauer"};
 				class Blackburn {
 					label = "Blackburn";
 				};
@@ -121,6 +124,9 @@ class XtdGearModels
 				};
 				class Kincaid {
 					label = "Kincaid";
+				};
+				class Bauer {
+					label = "Bauer";
 				};
 			};
 		};
@@ -199,6 +205,10 @@ class XtdGearInfos
 			model	= "Basilisk_Fury_vests";
 			role	= "Vargo";
 		};
+		class Basilisk_Famous_M56R_Armor {
+			model	= "Basilisk_Fury_vests";
+			role	= "Famous";
+		};
 
 		//Corvus 
 		class Basilisk_Blackburn_M56R_Armor {
@@ -216,6 +226,10 @@ class XtdGearInfos
 		class Basilisk_Kincaid_M56R_Armor {
 			model 	= "Basilisk_Corvus_vests";
 			role 	= "Kincaid";
+		};
+		class Basilisk_Bauer_M56R_Armor {
+			model 	= "Basilisk_Corvus_vests";
+			role 	= "Bauer";
 		};
 	};
 };
@@ -805,6 +819,109 @@ class CfgWeapons
 			hiddenSelectionsTextures[] = { "BasiliskGear\data\armor\Vargo_Spi_Mk1.paa" };
 		};
 	};
+	class Basilisk_Famous_M56R_Armor : Basilisk_Base_M56R_Armor {
+		scope = 2;
+		scopeArsenal = 2;
+		author = "Soldner";
+		displayName = "[Basilisk] M56R Combat Armor (Famous)";
+		hiddenSelections[] = {
+			"camo1",
+			"camo2",
+			"camo3",
+			"camo4",
+			"camo5",
+			"camo6",
+			"camo7",
+			"camo8",
+			"camo9",
+			"camo10",
+			//"Reach_Forearm_Left",
+			//"Reach_Forearm_Right",
+			"H3_Forearm_Left",
+			"H3_Forearm_Right",
+			"H3_Pauldron_Left",
+			"H3_Pauldron_Right",
+			"Reach_Pauldron_Left",
+			"Reach_Pauldron_Right",
+			"Reach_Shoulder_Radio_Left",
+			"Reach_Shoulder_Radio_Right",
+			"Reach_Sniper_Pauldron_Left",
+			//"Reach_Sniper_Pauldron_Right",
+			//"Reach_CQB_Pauldron_Left",
+			"Reach_CQB_Pauldron_Right",
+			"Thigh_Pouch",
+			//"H3_Armor_Upper",
+			//"H3_Armor_Lower",
+			"Reach_Armor_Upper",
+			"Reach_Armor_Lower",
+			//"Forearm_Vent_Left",
+			//"Forearm_Vent_Right",
+			//"Canisters"
+		};
+		hiddenSelectionsTextures[] = {
+			"BasiliskGear\data\armor\Famous_H3_Armor_Upper_co.paa",
+			"BasiliskGear\data\armor\Famous_H3_Armor_Lower_co.paa",
+			"MA_Armor\data\Vests\H3_ODST\Addons\Medic_Thigh_Pouch_co.paa",
+			"BasiliskGear\data\armor\Famous_Reach_Armor_Upper_co.paa",
+			"MA_Armor\data\Vests\H3_ODST\Reach_Armor_Lower_co.paa",
+			"MA_Armor\data\Vests\Reach_ODST\Canisters_co.paa",
+			"MA_Armor\data\Vests\Reach_ODST\Forearm_Vents_co.paa",
+			"BasiliskGear\data\armor\Famous_Sniper_co.paa",
+			"BasiliskGear\data\armor\Famous_CQB_co.paa",
+			"MA_Armor\data\Vests\Reach_ODST\Addons\Reach_Shoulder_Radio\Shoulder_Radio_Green_co.paa"
+		};
+		class ItemInfo : ItemInfo {
+			vestType = "Rebreather";
+			uniformModel = "MA_Armor\data\Vests\H3_ODST\H3_ODST_Armor.p3d";
+			containerClass = "Supply200";
+			hiddenSelections[] = {
+				"camo1",
+				"camo2",
+				"camo3",
+				"camo4",
+				"camo5",
+				"camo6",
+				"camo7",
+				"camo8",
+				"camo9",
+				"camo10",
+				//"Reach_Forearm_Left",
+				//"Reach_Forearm_Right",
+				"H3_Forearm_Left",
+				"H3_Forearm_Right",
+				"H3_Pauldron_Left",
+				"H3_Pauldron_Right",
+				"Reach_Pauldron_Left",
+				"Reach_Pauldron_Right",
+				"Reach_Shoulder_Radio_Left",
+				"Reach_Shoulder_Radio_Right",
+				"Reach_Sniper_Pauldron_Left",
+				//"Reach_Sniper_Pauldron_Right",
+				//"Reach_CQB_Pauldron_Left",
+				"Reach_CQB_Pauldron_Right",
+				"Thigh_Pouch",
+				//"H3_Armor_Upper",
+				//"H3_Armor_Lower",
+				"Reach_Armor_Upper",
+				"Reach_Armor_Lower",
+				//"Forearm_Vent_Left",
+				//"Forearm_Vent_Right",
+				//"Canisters"
+			};
+			hiddenSelectionsTextures[] = {
+				"BasiliskGear\data\armor\Famous_H3_Armor_Upper_co.paa",
+				"BasiliskGear\data\armor\Famous_H3_Armor_Lower_co.paa",
+				"MA_Armor\data\Vests\H3_ODST\Addons\Medic_Thigh_Pouch_co.paa",
+				"BasiliskGear\data\armor\Famous_Reach_Armor_Upper_co.paa",
+				"MA_Armor\data\Vests\H3_ODST\Reach_Armor_Lower_co.paa",
+				"MA_Armor\data\Vests\Reach_ODST\Canisters_co.paa",
+				"MA_Armor\data\Vests\Reach_ODST\Forearm_Vents_co.paa",
+				"BasiliskGear\data\armor\Famous_Sniper_co.paa",
+				"BasiliskGear\data\armor\Famous_CQB_co.paa",
+				"MA_Armor\data\Vests\Reach_ODST\Addons\Reach_Shoulder_Radio\Shoulder_Radio_Green_co.paa"
+			};
+		};
+	};
 
 	//Corvus
 	class Basilisk_Blackburn_M56R_Armor: Basilisk_Base_M56R_Armor {
@@ -1128,6 +1245,109 @@ class CfgWeapons
 				"MA_Armor\data\Vests\Reach_ODST\Addons\Sniper_Shoulders\Sniper_co.paa",
 				"MA_Armor\data\Vests\Reach_ODST\Addons\CQB_Shoulders\CQB_co.paa",
 				"MA_Armor\data\Vests\Reach_ODST\Addons\Reach_Shoulder_Radio\Shoulder_Radio_Green_co.paa"
+			};
+		};
+	};
+	class Basilisk_Bauer_M56R_Armor : Basilisk_Base_M56R_Armor {
+		scope = 2;
+		scopeArsenal = 2;
+		author = "Soldner";
+		displayName = "[Basilisk] M56R Combat Armor (Bauer)";
+		hiddenSelections[] = {
+			"camo1",
+			"camo2",
+			"camo3",
+			"camo4",
+			"camo5",
+			"camo6",
+			"camo7",
+			"camo8",
+			"camo9",
+			"camo10",
+			"Reach_Forearm_Left",
+			"Reach_Forearm_Right",
+			//"H3_Forearm_Left",
+			//"H3_Forearm_Right",
+			"H3_Pauldron_Left",
+			"H3_Pauldron_Right",
+			"Reach_Pauldron_Left",
+			//"Reach_Pauldron_Right",
+			"Reach_Shoulder_Radio_Left",
+			//"Reach_Shoulder_Radio_Right",
+			//"Reach_Sniper_Pauldron_Left",
+			"Reach_Sniper_Pauldron_Right",
+			"Reach_CQB_Pauldron_Left",
+			"Reach_CQB_Pauldron_Right",
+			//"Thigh_Pouch",
+			//"H3_Armor_Upper",
+			//"H3_Armor_Lower",
+			"Reach_Armor_Upper",
+			"Reach_Armor_Lower",
+			//"Forearm_Vent_Left",
+			//"Forearm_Vent_Right",
+			//"Canisters"
+		};
+		hiddenSelectionsTextures[] = {
+			"BasiliskGear\data\armor\Bauer_H3_Upper_Armor_co.paa",
+			"BasiliskGear\data\armor\Bauer_H3_Lower Armor_co.paa",
+			"BasiliskGear\data\armor\Bauer_Thigh_Pouch_co.paa",
+			"BasiliskGear\data\armor\Bauer_Reach_Armor_Upper_co.paa",
+			"MA_Armor\data\Vests\H3_ODST\Reach_Armor_Lower_co.paa",
+			"MA_Armor\data\Vests\Reach_ODST\Canisters_co.paa",
+			"MA_Armor\data\Vests\Reach_ODST\Forearm_Vents_co.paa",
+			"BasiliskGear\data\armor\Bauer_Sniper_co.paa",
+			"MA_Armor\data\Vests\Reach_ODST\Addons\CQB_Shoulders\CQB_co.paa",
+			"BasiliskGear\data\armor\Bauer_Shoulder_Radio_co.paa"
+		};
+		class ItemInfo : ItemInfo {
+			vestType = "Rebreather";
+			uniformModel = "MA_Armor\data\Vests\H3_ODST\H3_ODST_Armor.p3d";
+			containerClass = "Supply200";
+			hiddenSelections[] = {
+				"camo1",
+				"camo2",
+				"camo3",
+				"camo4",
+				"camo5",
+				"camo6",
+				"camo7",
+				"camo8",
+				"camo9",
+				"camo10",
+				"Reach_Forearm_Left",
+				"Reach_Forearm_Right",
+				//"H3_Forearm_Left",
+				//"H3_Forearm_Right",
+				"H3_Pauldron_Left",
+				"H3_Pauldron_Right",
+				"Reach_Pauldron_Left",
+				//"Reach_Pauldron_Right",
+				"Reach_Shoulder_Radio_Left",
+				//"Reach_Shoulder_Radio_Right",
+				//"Reach_Sniper_Pauldron_Left",
+				"Reach_Sniper_Pauldron_Right",
+				"Reach_CQB_Pauldron_Left",
+				"Reach_CQB_Pauldron_Right",
+				//"Thigh_Pouch",
+				//"H3_Armor_Upper",
+				//"H3_Armor_Lower",
+				"Reach_Armor_Upper",
+				"Reach_Armor_Lower",
+				//"Forearm_Vent_Left",
+				//"Forearm_Vent_Right",
+				//"Canisters"
+			};
+			hiddenSelectionsTextures[] = {
+				"BasiliskGear\data\armor\Bauer_H3_Upper_Armor_co.paa",
+				"BasiliskGear\data\armor\Bauer_H3_Lower Armor_co.paa",
+				"BasiliskGear\data\armor\Bauer_Thigh_Pouch_co.paa",
+				"BasiliskGear\data\armor\Bauer_Reach_Armor_Upper_co.paa",
+				"MA_Armor\data\Vests\H3_ODST\Reach_Armor_Lower_co.paa",
+				"MA_Armor\data\Vests\Reach_ODST\Canisters_co.paa",
+				"MA_Armor\data\Vests\Reach_ODST\Forearm_Vents_co.paa",
+				"BasiliskGear\data\armor\Bauer_Sniper_co.paa",
+				"MA_Armor\data\Vests\Reach_ODST\Addons\CQB_Shoulders\CQB_co.paa",
+				"BasiliskGear\data\armor\Bauer_Shoulder_Radio_co.paa"
 			};
 		};
 	};

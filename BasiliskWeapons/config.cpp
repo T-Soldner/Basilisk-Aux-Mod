@@ -234,7 +234,7 @@ class CfgWeapons {
 		author = "Soldner";
 		baseWeapon = "Basilisk_Railgun";
 		magazines[] = { "Basilisk_Railgun_Slug" };
-		initspeed = 200;
+		initspeed = 1000;
 		maxZeroing = 1000;
 		hiddenSelections[] = { "camo","camo1" };
 		hiddenSelectionsTextures[] = { "BasiliskWeapons\data\railgun_co.paa","optre_fc_weapons\railgun\data\r_railgun_ca.paa" };
@@ -297,7 +297,7 @@ class CfgMagazines {
 		picture = "\A3\Weapons_F\Data\UI\M_battery_CA.paa";
 		descriptionshort = "16x65mm Slug for the ARC-920 Railgun";
 		count = 1;
-		mass = 20;
+		mass = 10;
 		ace_arsenal_hide = -1;
 	};
 
@@ -326,16 +326,16 @@ class CfgAmmo {
 	//Railgun Ammo
 	class OPTRE_FC_16x65mm_Slug;
 	class Basilisk_16x65mm_Slug : OPTRE_FC_16x65mm_Slug {
-		hit = 100;
-		indirectHit = 10;
+		hit = 400;
+		indirectHit = 20;
 		indirectHitRange = 1;
-		caliber = 100;
+		caliber = 250;
 	};
 
 	//762 Ammo
 	class ACE_762x51_Ball_M993_AP;
 	class Basilisk_762 : ACE_762x51_Ball_M993_AP {
-		caliber = 8;
+		caliber = 10;
 		hit = 25;
 	};
 };

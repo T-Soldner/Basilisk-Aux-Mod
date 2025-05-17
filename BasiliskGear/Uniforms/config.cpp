@@ -88,8 +88,8 @@ class CfgWeapons {
 		displayName = "[Basilisk] M56 BDU";
 		CBRN_protectionLevel = "4 + 8";
 		ACE_GForceCoef = 0.9;
-		class ItemInfo : UniformItem
-		{
+		class ItemInfo : UniformItem {
+			containerClass = Supply20;
 			uniformModel = "-";
 			uniformClass = "Basilisk_M56_BDU_Base";
 			containerClass = "Supply150";
@@ -112,8 +112,8 @@ class CfgWeapons {
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 		CBRN_protectionLevel = "4 + 8";
 		ACE_GForceCoef = 0.9;
-		class ItemInfo : UniformItem
-		{
+		class ItemInfo : UniformItem {
+			containerClass = Supply20;
 			uniformModel = "-";
 			uniformClass = "Basilisk_SPI_Undersuit_Base";
 			containerClass = "Supply150";
@@ -134,8 +134,7 @@ class CfgWeapons {
 		displayName = "[Basilisk] Garrison armor";
 		picture = "\19th_H2A_armor\textures\H2A_marine_icon";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
-		class ItemInfo : UniformItem
-		{
+		class ItemInfo : UniformItem {
 			uniformModel = "-";
 			uniformClass = "Basilisk_H2A_Base";
 			containerClass = "Supply150";
@@ -153,14 +152,14 @@ class CfgWeapons {
 		displayName = "[Basilisk] Garrison Corpsman armor";
 		picture = "\19th_H2A_armor\textures\H2A_marine_icon";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
-		class ItemInfo : UniformItem
-		{
+		class ItemInfo : UniformItem {
 			uniformModel = "-";
 			uniformClass = "Basilisk_H2A_Corpsman_Base";
 			containerClass = "Supply150";
 			mass = 100;
 			allowedSlots[] = {"701","801","901"};
 			armor = 1;
+			containerClass = Supply10;
 		};
 	};
 };

@@ -634,22 +634,23 @@ class CfgWeapons
 			};
 		};
 	};
-
-	//CH252A
-	class Basilisk_CH252A_Helmet : Basilisk_Helmet_Base_one {
+	
+	//Commando
+	class Basilisk_Commando_Helmet : Basilisk_Helmet_Base_one
+	{
 		dlc = "Basilisk Aux Mod";
 		scope = 1;
 		scopeCurator = 1;
 		scopeArsenal = 1;
-		displayName = "[Basilisk] CH252A";
-		picture = "\OPTRE_UNSC_Units\Army\icons\odst_helmet.paa";
-		model = "\OPTRE_UNSC_Units\Army\aa_helmet.p3d";
-		hiddenSelections[] = { "camo" };
-		hiddenSelectionsTextures[] = { "optre_unsc_units\army\data\aa_helmet_co.paa" };
+		displayName = "[Basilisk] Commando Helmet";
+		model = "MA_Armor\data\Helmets\Commando\Commando_Helmet.p3d";
+		hiddenSelections[] = {"Camo1","Camo2"};
+		hiddenSelectionsTextures[] = {"MA_Armor\data\Helmets\Commando\Helmets\Olive_Commando_Helmet_CO.paa","MA_Armor\data\Helmets\Commando\Visors\Base_Commando_Visor_CO.paa"};
 		class ItemInfo : ItemInfo
 		{
-			uniformModel = "\OPTRE_UNSC_Units\Army\aa_helmet.p3d";
-			hiddenSelectionsTextures[] = { "optre_unsc_units\army\data\aa_helmet_co.paa" };
+			uniformModel = "MA_Armor\data\Helmets\Commando\Commando_Helmet.p3d";
+			hiddenSelections[] = {"Camo1","Camo2"};
+			hiddenSelectionsTextures[] = {"MA_Armor\data\Helmets\Commando\Helmets\Olive_Commando_Helmet_CO.paa","MA_Armor\data\Helmets\Commando\Visors\Base_Commando_Visor_CO.paa"};
 			class HitpointsProtectionInfo
 			{
 				class Face

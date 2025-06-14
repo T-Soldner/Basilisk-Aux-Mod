@@ -400,3 +400,9 @@ class TeshamMutna {
 	duration = 122;
 	musicClass = "BasiliskAction";
 };
+class PropellerheadsSpybreak {
+	name = "Propellerheads - Spybreak!";
+	sound[] = { "BasiliskMusic\data\Tracks\PropellerheadsSpybreak!.ogg",db + 0,1 };
+	duration = 240;
+	musicClass = "BasiliskAction";
+};

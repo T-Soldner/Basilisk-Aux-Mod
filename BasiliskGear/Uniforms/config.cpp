@@ -416,7 +416,7 @@ class CfgVehicles {
 		model = "MA_Armor\data\Uniforms\H3_ODST\H3_ODST_Uniform.p3d";
 		picture = "\MA_Armor\data\Icons\H3_ODST_Uniform.paa";
 		hiddenSelections[] = { "camo" };
-		hiddenSelectionsTextures[] = { "MA_Armor\data\Uniforms\H3_ODST\H3_Undersuit_co.paa" };
+		hiddenSelectionsTextures[] = { "BasiliskGear\data\uniforms\ODST_Undersuit_co.paa" };
 	};
 
 	//SPI Undersuit

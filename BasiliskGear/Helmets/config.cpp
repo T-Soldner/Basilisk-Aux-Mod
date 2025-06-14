@@ -54,18 +54,17 @@ class CfgWeapons
 		model = "MA_Armor\data\Helmets\HR_ODST\HR_ODST.p3d";
 		picture = "MA_Armor\data\Icons\Halo_Reach_ODST_Helmet.paa";
 		displayName = "[Basilisk] M56S-R Helmet - Base";
-		hiddenSelectionsTextures[] =
-		{
-			"MA_Armor\data\Helmets\HR_ODST\HR_ODST_Helmet_CO.paa",
-			"MA_Armor\data\Helmets\HR_ODST\HR_ODST_Visor_Blue_co.paa"
+		hiddenSelectionsTextures[] = { 
+			"BasiliskGear\data\Helmets\base_HR_ODST_Helmet_CO.paa",
+			"MA_Armor\data\Helmets\HR_ODST\HR_ODST_Visor_Blue_co.paa" 
 		};
+		hiddenSelectionsMaterials[] = {"BasiliskGear\data\Helmets\base_HR_ODST_Helmet.rvmat",""};
 		class ItemInfo : HeadgearItem
 		{
 			uniformModel = "MA_Armor\data\Helmets\HR_ODST\HR_ODST.p3d";
-			hiddenSelectionsTextures[] =
-			{
-				"MA_Armor\data\Helmets\HR_ODST\HR_ODST_Helmet_CO.paa",
-				"MA_Armor\data\Helmets\HR_ODST\HR_ODST_Visor_Blue_co.paa"
+			hiddenSelectionsTextures[] = { 
+				"BasiliskGear\data\Helmets\base_HR_ODST_Helmet_CO.paa",
+				"MA_Armor\data\Helmets\HR_ODST\HR_ODST_Visor_Blue_co.paa" 
 			};
 			class HitpointsProtectionInfo
 			{
@@ -103,6 +102,7 @@ class CfgWeapons
 		model = "MA_Armor\data\Helmets\H3_ODST\H3_ODST_Helmet.p3d";
 		picture = "MA_Armor\data\Icons\H3_ODST_Helmet.paa";
 		hiddenSelectionsTextures[] = { "MA_Armor\data\Helmets\H3_ODST\H3_Helmet_co.paa","MA_Armor\data\Helmets\H3_ODST\H3_Visor_Blue_co.paa" };
+		hiddenSelectionsMaterials[] = {"BasiliskGear\data\Helmets\base_H3_ODST_Helmet.rvmat",""};
 		class ItemInfo : ItemInfo
 		{
 			uniformModel = "MA_Armor\data\Helmets\H3_ODST\H3_ODST_Helmet.p3d";
@@ -635,6 +635,45 @@ class CfgWeapons
 		};
 	};
 	
+	//CH252A (AA)
+	class Basilisk_CH252A_Helmet : Basilisk_Helmet_Base_one {
+		dlc = "Basilisk Aux Mod";
+		scope = 1;
+		scopeCurator = 1;
+		scopeArsenal = 1;
+		displayName = "[Basilisk] CH252A";
+		picture = "\OPTRE_UNSC_Units\Army\icons\odst_helmet.paa";
+		model = "\OPTRE_UNSC_Units\Army\aa_helmet.p3d";
+		hiddenSelections[] = { "camo" };
+		hiddenSelectionsTextures[] = { "optre_unsc_units\army\data\aa_helmet_co.paa" };
+		class ItemInfo : ItemInfo
+		{
+			uniformModel = "\OPTRE_UNSC_Units\Army\aa_helmet.p3d";
+			hiddenSelectionsTextures[] = { "optre_unsc_units\army\data\aa_helmet_co.paa" };
+			class HitpointsProtectionInfo
+			{
+				class Face
+				{
+					armor = 25;
+					hitpointName = "HitFace";
+					passThrough = 0.1;
+				};
+				class Head
+				{
+					armor = 25;
+					hitPointName = "HitHead";
+					passThrough = 0.1;
+				};
+				class Neck
+				{
+					armor = 25;
+					hitpointName = "HitNeck";
+					passThrough = 0.1;
+				};
+			};
+		};
+	};
+	
 	//Commando
 	class Basilisk_Commando_Helmet : Basilisk_Helmet_Base_one
 	{
@@ -676,33 +715,6 @@ class CfgWeapons
 	};
 
 	//Covers
-	class H_MilCap_Blue;
-	class Basilisk_Base_Beret : H_HelmetB
-	{
-		dlc = "Basilisk Aux Mod";
-		author = "VorpalHotdog";
-		scope = 1;
-		displayName = "Basilisk Beret Base";
-		picture = "\A3\Characters_F_Bootcamp\Data\UI\icon_H_Beret_Colonel_ca.paa";
-		model = "a3\characters_f_epb\BLUFOR\headgear_beret02";
-		hiddenSelections[] = { "Camo" };
-		hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\headgear_basiliskberet_co.paa" };
-		class ItemInfo : HeadgearItem
-		{
-			mass = 20;
-			uniformModel = "a3\characters_f_epb\BLUFOR\headgear_beret02";
-			hiddenSelections[] = { "Camo" };
-			class HitpointsProtectionInfo
-			{
-				class Head
-				{
-					hitPointName = "HitHead";
-					armor = 1;
-					passThrough = 0.5;
-				};
-			};
-		};
-	};
 	class Basilisk_Base_Boonie : H_HelmetB
 	{
 		dlc = "Basilisk Aux Mod";

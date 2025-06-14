@@ -27,6 +27,18 @@ class CfgWeapons
 		picture = "";
 		model = "MA_Armor\data\Vests\H3_ODST\H3_ODST_Armor.p3d";
 		picture = "MA_Armor\data\Icons\H3ODST_Vest.paa";
+		hiddenSelectionsMaterials[] = {
+			"BasiliskGear\data\base_H3_Upper.rvmat",
+			"BasiliskGear\data\base_H3_Lower.rvmat",
+			"BasiliskGear\data\base_Thigh_Pouch.rvmat", 
+			"BasiliskGear\data\base_Reach_Upper.rvmat",
+			"BasiliskGear\data\base_Reach_Lower.rvmat",
+			"BasiliskGear\data\base_Canisters.rvmat",
+			"BasiliskGear\data\base_Forearm_Vents.rvmat",
+			"BasiliskGear\data\base_Sniper.rvmat",
+			"BasiliskGear\data\base_CQB.rvmat",
+			"BasiliskGear\data\base_Shoulder_Radio.rvmat"
+		};
 		class ItemInfo: ItemInfo
 		{
 			vestType = "Rebreather";

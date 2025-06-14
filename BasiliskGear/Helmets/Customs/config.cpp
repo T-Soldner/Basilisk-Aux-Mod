@@ -21,7 +21,7 @@ class XtdGearModels {
 			{
 				alwaysSelectable = 1;
 				label = "Role";
-				values[] = { "Standard","Burtovski","Sabbath","Tepfer" };
+				values[] = { "Standard","Burtovski","Sabbath","Tepfer","Reject" };
 				class Standard {
 					label = "Standard";
 				};
@@ -33,6 +33,9 @@ class XtdGearModels {
 				};
 				class Tepfer {
 					label = "Tepfer";
+				};
+				class Reject {
+					label = "Reject";
 				};
 			};
 		};
@@ -130,18 +133,10 @@ class XtdGearModels {
 			{
 				alwaysSelectable = 1;
 				label = "Role";
-				values[] = { "beret","boonie","patrol" };
-				class beret
-				{
-					label = "Beret";
-				};
+				values[] = { "boonie" };
 				class boonie
 				{
 					label = "Boonie";
-				};
-				class patrol
-				{
-					label = "Patrol";
 				};
 			};
 		};
@@ -164,7 +159,11 @@ class XtdGearInfos {
 		};
 		class Basilisk_Tepfer_M56SH_Helmet {
 			role	= "Tepfer";
-			model	= "Basilisk_Olympus_Helmets";
+			model	= "Basilisk_Custom_helmets";
+		};
+		class Basilisk_Reject_M56SH_Helmet {
+			role	= "Reject";
+			model	= "Basilisk_Custom_helmets";
 		};
 
 		//Olympus
@@ -286,11 +285,11 @@ class CfgWeapons
 		author = "Soldner";
 		displayName = "[Basilisk] M56S-R Helmet (Standard)";
 		hiddenSelections[] = { "camo1","camo2" };
-		hiddenSelectionsTextures[] = { "MA_Armor\data\Helmets\HR_ODST\HR_ODST_Helmet_CO.paa","MA_Armor\data\Helmets\HR_ODST\HR_ODST_Visor_Blue_co.paa" };
+		hiddenSelectionsTextures[] = { "BasiliskGear\data\Helmets\base_HR_ODST_Helmet_CO.paa","MA_Armor\data\Helmets\HR_ODST\HR_ODST_Visor_Blue_co.paa" };
 		class ItemInfo : ItemInfo
 		{
 			hiddenSelections[] = { "camo1","camo2" };
-			hiddenSelectionsTextures[] = { "MA_Armor\data\Helmets\HR_ODST\HR_ODST_Helmet_CO.paa","MA_Armor\data\Helmets\HR_ODST\HR_ODST_Visor_Blue_co.paa" };
+			hiddenSelectionsTextures[] = { "BasiliskGear\data\Helmets\base_HR_ODST_Helmet_CO.paa","MA_Armor\data\Helmets\HR_ODST\HR_ODST_Visor_Blue_co.paa" };
 		};
 	};
 	class Basilisk_Burtovski_M56SR_Helmet : Basilisk_M56SR_Helmet_Base {
@@ -329,6 +328,18 @@ class CfgWeapons
 		class ItemInfo : ItemInfo {
 			hiddenSelections[] = { "camo1","camo2" };
 			hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Tepfer_H3_Helmet_co.paa","BasiliskGear\data\helmets\Tepfer_H3_Visor_co.paa" };
+		};
+	};
+	class Basilisk_Reject_M56SH_Helmet : Basilisk_M56SH_Helmet_Base {
+		scope = 2;
+		scopeArsenal = 2;
+		author = "Soldner";
+		displayName = "[Basilisk] M56SH (Reject)";
+		hiddenSelections[] = { "camo1","camo2" };
+		hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Reject_H3_Helmet_co.paa","BasiliskGear\data\helmets\Reject_H3_Visor_co.paa" };
+		class ItemInfo : ItemInfo {
+			hiddenSelections[] = { "camo1","camo2" };
+			hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Reject_H3_Helmet_co.paa","BasiliskGear\data\helmets\Reject_H3_Visor_co.paa" };
 		};
 	};
 
@@ -586,20 +597,8 @@ class CfgWeapons
 	};
 
 	//Covers
-	class Basilisk_Base_Beret;
 	class Basilisk_Base_Boonie;
 	class H_MilCap_Blue;
-
-	class Basilisk_Basilisk_Beret : Basilisk_Base_Beret
-	{
-		scope = 2;
-		scopeCurator = 2;
-		scopeArsenal = 2;
-		mass = 1;
-		author = "VorpalHotdog";
-		displayName = "Basilisk Beret";
-		hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\headgear_Basiliskberet_co.paa" };
-	};
 	class Basilisk_Basilisk_Boonie : Basilisk_Base_Boonie
 	{
 		scope = 2;

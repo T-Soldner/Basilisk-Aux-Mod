@@ -406,3 +406,9 @@ class PropellerheadsSpybreak {
 	duration = 240;
 	musicClass = "BasiliskAction";
 };
+class OtherworldFINALFANTASYX {
+	name = "FINAL FANTASY X - Otherworld";
+	sound[] = { "BasiliskMusic\data\Tracks\OtherworldFINALFANTASYX.ogg",db + 0,1 };
+	duration = 194;
+	musicClass = "BasiliskAction";
+};

@@ -84,7 +84,7 @@ class XtdGearModels
 			{
 				alwaysSelectable = 1;
 				label = "Owner";
-				values[] = { "Holland","Soldner"};
+				values[] = { "Holland","Soldner","Buckley"};
 				class Holland
 				{
 					label = "Holland";
@@ -92,6 +92,10 @@ class XtdGearModels
 				class Soldner
 				{
 					label = "Soldner";
+				};
+				class Buckley
+				{
+					label = "Buckley";
 				};
 			};
 		};
@@ -154,9 +158,13 @@ class XtdGearInfos
 			model = "Basilisk_Custom_Backpacks";
 			role = "Holland";
 		};
-		class Basilisk_Soldner_Rucksack_Gunbag {
+		class Basilisk_ANPRC_515_Soldner {
 			model = "Basilisk_Custom_Backpacks";
 			role = "Soldner";
+		};
+		class Basilisk_ANPRC_521_Buckley {
+			model = "Basilisk_Custom_Backpacks";
+			role = "Buckley";
 		};
 	};
 };
@@ -276,7 +284,7 @@ class CfgVehicles
 	};
 
 	//Customs
-	class Basilisk_Soldner_Rucksack_Gunbag : Basilisk_ANPRC_515
+	class Basilisk_ANPRC_515_Soldner : Basilisk_ANPRC_515
 	{
 		_generalMacro = "ace_gunbag_Tan";
 		displayName = "[Basilisk] Soldner's ILCS AN/PRC-515";
@@ -298,6 +306,23 @@ class CfgVehicles
 		scopeCurator = 2;
 		scopeArsenal = 2;
 		hiddenSelectionsTextures[] = { "BasiliskGear\data\packs\soft_backpack_co.paa","BasiliskGear\data\packs\holland_prc521_co.paa" };
+		tf_isolatedAmount = 0.65;
+		tf_encryptionCode = "tf_west_radio_code";
+		tf_dialog = "anarc210_radio_dialog";
+		tf_subtype = "digital_lr";
+		tf_range = 50000;
+		tf_dialogUpdate = "[""%1""] call TFAR_fnc_updateLRDialogToChannel;";
+		tf_hasLRradio = 1;
+		maximumLoad = 500;
+	};
+	class Basilisk_ANPRC_521_Buckley : OPTRE_ANPRC_521_green
+	{
+		author = "Soldner";
+		displayName = "[Basilisk] Buckley's ILCS AN/PRC-521";
+		scope = 2;
+		scopeCurator = 2;
+		scopeArsenal = 2;
+		hiddenSelectionsTextures[] = { "BasiliskGear\data\packs\soft_backpack_co.paa","BasiliskGear\data\packs\Buckley_prc521_co.paa" };
 		tf_isolatedAmount = 0.65;
 		tf_encryptionCode = "tf_west_radio_code";
 		tf_dialog = "anarc210_radio_dialog";

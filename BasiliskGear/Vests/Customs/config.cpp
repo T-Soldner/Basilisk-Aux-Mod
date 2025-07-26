@@ -466,13 +466,59 @@ class CfgWeapons
 		author = "Soldner";
 		displayName = "[Basilisk] M56R Combat Armor (Soldner)";
 		hiddenSelections[] = {"camo1","camo2","camo3","camo4","camo5","camo6","camo7","camo8","camo9","camo10","H3_Forearm_Left","H3_Forearm_Right","H3_Pauldron_Left","H3_Pauldron_Right","Reach_Pauldron_Left","Reach_Shoulder_Radio_Left","Reach_Sniper_Pauldron_Right","Reach_CQB_Pauldron_Left","Reach_CQB_Pauldron_Right","Thigh_Pouch","H3_Armor_Upper","H3_Armor_Lower"};
-		hiddenSelectionsTextures[] = {"MA_Armor\data\Vests\H3_ODST\H3_Upper_Armor_co.paa","MA_Armor\data\Vests\H3_ODST\H3_Lower_Armor_co.paa","MA_Armor\data\Vests\H3_ODST\Addons\Thigh_Pouch_co.paa","BasiliskGear\data\armor\Soldner_Reach_Armor_Upper_co.paa","BasiliskGear\data\armor\Soldner_Reach_Armor_Lower_co.paa","MA_Armor\data\Vests\Reach_ODST\Canisters_co.paa","BasiliskGear\data\armor\Soldner_Forearm_Vents_co.paa","BasiliskGear\data\armor\Soldner_Sniper_co.paa","MA_Armor\data\Vests\Reach_ODST\Addons\CQB_Shoulders\CQB_co.paa","BasiliskGear\data\armor\Soldner_Shoulder_Radio_co.paa"};
+		hiddenSelectionsTextures[] = {
+			"MA_Armor\data\Vests\H3_ODST\H3_Upper_Armor_co.paa",
+			"MA_Armor\data\Vests\H3_ODST\H3_Lower_Armor_co.paa",
+			"MA_Armor\data\Vests\H3_ODST\Addons\Thigh_Pouch_co.paa",
+			"BasiliskGear\data\armor\Soldner_Reach Armor Upper_co.paa",
+			"BasiliskGear\data\armor\Soldner_Reach Armor Lower_co.paa",
+			"MA_Armor\data\Vests\Reach_ODST\Canisters_co.paa",
+			"BasiliskGear\data\armor\Soldner_Forearm Vents_co.paa",
+			"BasiliskGear\data\armor\Soldner_Sniper_co.paa",
+			"MA_Armor\data\Vests\Reach_ODST\Addons\CQB_Shoulders\CQB_co.paa",
+			"BasiliskGear\data\armor\Soldner_Shoulder_Radio_co.paa"
+		};
+		hiddenSelectionsMaterials[] = {
+			"BasiliskGear\data\base_H3_Upper.rvmat",
+			"BasiliskGear\data\base_H3_Lower.rvmat",
+			"BasiliskGear\data\base_Thigh_Pouch.rvmat", 
+			"BasiliskGear\data\Soldner_Reach_Upper.rvmat",
+			"BasiliskGear\data\Soldner_Reach_Lower.rvmat",
+			"BasiliskGear\data\Soldner_Canisters.rvmat",
+			"BasiliskGear\data\Soldner_Forearm_Vents.rvmat",
+			"BasiliskGear\data\Soldner_Sniper.rvmat",
+			"BasiliskGear\data\base_CQB.rvmat",
+			"BasiliskGear\data\base_Shoulder_Radio.rvmat"
+		};
 		class ItemInfo: ItemInfo {
 			vestType = "Rebreather";
 			uniformModel = "MA_Armor\data\Vests\H3_ODST\H3_ODST_Armor.p3d";
 			containerClass = "Supply200";
 			hiddenSelections[] = {"camo1","camo2","camo3","camo4","camo5","camo6","camo7","camo8","camo9","camo10","H3_Forearm_Left","H3_Forearm_Right","H3_Pauldron_Left","H3_Pauldron_Right","Reach_Pauldron_Left","Reach_Shoulder_Radio_Left","Reach_Sniper_Pauldron_Right","Reach_CQB_Pauldron_Left","Reach_CQB_Pauldron_Right","Thigh_Pouch","H3_Armor_Upper","H3_Armor_Lower"};
-			hiddenSelectionsTextures[] = {"MA_Armor\data\Vests\H3_ODST\H3_Upper_Armor_co.paa","MA_Armor\data\Vests\H3_ODST\H3_Lower_Armor_co.paa","MA_Armor\data\Vests\H3_ODST\Addons\Thigh_Pouch_co.paa","BasiliskGear\data\armor\Soldner_Reach_Armor_Upper_co.paa","BasiliskGear\data\armor\Soldner_Reach_Armor_Lower_co.paa","MA_Armor\data\Vests\Reach_ODST\Canisters_co.paa","BasiliskGear\data\armor\Soldner_Forearm_Vents_co.paa","BasiliskGear\data\armor\Soldner_Sniper_co.paa","MA_Armor\data\Vests\Reach_ODST\Addons\CQB_Shoulders\CQB_co.paa","BasiliskGear\data\armor\Soldner_Shoulder_Radio_co.paa"};
+			hiddenSelectionsTextures[] = {
+				"MA_Armor\data\Vests\H3_ODST\H3_Upper_Armor_co.paa",
+				"MA_Armor\data\Vests\H3_ODST\H3_Lower_Armor_co.paa",
+				"MA_Armor\data\Vests\H3_ODST\Addons\Thigh_Pouch_co.paa",
+				"BasiliskGear\data\armor\Soldner_Reach Armor Upper_co.paa",
+				"BasiliskGear\data\armor\Soldner_Reach Armor Lower_co.paa",
+				"MA_Armor\data\Vests\Reach_ODST\Canisters_co.paa",
+				"BasiliskGear\data\armor\Soldner_Forearm Vents_co.paa",
+				"BasiliskGear\data\armor\Soldner_Sniper_co.paa",
+				"MA_Armor\data\Vests\Reach_ODST\Addons\CQB_Shoulders\CQB_co.paa",
+				"BasiliskGear\data\armor\Soldner_Shoulder_Radio_co.paa"
+			};
+			hiddenSelectionsMaterials[] = {
+				"BasiliskGear\data\base_H3_Upper.rvmat",
+				"BasiliskGear\data\base_H3_Lower.rvmat",
+				"BasiliskGear\data\base_Thigh_Pouch.rvmat", 
+				"BasiliskGear\data\Soldner_Reach_Upper.rvmat",
+				"BasiliskGear\data\Soldner_Reach_Lower.rvmat",
+				"BasiliskGear\data\Soldner_Canisters.rvmat",
+				"BasiliskGear\data\Soldner_Forearm_Vents.rvmat",
+				"BasiliskGear\data\Soldner_Sniper.rvmat",
+				"BasiliskGear\data\base_CQB.rvmat",
+				"BasiliskGear\data\base_Shoulder_Radio.rvmat"
+			};
 		};
 	};
 	class Basilisk_Holland_M56R_Armor : Basilisk_Base_M56R_Armor {

@@ -39,4 +39,7 @@ class CfgMusicClasses
 	class BasiliskGoofy {
 		displayName = "Basilisk - Goofy";
 	};
+	class BasiliskStarWars {
+		displayName = "Basilisk - Star Wars";
+	};
 };

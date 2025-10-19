@@ -56,7 +56,7 @@ class XtdGearModels {
 			class type {
 				alwaysSelectable = 1;
 				label = "Owner";
-				values[] = {"HollandAK120","SoldnerDMR","HavocGL","PayneRailgun"};
+				values[] = {"HollandAK120","SoldnerDMR","HavocGL","PayneRailgun","VargoShield"};
 				class HollandAK120 {
 					label = "Holland";
 				};
@@ -68,6 +68,9 @@ class XtdGearModels {
 				};
 				class PayneRailgun {
 					label = "Payne";
+				};
+				class VargoShield {
+					label = "Vargo";
 				};				
 			};
 		};
@@ -105,6 +108,10 @@ class XtdGearInfos {
 		class Basilisk_Railgun {
 			model 	= "Basilisk_personal_primary_weapons";
 			type 	= "PayneRailgun";
+		};
+		class Basilisk_Vargo_Riot_Shield {
+			model 	= "Basilisk_personal_primary_weapons";
+			type 	= "VargoShield";
 		};
 	};
 };
@@ -284,6 +291,17 @@ class CfgWeapons {
 		{
 			"CBA_40mm_M203_6rnds"
 		};
+	};
+
+	class OPTRE_M6B_Riot_Shield_Urban;
+	class Basilisk_Vargo_Riot_Shield : OPTRE_M6B_Riot_Shield_Urban {
+		dlc = "Basilisk AUX Mod";
+		scope = 2;
+		scopearsenal = 2;
+		displayname = "[Basilisk] Vargo's Riot Shield";
+		author = "Soldner";
+		baseWeapon = "Basilisk_Vargo_Riot_Shield";
+		hiddenSelectionsTextures[] = {"BasiliskWeapons\data\body_co.paa"};
 	};
 };
 class CfgMagazines {

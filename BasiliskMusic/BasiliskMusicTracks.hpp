@@ -140,7 +140,7 @@ class RevanTheme {
 	name = "Star Wars - Revan Theme";
 	sound[] = {"BasiliskMusic\data\Tracks\RevanTheme.ogg",db+0,1};
 	duration=342;
-	musicClass = "BasiliskAction";
+	musicClass = "BasiliskStarWars";
 };
 class YouThinkIAintWorthADollarB {
 	name = "QotSA - You Think I Aint Worth A Dollar";
@@ -215,7 +215,7 @@ class CPIReallyWantToStayAtYourHouse {
 	musicClass = "BasiliskGoofy";
 };
 class BasiliskEDF {
-	name = "EDF - Songs";
+	name = "EDF - The Song";
 	sound[] = {"BasiliskMusic\data\Tracks\edf.ogg",db+0,1};
 	duration=132;
 	musicClass = "BasiliskGoofy";
@@ -257,7 +257,7 @@ class Jojopillarmen {
 	musicClass = "BasiliskGoofy";
 };
 class DBZGinyu {
-	name = "Vulcan Theme Song";
+	name = "DBZ - Ginyu Force Theme";
 	sound[] = {"BasiliskMusic\data\Tracks\DBZGinyu.ogg",db+0,1};
 	duration=115;
 	musicClass = "BasiliskGoofy";
@@ -329,19 +329,19 @@ class GoGoPowerRangersInstrumental {
 	musicClass = "BasiliskGoofy";
 };
 class LastResortDMC {
-	name = "Last Resort - Papa Roach";
+	name = "Papa Roach - Last Resort";
 	sound[] = { "BasiliskMusic\data\Tracks\LastResortPR.ogg",db + 0,1 };
 	duration = 153;
 	musicClass = "BasiliskAction";
 };
 class ImperiumsDream {
-	name = "Imperium's Dream";
+	name = "Warhammer 40k - Imperium's Dream";
 	sound[] = { "BasiliskMusic\data\Tracks\ImperiumsDream.ogg",db + 0,1 };
 	duration = 203;
 	musicClass = "BasiliskSuspense";
 };
 class DancingwiththeSource {
-	name = "Dancing with the Source - Divinity 2";
+	name = "Divinity 2 - Dancing with the Source";
 	sound[] = { "BasiliskMusic\data\Tracks\DancingwiththeSource.ogg",db + 0,1 };
 	duration = 145;
 	musicClass = "BasiliskIdle";
@@ -353,7 +353,7 @@ class PulsePressure {
 	musicClass = "BasiliskIdle";
 };
 class WoodsEvanRoyalty {
-	name = "Woods - Evan Royalty";
+	name = "Evan Royalty - Woods";
 	sound[] = { "BasiliskMusic\data\Tracks\WoodsEvanRoyalty.ogg",db + 0,1 };
 	duration = 150;
 	musicClass = "BasiliskIdle";
@@ -383,7 +383,7 @@ class ChocolateOutline {
 	musicClass = "BasiliskIdle";
 };
 class NimaFakhraraInvestigation {
-	name = "Investigation - Nima Fakhrara";
+	name = "Nima Fakhrara - Investigation";
 	sound[] = { "BasiliskMusic\data\Tracks\NimaFakhraraInvestigation.ogg",db + 0,1 };
 	duration = 124;
 	musicClass = "BasiliskIdle";
@@ -395,7 +395,7 @@ class OnceInRome {
 	musicClass = "BasiliskSuspense";
 };
 class TeshamMutna {
-	name = "Tesham Mutna";
+	name = "Witcher 3 - Tesham Mutna";
 	sound[] = { "BasiliskMusic\data\Tracks\TeshamMutna.ogg",db + 0,1 };
 	duration = 122;
 	musicClass = "BasiliskAction";
@@ -411,4 +411,136 @@ class OtherworldFINALFANTASYX {
 	sound[] = { "BasiliskMusic\data\Tracks\OtherworldFINALFANTASYX.ogg",db + 0,1 };
 	duration = 194;
 	musicClass = "BasiliskAction";
+};
+class CoD__Black_Ops_Soundtrack___Virus {
+	name = " Black Ops - Virus";
+	sound[] = { "BasiliskMusic\data\Tracks\CoD_ Black Ops Soundtrack - Virus.ogg",db + 0,1 };
+	duration = 150;
+	musicClass = "BasiliskAction";
+};
+
+class SWG_Tatooine_Ambient_Soundtrack {
+	name = "SWG — Tatooine Ambient Soundtrack";
+	sound[] = { "BasiliskMusic\data\Tracks\SWG - Tatooine Ambient Soundtrack.ogg",db + 0,1 };
+	duration = 1344;
+	musicClass = "BasiliskStarWars";
+};
+
+class Star_Wars__KOTOR_Music__The_Old_Republic_Theme {
+	name = "KOTOR - The Old Republic Theme";
+	sound[] = { "BasiliskMusic\data\Tracks\Star Wars_ KOTOR Music- The Old Republic Theme.ogg",db + 0,1 };
+	duration = 85;
+	musicClass = "BasiliskStarWars";
+};
+
+class SWG_Soundtrack___01_To_Start_a_Journey {
+	name = "SWG - To Start a Journey";
+	sound[] = { "BasiliskMusic\data\Tracks\SWG Soundtrack - 01 To Start a Journey.ogg",db + 0,1 };
+	duration = 116;
+	musicClass = "BasiliskStarWars";
+};
+
+class SWG_Soundtrack___02__A_World_of_Sand_ {
+	name = "SWG - A World of Sand";
+	sound[] = { "BasiliskMusic\data\Tracks\SWG Soundtrack - 02 _A World of Sand_.ogg",db + 0,1 };
+	duration = 33;
+	musicClass = "BasiliskStarWars";
+};
+
+class SWG_Soundtrack___03__Break_neck_Speeds_ {
+	name = "SWG - Break-neck Speeds";
+	sound[] = { "BasiliskMusic\data\Tracks\SWG Soundtrack - 03 _Break-neck Speeds_.ogg",db + 0,1 };
+	duration = 71;
+	musicClass = "BasiliskStarWars";
+};
+
+class SWG_Soundtrack___04__Pastel_Sunsets_ {
+	name = "SWG - Pastel Sunsets";
+	sound[] = { "BasiliskMusic\data\Tracks\SWG Soundtrack - 04 _Pastel Sunsets_.ogg",db + 0,1 };
+	duration = 21;
+	musicClass = "BasiliskStarWars";
+};
+
+class SWG_Soundtrack___05__Dathomir__Twisted_Beauty_ {
+	name = "SWG - Dathomir Twisted Beauty";
+	sound[] = { "BasiliskMusic\data\Tracks\SWG Soundtrack - 05 _Dathomir_ Twisted Beauty_.ogg",db + 0,1 };
+	duration = 40;
+	musicClass = "BasiliskStarWars";
+};
+
+class SWG_Soundtrack___06__Ambush__ {
+	name = "SWG - Ambush!";
+	sound[] = { "BasiliskMusic\data\Tracks\SWG Soundtrack - 06 _Ambush!_.ogg",db + 0,1 };
+	duration = 88;
+	musicClass = "BasiliskStarWars";
+};
+
+class SWG_Soundtrack___07__The_Warming_Sunrise_ {
+	name = "SWG - The Warming Sunrise";
+	sound[] = { "BasiliskMusic\data\Tracks\SWG Soundtrack - 07 _The Warming Sunrise_.ogg",db + 0,1 };
+	duration = 60;
+	musicClass = "BasiliskStarWars";
+};
+
+class SWG_Soundtrack___19__Nym_s_Property_ {
+	name = "SWG - Nym's Property";
+	sound[] = { "BasiliskMusic\data\Tracks\SWG Soundtrack - 19 _Nym's Property_.ogg",db + 0,1 };
+	duration = 83;
+	musicClass = "BasiliskStarWars";
+};
+
+class SWG_Soundtrack___26__Chasing_a_Bounty_ {
+	name = "SWG - Chasing a Bounty";
+	sound[] = { "BasiliskMusic\data\Tracks\SWG Soundtrack - 26 _Chasing a Bounty_.ogg",db + 0,1 };
+	duration = 61;
+	musicClass = "BasiliskStarWars";
+};
+
+class SWG_Soundtrack___27__Birth_of_a_Player_City_ {
+	name = "SWG - Birth of a Player City";
+	sound[] = { "BasiliskMusic\data\Tracks\SWG Soundtrack - 27 _Birth of a Player City_.ogg",db + 0,1 };
+	duration = 78;
+	musicClass = "BasiliskStarWars";
+};
+
+class SWG_Soundtrack___33__BONUS__Classic_SWG_Launcher_ {
+	name = "SWG - Classic SWG Launcher";
+	sound[] = { "BasiliskMusic\data\Tracks\SWG Soundtrack - 33 _BONUS_ Classic SWG Launcher_.ogg",db + 0,1 };
+	duration = 123;
+	musicClass = "BasiliskStarWars";
+};
+
+class The_Battle_for_Coruscant___The_Music_of_STAR_WARS__The_Old_Republic {
+	name = "SWTOR - The Battle for Coruscant";
+	sound[] = { "BasiliskMusic\data\Tracks\The Battle for Coruscant - The Music of STAR WARS_ The Old Republic.ogg",db + 0,1 };
+	duration = 378;
+	musicClass = "BasiliskStarWars";
+};
+
+class The_Mandalorian_Blockade___The_Music_of_STAR_WARS__The_Old_Republic {
+	name = "SWTOR - The Mandalorian Blockade";
+	sound[] = { "BasiliskMusic\data\Tracks\The Mandalorian Blockade - The Music of STAR WARS_ The Old Republic.ogg",db + 0,1 };
+	duration = 326;
+	musicClass = "BasiliskStarWars";
+};
+
+class Bounty_Hunter_Ambient {
+	name = "Bounty Hunter Ambience";
+	sound[] = { "BasiliskMusic\data\Tracks\Bounty Hunter Ambient.ogg",db + 0,1 };
+	duration = 3740;
+	musicClass = "BasiliskStarWars";
+};
+
+class Star_Wars_Ambient_Soundtrack {
+	name = "Star Wars Ambient Soundtrack";
+	sound[] = { "BasiliskMusic\data\Tracks\Star Wars Ambient Soundtrack.ogg",db + 0,1 };
+	duration = 3605;
+	musicClass = "BasiliskStarWars";
+};
+
+class The_Mandalorian {
+	name = "The Mandalorian";
+	sound[] = { "BasiliskMusic\data\Tracks\The Mandalorian.ogg",db + 0,1 };
+	duration = 198;
+	musicClass = "BasiliskStarWars";
 };

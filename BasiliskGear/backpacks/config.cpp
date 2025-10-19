@@ -249,7 +249,7 @@ class CfgVehicles
 		maximumLoad = 500;
 		mass = 50;
 		hiddenSelections[] = {"camo1","camo2","Radio"};
-		hiddenSelectionsTextures[] = {"MA_Armor\data\Backpacks\ODST_Rucksack\ODST_Ruck_co.paa","MA_Armor\data\Backpacks\ODST_Rucksack\Attachments\Backpack_Radio_ODST_co.paa"};
+		hiddenSelectionsTextures[] = {"BasiliskGear\data\packs\Basilisk_ODST_Ruck_co.paa","MA_Armor\data\Backpacks\ODST_Rucksack\Attachments\Backpack_Radio_ODST_co.paa"};
 	};
 	class Basilisk_M56_ILCS_Corpsman : MA_M56S_Rucksack
 	{
@@ -273,7 +273,7 @@ class CfgVehicles
 		maximumLoad = 500;
 		mass = 50;
 		hiddenSelections[] = {"camo1","camo2"};
-		hiddenSelectionsTextures[] = {"MA_Armor\data\Backpacks\ODST_Rucksack\ODST_Ruck_co.paa","MA_Armor\data\Backpacks\ODST_Rucksack\Attachments\Backpack_Radio_ODST_co.paa"};
+		hiddenSelectionsTextures[] = {"BasiliskGear\data\packs\Basilisk_ODST_Ruck_co.paa","MA_Armor\data\Backpacks\ODST_Rucksack\Attachments\Backpack_Radio_ODST_co.paa"};
 	};
 	class Basilisk_M56_ILCS_Gunbag : Basilisk_M56_ILCS
 	{

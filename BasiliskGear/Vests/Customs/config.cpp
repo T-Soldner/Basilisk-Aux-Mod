@@ -1098,7 +1098,7 @@ class CfgWeapons
 	class Basilisk_Morningstar_M56R_Armor : Basilisk_Base_M56R_Armor {
 		scope = 2;
 		scopeArsenal = 2;
-		author = "Soldner";
+		author = "Jimbo";
 		displayName = "[Basilisk] M56R Combat Armor (Morningstar)";
 		hiddenSelections[] = {
 			"camo1",

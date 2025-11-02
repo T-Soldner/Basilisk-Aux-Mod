@@ -125,7 +125,7 @@ class UnderBarrelSlot;
 
 class CfgWeapons {	
 	//Vulcan M7
- 	class OPTRE_M7;	
+ 	/*class OPTRE_M7;	
 	class Basilisk_Vulcan_M7 : OPTRE_M7 {
 		dlc = "Basilisk AUX Mod";
 		author = "Soldner";
@@ -149,9 +149,10 @@ class CfgWeapons {
 			};
 		};
 	};
+	*/
 	
 	//Templar MA5B
-	class OPTRE_MA5B;
+	/*class OPTRE_MA5B;
  	class OPTRE_MA5BGL;
 	class OPTRE_M301UGL;
 	class Basilisk_Templar_MA5B: OPTRE_MA5B {
@@ -201,6 +202,7 @@ class CfgWeapons {
 			magazineWell[] = {"MEU_GL_Explosive_Lethal","MEU_GL_Smokes","MEU_GL_Tactile","MEU_GL_Flares"};
 		};
 	};
+	*/
 	
 	//Holland AK
 	class arifle_AK12_GL_F;

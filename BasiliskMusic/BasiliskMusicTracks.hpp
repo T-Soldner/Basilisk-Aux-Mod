@@ -544,3 +544,31 @@ class The_Mandalorian {
 	duration = 198;
 	musicClass = "BasiliskStarWars";
 };
+
+class Caesars_Palace_Jerk_It_Out {
+	name = "Caesars Palace - Jerk It Out";
+	sound[] = { "BasiliskMusic\data\Tracks\Caesars Palace - Jerk It Out.ogg",db + 0,1 };
+	duration = 188;
+	musicClass = "BasiliskGoofy";
+};
+
+class Endless_Taverns_Prepare_to_Drop {
+	name = "Endless Taverns - Prepare to Drop";
+	sound[] = { "BasiliskMusic\data\Tracks\Prepare to Drop - Endless Taverns.ogg",db + 0,1 };
+	duration = 256;
+	musicClass = "BasiliskSuspense";
+};
+
+class Vampire_Basilisk_Story {
+	name = "Meteor - Phoenix Rising/Vampire";
+	sound[] = { "BasiliskMusic\data\Tracks\Vampire.ogg",db + 0,1 };
+	duration = 96;
+	musicClass = "BasiliskStory";
+};
+
+class Billy_Talent_Devil_In_A_Midnight_Mass {
+	name = "Billy Talent - Devil In A Midnight Mass";
+	sound[] = { "BasiliskMusic\data\Tracks\TeshamMutna.ogg",db + 0,1 };
+	duration = 171;
+	musicClass = "BasiliskAction";
+};

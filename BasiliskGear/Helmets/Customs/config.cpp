@@ -78,7 +78,7 @@ class XtdGearModels {
 			{
 				alwaysSelectable = 1;
 				label = "Owner";
-				values[] = { "Buckley","Wolf","Payne","Chop","Vargo","Famous"};
+				values[] = { "Buckley","Wolf","Payne","Chop","Vargo","Famous","Morningstar"};
 				class Buckley {
 					label = "Buckley";
 				};
@@ -96,6 +96,9 @@ class XtdGearModels {
 				};
 				class Famous {
 					label = "Famous";
+				};
+				class Morningstar {
+					label = "Morningstar";
 				};
 			};
 		};
@@ -219,6 +222,10 @@ class XtdGearInfos {
 		};
 		class Basilisk_Famous_M56E_Helmet {
 			role	= "Famous";
+			model	= "Basilisk_Fury_Helmets";
+		};
+		class Basilisk_Morningstar_M56SH_Helmet {
+			role	= "Morninstar";
 			model	= "Basilisk_Fury_Helmets";
 		};
 
@@ -384,8 +391,7 @@ class CfgWeapons
 			hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Kaker_Pilot_Helmet_CO.paa","BasiliskGear\data\helmets\Kaker_Pilot_Visor_co.paa" };
 		};
 	};
-	class Basilisk_Havoc_M56SR_Helmet : Basilisk_M56SR_Helmet_Base
-	{
+	class Basilisk_Havoc_M56SR_Helmet : Basilisk_M56SR_Helmet_Base {
 		scope = 2;
 		scopeArsenal = 2;
 		author = "Sabbath";
@@ -398,8 +404,7 @@ class CfgWeapons
 			hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Havoc_HR_ODST_Helmet_CO.paa","BasiliskGear\data\helmets\Havoc_HR_ODST_Visor_co.paa" };
 		};
 	};
-	class Basilisk_Ksiazek_M56G_Helmet : Basilisk_M56G_Helmet_Base
-	{
+	class Basilisk_Ksiazek_M56G_Helmet : Basilisk_M56G_Helmet_Base {
 		scope = 2;
 		scopeArsenal = 2;
 		author = "Sabbath";
@@ -425,8 +430,7 @@ class CfgWeapons
 			hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Ishra_HR_ODST_Helmet_CO.paa","BasiliskGear\data\helmets\Ishra_HR_ODST_Visor_co.paa" };
 		};
 	};
-	class Basilisk_Grimshaw_M56SR_Helmet : Basilisk_M56SR_Helmet_Base
-	{
+	class Basilisk_Grimshaw_M56SR_Helmet : Basilisk_M56SR_Helmet_Base {
 		scope = 2;
 		scopeArsenal = 2;
 		author = "Sir Chungus";
@@ -507,8 +511,7 @@ class CfgWeapons
 			hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Vargo_H3_EOD_Helm.paa","BasiliskGear\data\helmets\Vargo_EOD_Visor_H3_CO.paa" };
 		};
 	};
-	class Basilisk_Famous_M56E_Helmet : Basilisk_M56E_Helmet_Base
-	{
+	class Basilisk_Famous_M56E_Helmet : Basilisk_M56E_Helmet_Base {
 		scope = 2;
 		scopeCurator = 2;
 		scopeArsenal = 2;
@@ -522,10 +525,20 @@ class CfgWeapons
 			hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Famous_EOD_Helmet_co.paa","MA_Armor\data\Helmets\EOD\EOD_Visor_Red_co.paa" };
 		};
 	};
-
+	class Basilisk_Morningstar_M56SH_Helmet : Basilisk_M56SH_Helmet_Base {
+		scope = 2;
+		scopeArsenal = 2;
+		author = "Jimbo";
+		displayName = "[Basilisk] M56SH (Morningstar)";
+		hiddenSelections[] = { "camo1","camo2" };
+		hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Morningstar_H3_Helmet_co.paa","MA_Armor\data\Helmets\HR_ODST\HR_ODST_Visor_Gold_co.paa" };
+		class ItemInfo : ItemInfo {
+			hiddenSelections[] = { "camo1","camo2" };
+			hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Morningstar_H3_Helmet_co.paa","MA_Armor\data\Helmets\HR_ODST\HR_ODST_Visor_Gold_co.paa" };
+		};
+	};
 	//Corvus
-	class Basilisk_Blackburn_M56E_Helmet : Basilisk_M56E_Helmet_Base
-	{
+	class Basilisk_Blackburn_M56E_Helmet : Basilisk_M56E_Helmet_Base {
 		scope = 2;
 		scopeCurator = 2;
 		scopeArsenal = 2;
@@ -539,8 +552,7 @@ class CfgWeapons
 			hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Blackburn_EOD_Helmet_co.paa","MA_Armor\data\Helmets\EOD\EOD_Visor_Blue_co.paa" };
 		};
 	};
-	class Basilisk_Pjetrovic_SPI_Helmet : Basilisk_SPI_Helmet
-	{
+	class Basilisk_Pjetrovic_SPI_Helmet : Basilisk_SPI_Helmet {
 		scope = 2;
 		scopeCurator = 2;
 		scopeArsenal = 2;
@@ -553,8 +565,7 @@ class CfgWeapons
 			hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Pjetrovic_SPI_Helmet_co.paa","BasiliskGear\data\helmets\Pjetrovic_SPI_Visor_CO.paa" };
 		};
 	};
-	class Basilisk_Lancer_Grenadier_Helmet : Basilisk_Grenadier_Helmet
-	{
+	class Basilisk_Lancer_Grenadier_Helmet : Basilisk_Grenadier_Helmet {
 		scope = 2;
 		scopeCurator = 2;
 		scopeArsenal = 2;
@@ -567,8 +578,7 @@ class CfgWeapons
 			hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Lancer_Grenadier_Helmet_co.paa","MA_Armor\data\Helmets\Grenadier\Visors\Sky_Grenadier_Visor_CO.paa" };
 		};
 	};
-	class Basilisk_Kincaid_M56S_Helmet : Basilisk_M56S_Helmet_Base
-	{
+	class Basilisk_Kincaid_M56S_Helmet : Basilisk_M56S_Helmet_Base {
 		scope = 2;
 		scopeArsenal = 2;
 		author = "Sir Chungus";
@@ -581,8 +591,7 @@ class CfgWeapons
 			hiddenSelectionsTextures[] = { "BasiliskGear\data\helmets\Kincaid_H4_Scout_Helmet_CO.paa","MA_Armor\data\Helmets\H4_Scout\Scout_Visor_Black_co.paa"  };
 		};
 	};
-	class Basilisk_Bauer_Commando_Helmet : Basilisk_Commando_Helmet
-	{
+	class Basilisk_Bauer_Commando_Helmet : Basilisk_Commando_Helmet {
 		scope = 2;
 		scopeArsenal = 2;
 		author = "Sabbath";
@@ -599,8 +608,7 @@ class CfgWeapons
 	//Covers
 	class Basilisk_Base_Boonie;
 	class H_MilCap_Blue;
-	class Basilisk_Basilisk_Boonie : Basilisk_Base_Boonie
-	{
+	class Basilisk_Basilisk_Boonie : Basilisk_Base_Boonie {
 		scope = 2;
 		scopeCurator = 2;
 		scopeArsenal = 2;

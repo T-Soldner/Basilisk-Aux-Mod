@@ -559,16 +559,51 @@ class Endless_Taverns_Prepare_to_Drop {
 	musicClass = "BasiliskSuspense";
 };
 
-class Vampire_Basilisk_Story {
-	name = "Meteor - Phoenix Rising/Vampire";
-	sound[] = { "BasiliskMusic\data\Tracks\Vampire.ogg",db + 0,1 };
-	duration = 96;
-	musicClass = "BasiliskStory";
-};
-
 class Billy_Talent_Devil_In_A_Midnight_Mass {
 	name = "Billy Talent - Devil In A Midnight Mass";
-	sound[] = { "BasiliskMusic\data\Tracks\TeshamMutna.ogg",db + 0,1 };
+	sound[] = { "BasiliskMusic\data\Tracks\Billy Talent - Devil In A Midnight Mass.ogg",db + 0,1 };
 	duration = 171;
 	musicClass = "BasiliskAction";
+};
+class H3ODSTWereTheDesperateMeasuresMetal {
+	name = "Halo 3 ODST - We're The Desperate Measures (Metal)";
+	sound[] = { "BasiliskMusic\data\Tracks\Desperate Measures Metal.ogg",db + 0,1 };
+	duration = 234;
+	musicClass = "BasiliskAction";
+};
+class CPRebelPath {
+	name = "Cyberpunk 2077 - The Rebel Path";
+	sound[] = { "BasiliskMusic\data\Tracks\Cyberpunk 2077 - The Rebel Path.ogg",db + 0,1 };
+	duration = 260;
+	musicClass = "BasiliskSuspense";
+};
+class c152PHONKDXNCE{
+	name = "c152 - PHONK DXNCE";
+	sound[] = { "BasiliskMusic\data\Tracks\c152 - PHONK DXNCE.ogg",db + 0,1 };
+	duration = 141;
+	musicClass = "BasiliskGoofy";
+};
+class ZeldaGerudoValley{
+	name = "Zelda - Gerudo Valley";
+	sound[] = { "BasiliskMusic\data\Tracks\Zelda - Gerudo Valley.ogg",db + 0,1 };
+	duration = 155;
+	musicClass = "BasiliskAction";
+};
+class ElleyDuheWhethanMONEYONTHEDASH{
+	name = "Elley Duhe & Whethan - MONEY ON THE DASH";
+	sound[] = { "BasiliskMusic\data\Tracks\Elley Duhe & Whethan - MONEY ON THE DASH.ogg",db + 0,1 };
+	duration = 145;
+	musicClass = "BasiliskGoofy";
+};
+class StarWarsHothAmbience {
+	name = "Star Wars - Hoth Ambience";
+	sound[] = { "BasiliskMusic\data\Tracks\Star Wars -Hoth Ambience.ogg",db + 0,1 };
+	duration = 3596;
+	musicClass = "BasiliskStarWars";
+};
+class StarWarsForceTheme {
+	name = "Star Wars - The Force Suite";
+	sound[] = { "BasiliskMusic\data\Tracks\Star Wars - The Force Suite.ogg",db + 0,1 };
+	duration = 275;
+	musicClass = "BasiliskStarWars";
 };

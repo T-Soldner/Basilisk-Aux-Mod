@@ -1,3 +1,4 @@
+#include "BIS_AddonInfo.hpp"
 class CfgPatches
 {
 	class BasiliskMusic
@@ -41,8 +42,5 @@ class CfgMusicClasses
 	};
 	class BasiliskStarWars {
 		displayName = "Basilisk - Star Wars";
-	};
-	class BasiliskStory {
-		displayName = "Basilisk - Story";
 	};
 };

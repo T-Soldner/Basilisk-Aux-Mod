@@ -4,7 +4,7 @@ class CfgPatches
 	class BasiliskMusic
 	{
 		// Meta information for editor
-		name = "Basilisk AUX Mod";
+		name = "Soldner Music Mod";
 		author = "Soldner";
 		url = "https://discord.gg/ZpeRJyyddS";
 
@@ -29,18 +29,18 @@ class CfgMusic
 class CfgMusicClasses
 {
 	class BasiliskAction {
-		displayName = "Basilisk - Action";
+		displayName = "Soldner - Action";
 	};
 	class BasiliskSuspense {
-		displayName = "Basilisk - Suspense";
+		displayName = "Soldner - Suspense";
 	};
 	class BasiliskIdle {
-		displayName = "Basilisk - Idle";
+		displayName = "Soldner - Idle";
 	};
 	class BasiliskGoofy {
-		displayName = "Basilisk - Goofy";
+		displayName = "Soldner - Goofy";
 	};
 	class BasiliskStarWars {
-		displayName = "Basilisk - Star Wars";
+		displayName = "Soldner - Star Wars";
 	};
 };

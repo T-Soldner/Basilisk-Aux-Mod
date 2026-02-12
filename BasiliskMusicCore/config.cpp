@@ -1,7 +1,7 @@
 class CfgPatches {
 	class BasiliskMusicCore {
 		// Meta information for editor
-		name = "Basilisk Music Mod";
+		name = "Soldner Music Mod";
 		author = "Soldner";
 		url = "https://discord.gg/ZpeRJyyddS";
 
@@ -24,6 +24,6 @@ class CfgMods {
 	class Basilisk_Music_Core: Mod_Base {
 		logo = "BasiliskMusicCore\textures\logo.paa";
 		picture = "BasiliskMusicCore\textures\logo.paa";
-		name = "Basilisk Music Mod";
+		name = "Soldner Music Mod";
 	};
 };

@@ -609,37 +609,37 @@ class StarWarsForceTheme {
 };
 class StarWarsAnakinsDarkDeeds {
 	name = "Star Wars - Anakin's Dark Deeds";
-	sound[] = { "BasiliskMusic\data\Tracks\Anakin's Dark Deeds",db + 0,1 };
+	sound[] = { "BasiliskMusic\data\Tracks\Anakins Dark Deeds.ogg",db + 0,1 };
 	duration = 244;
 	musicClass = "BasiliskStarWars";
 };
 class StarWarsRebelAmbush {
 	name = "Star Wars - Rebel Ambush Music";
-	sound[] = { "BasiliskMusic\data\Tracks\Star Wars RPG Rebel Ambush Music",db + 0,1 };
+	sound[] = { "BasiliskMusic\data\Tracks\Star Wars RPG Rebel Ambush Music.ogg",db + 0,1 };
 	duration = 1124;
 	musicClass = "BasiliskStarWars";
 };
 class StarWarsScoundrelFleetTheme {
 	name = "Star Wars - Scoundrel Fleet Theme";
-	sound[] = { "BasiliskMusic\data\Tracks\Star Wars Scoundrel Fleet Theme",db + 0,1 };
+	sound[] = { "BasiliskMusic\data\Tracks\Star Wars Scoundrel Fleet Theme.ogg",db + 0,1 };
 	duration = 1381;
 	musicClass = "BasiliskStarWars";
 };
 class StarWarsImperialAssaultMusic {
 	name = "Star Wars - Imperial Assault Music";
-	sound[] = { "BasiliskMusic\data\Tracks\Star Wars RPG Imperial Assault Music",db + 0,1 };
+	sound[] = { "BasiliskMusic\data\Tracks\Star Wars RPG Imperial Assault Music.ogg",db + 0,1 };
 	duration = 1404;
 	musicClass = "BasiliskStarWars";
 };
 class StarWarsInfiltrationMusic {
 	name = "Star Wars - Infiltration Music";
-	sound[] = { "BasiliskMusic\data\Tracks\Star Wars RPG Infiltration Music",db + 0,1 };
+	sound[] = { "BasiliskMusic\data\Tracks\Star Wars RPG Infiltration Music.ogg",db + 0,1 };
 	duration = 1064;
 	musicClass = "BasiliskStarWars";
 };
 class StarWarsBaseofOperationsMusicMix {
 	name = "Star Wars - Base of Operations Music Mix";
-	sound[] = { "BasiliskMusic\data\Tracks\Star Wars RPG Group Base of Operations Music Mix",db + 0,1 };
+	sound[] = { "BasiliskMusic\data\Tracks\Star Wars RPG Group Base of Operations Music Mix.ogg",db + 0,1 };
 	duration = 1635;
 	musicClass = "BasiliskStarWars";
 };

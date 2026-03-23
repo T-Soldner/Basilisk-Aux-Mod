@@ -93,8 +93,7 @@ class CfgWeapons
 			};
 			passThrough = 0.1;
 			modelSides[] = { 6 };
-			class HitpointsProtectionInfo
-			{
+			class HitpointsProtectionInfo {
 				class Neck
 				{
 					hitpointName = "HitNeck";
